@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>קצת עליי Keren in Japan</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .about-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .about-head {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-head h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .about-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-photo {
+      max-width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 0 28px rgba(0,0,0,0.2);
+      object-fit: cover;
+    }
+
+    .about-cta {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo-wrap {
+        order: -1; /* show photo first on mobile if you prefer */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="about-wrap">
+
+    <!-- HEADER -->
+    <header class="about-head">
+      <h1>קצת עליי</h1>
+      <p>החיבור שלי ליפן התחיל הרבה לפני שידעתי שיום אחד אחיה כאן.</p>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="about-grid">
+
+      <!-- TEXT -->
+      <div class="about-text">
+        <p>
+          שמי קרן זוהר, ואני חיה, נושמת וחוקרת את יפן כבר שנים. בין עולם האקדמיה לעולם
+          האמיתי, אני מלווה עסקים, קבוצות וארגונים שרוצים להבין את יפן האמיתית.
+        </p>
+
+        <p>
+          התחלתי בקיוטו, לימדתי עברית ולמדתי יפנית. עברתי לטוקיו לחקור את תרבות העבודה וטכנולוגיות מסייעות לבעלי מוגבלויות.
+         במהלך המלחמה לא נחתי לרגע, עבדתי עם מוסדות אקדמיים, יזמים ובעלי עסקים, וגופי תקשורת בישראל וביפן. את כל הניסיון הזה אני
+          מביאה אל השירותים שלי, ומזמינה אתכם להיפגש עם העומק, המורכבות, והקסם של יפן האמיתית
+        </p>
+
+        <p>
+          כשהצטרפתם אליי לסיור, להרצאה או ל־Japan 1on1, המטרה שלי היא אחת: שתצאו
+          עם תחושה שאתם באמת מבינים קצת יותר את יפן. איך החברה היפנית חושבת, מרגישה ופועלת ולא רק
+          איך היא נראית בתמונות.
+        </p>
+
+        <div class="about-cta">
+          <a href="services.html" class="btn btn-primary">לשירותים יפנים</a>
+        </div>
+      </div>
+
+      <!-- PHOTO -->
+      <div class="about-photo-wrap">
+        <img src="assets/images/about/about_me.jpg"
+             alt="Keren in Japan קרן זוהר"
+             class="about-photo"
+             loading="lazy">
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
