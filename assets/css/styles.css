@@ -172,10 +172,11 @@ img {
   text-align: center;
 }
 
-.hero-copy h1 {
+.hero-copy-centered h1 {
   margin: 0 0 1rem;
   font-size: 2.8rem;
   line-height: 1.2;
+  text-align: center;
 }
 
 .hero-subtitle {
@@ -496,8 +497,21 @@ img {
   box-shadow: 0 8px 24px rgba(176, 31, 59, 0.2);
 }
 
-.service-icon {
-  font-size: 2.5rem;
+.service-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 1rem 2rem;
+  background: #b01f3b;
+  color: #fdfdfd;
+  border-radius: 50%;
+  aspect-ratio: 1 / 0.6;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .service-card h3 {
