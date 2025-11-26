@@ -203,6 +203,19 @@ img {
   justify-content: center;
 }
 
+/* Final CTA section */
+.final-cta {
+  text-align: center;
+}
+
+.final-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.final-cta p {
+  margin-bottom: 1.5rem;
+}
+
 /* Right side visual slider */
 .hero-visual {
   flex: 1 1 300px;
