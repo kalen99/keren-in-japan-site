@@ -141,16 +141,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // If someone left placeholder
         if (/YOUR_ID/i.test(input)) return '';
 
+        // Remove duplicate embeds first (e.g., https://www.youtube.com/embed/https://www.youtube.com/embed/ID)
+        let clean = input.replace(/https:\/\/www\.youtube\.com\/embed\/https:\/\/www\.youtube\.com\/embed\//g, 'https://www.youtube.com/embed/');
+        clean = clean.replace(/www\.youtube\.com\/embed\/www\.youtube\.com\/embed\//g, 'www.youtube.com/embed/');
+
         // Try to extract the video id from many possible formats
-        // Examples: https://www.youtube.com/embed/ID, https://youtu.be/ID, watch?v=ID
+        // Examples: https://www.youtube.com/embed/ID, https://youtu.be/ID, watch?v=ID, ID?si=...
         const re = /(?:embed\/|youtu\.be\/|watch\?v=|v\/)([A-Za-z0-9_-]{5,})/;
-        const m = input.match(re);
+        const m = clean.match(re);
         let id = m ? m[1] : null;
-        // If not found, maybe input is already an id
+        
+        // If not found, maybe input is already an id (with query params)
         if (!id) {
-          const maybeId = input.match(/^([A-Za-z0-9_-]{5,})/);
+          const maybeId = clean.match(/^([A-Za-z0-9_-]{5,})/);
           if (maybeId) id = maybeId[1];
         }
+        
         if (!id) return '';
         return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
       }
@@ -193,6 +199,20 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.setAttribute('hidden', '');
+        // clear both created iframe and existing one if present
+        const existing = modal.querySelector('#videoFrame');
+        if (existing) existing.src = '';
+        iframe.src = '';
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+        modal.setAttribute('hidden', '');
+        const existing = modal.querySelector('#videoFrame');
+        if (existing) existing.src = '';
         iframe.src = '';
         document.body.style.overflow = '';
       }
