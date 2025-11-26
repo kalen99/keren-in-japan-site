@@ -46,9 +46,9 @@
       background: #000;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 3rem;
-      gap: 2rem;
+      justify-content: center; /* center the inner box */
+      padding: 0; /* inner spacing handled by .service-box */
+      gap: 1.25rem;
     }
 
     .service-bg {
@@ -101,6 +101,23 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    /* A centered box that constrains slide width and aspect ratio */
+    .service-box {
+      width: 100%;
+      max-width: 760px; /* make the feature box smaller */
+      margin: 0 auto;
+      aspect-ratio: 5 / 4;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem; /* inner padding controls spacing */
+      gap: 1rem;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.45);
     }
 
     .service-content h3 {
@@ -175,18 +192,18 @@
         width: 240px;
         height: 240px;
       }
-      .service-slide {
-        flex-direction: column;
-        padding: 2rem;
-        min-height: auto;
+      .service-image {
+        position: relative;
+        z-index: 3;
+        width: 240px; /* slightly smaller to fit the smaller box */
+        height: 240px;
+        flex-shrink: 0;
+        aspect-ratio: 1;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+        transform: translateY(-8px);
       }
-      .split-inner {
-        grid-template-columns: 1fr;
-        row-gap: 1.75rem;
-      }
-      .split-section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
       }
       .split-reverse .split-inner {
         direction: rtl;
@@ -236,8 +253,9 @@
 
           <!-- Slide 1: About Japan -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/lectures/japanbegin.jpeg');"></div>
+              style="background-image:url('assets/images/lectures/japanbegin.jpeg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/lectures/japanbegin.jpeg');"></div>
             <div class="service-content">
@@ -248,12 +266,14 @@
                 אני רוצה!
               </a>
             </div>
+            </div>
           </div>
 
           <!-- Slide 2: Innovation vs Israel -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/lectures/innovation.jpg');"></div>
+              style="background-image:url('assets/images/lectures/innovation.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/lectures/innovation.jpg');"></div>
             <div class="service-content">
@@ -264,12 +284,14 @@
                 אני רוצה!
               </a>
             </div>
+            </div>
           </div>
 
           <!-- Slide 3: Education & family -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/lectures/family.jpg');"></div>
+              style="background-image:url('assets/images/lectures/family.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/lectures/family.jpg');"></div>
             <div class="service-content">
@@ -284,8 +306,9 @@
 
           <!-- Slide 4: Work environment -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/lectures/business.jpg');"></div>
+              style="background-image:url('assets/images/lectures/business.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/lectures/business.jpg');"></div>
             <div class="service-content">
@@ -300,8 +323,9 @@
 
           <!-- Slide 5: Disability & tech -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/lectures/disability.jpg');"></div>
+              style="background-image:url('assets/images/lectures/disability.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/lectures/disability.jpg');"></div>
             <div class="service-content">
@@ -316,8 +340,9 @@
 
           <!-- Slide 6: Custom -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/lectures/custome.jpeg');"></div>
+              style="background-image:url('assets/images/lectures/custome.jpeg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/lectures/custome.jpeg');"></div>
             <div class="service-content">
@@ -350,8 +375,9 @@
 
           <!-- Shibuya -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/tours/shibuya.jpg');"></div>
+              style="background-image:url('assets/images/tours/shibuya.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/tours/shibuya.jpg');"></div>
             <div class="service-content">
@@ -366,8 +392,9 @@
 
           <!-- Asakusa -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/tours/asakusa.jpg');"></div>
+              style="background-image:url('assets/images/tours/asakusa.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/tours/asakusa.jpg');"></div>
             <div class="service-content">
@@ -382,8 +409,9 @@
 
           <!-- Business -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/tours/business.jpg');"></div>
+              style="background-image:url('assets/images/tours/business.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/tours/business.jpg');"></div>
             <div class="service-content">
@@ -398,8 +426,9 @@
 
           <!-- Neighborhoods -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/tours/neighborhoods.jpg');"></div>
+              style="background-image:url('assets/images/tours/neighborhoods.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/tours/neighborhoods.jpg');"></div>
             <div class="service-content">
@@ -414,8 +443,9 @@
 
           <!-- Alcohol tour -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/tours/alcohol.jpg');"></div>
+              style="background-image:url('assets/images/tours/alcohol.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/tours/alcohol.jpg');"></div>
             <div class="service-content">
@@ -430,8 +460,9 @@
 
           <!-- Night tour -->
           <div class="swiper-slide service-slide">
+            <div class="service-box">
             <div class="service-bg"
-                 style="background-image:url('assets/images/tours/night.jpg');"></div>
+              style="background-image:url('assets/images/tours/night.jpg');"></div>
             <div class="service-gradient"></div>
             <div class="service-image" style="background-image:url('assets/images/tours/night.jpg');"></div>
             <div class="service-content">
