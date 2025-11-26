@@ -20,22 +20,90 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Close nav when clicking outside or pressing Escape
+  document.addEventListener('click', (e) => {
+    if (!nav || !navToggle) return;
+    if (!nav.classList.contains('is-open')) return;
+    const withinNav = nav.contains(e.target) || navToggle.contains(e.target);
+    if (!withinNav) {
+      nav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav && nav.classList.contains('is-open')) {
+      nav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.focus();
+    }
+  });
+
 
 
   /* ============================
      HERO SLIDER (AUTO)
   ============================ */
-  const slides = document.querySelectorAll('.hero-slide');
+  // HERO SLIDER: accessible autoplay + controls + pause on hover/focus
+  const heroSlider = document.querySelector('.hero-slider');
+  if (heroSlider) {
+    const slides = Array.from(heroSlider.querySelectorAll('.hero-slide'));
+    const prevBtn = heroSlider.querySelector('.hero-prev');
+    const nextBtn = heroSlider.querySelector('.hero-next');
+    const playBtn = heroSlider.querySelector('.hero-play');
+    const status = document.getElementById('heroStatus');
 
-  if (slides.length > 0) {
-    let index = 0;
-    slides[0].classList.add('is-active');
+    let current = 0;
+    let autoplay = true;
+    const AUTOPLAY_MS = 4000;
+    let timer = null;
 
-    setInterval(() => {
-      slides[index].classList.remove('is-active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('is-active');
-    }, 2000);
+    function showSlide(i, updateAnnounce = true) {
+      slides.forEach((s, idx) => {
+        const active = idx === ((i % slides.length) + slides.length) % slides.length;
+        s.classList.toggle('is-active', active);
+        s.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      current = ((i % slides.length) + slides.length) % slides.length;
+      if (status && updateAnnounce) {
+        status.textContent = `תמונה ${current + 1} מתוך ${slides.length}`;
+      }
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+
+    function startAutoplay() {
+      if (timer) clearInterval(timer);
+      if (autoplay) timer = setInterval(nextSlide, AUTOPLAY_MS);
+    }
+    function stopAutoplay() { if (timer) clearInterval(timer); timer = null; }
+
+    // Initial state
+    if (slides.length > 0) showSlide(0, false);
+    startAutoplay();
+
+    // Controls
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
+    if (playBtn) playBtn.addEventListener('click', () => {
+      autoplay = !autoplay;
+      playBtn.setAttribute('aria-pressed', autoplay ? 'false' : 'true');
+      playBtn.textContent = autoplay ? '⏯' : '⏸';
+      if (autoplay) startAutoplay(); else stopAutoplay();
+    });
+
+    // Pause on hover or focus inside slider
+    heroSlider.addEventListener('mouseenter', () => { stopAutoplay(); });
+    heroSlider.addEventListener('mouseleave', () => { if (autoplay) startAutoplay(); });
+    heroSlider.addEventListener('focusin', () => { stopAutoplay(); });
+    heroSlider.addEventListener('focusout', () => { if (autoplay) startAutoplay(); });
+
+    // Keyboard support when focused on slider
+    heroSlider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { prevSlide(); startAutoplay(); }
+      if (e.key === 'ArrowRight') { nextSlide(); startAutoplay(); }
+    });
   }
 
 
@@ -67,12 +135,41 @@ document.addEventListener('DOMContentLoaded', () => {
       const title = card.dataset.title;
       const desc = card.dataset.desc;
 
-      iframe.src = url; // load YouTube
-      modal.querySelector('.video-player-wrap').innerHTML = '';
-      modal.querySelector('.video-player-wrap').appendChild(iframe);
+      // Normalize YouTube URL to a safe embed format
+      function normalizeYouTubeEmbed(input) {
+        if (!input) return '';
+        // If someone left placeholder
+        if (/YOUR_ID/i.test(input)) return '';
 
-      modalTitle.textContent = title;
-      modalDesc.textContent = desc;
+        // Try to extract the video id from many possible formats
+        // Examples: https://www.youtube.com/embed/ID, https://youtu.be/ID, watch?v=ID
+        const re = /(?:embed\/|youtu\.be\/|watch\?v=|v\/)([A-Za-z0-9_-]{5,})/;
+        const m = input.match(re);
+        let id = m ? m[1] : null;
+        // If not found, maybe input is already an id
+        if (!id) {
+          const maybeId = input.match(/^([A-Za-z0-9_-]{5,})/);
+          if (maybeId) id = maybeId[1];
+        }
+        if (!id) return '';
+        return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      }
+
+      const embedUrl = normalizeYouTubeEmbed(url);
+      if (!embedUrl) return; // ignore placeholders
+
+      // Use existing iframe in modal if present to avoid recreating nodes
+      const existing = modal.querySelector('#videoFrame');
+      if (existing) {
+        existing.src = embedUrl;
+      } else {
+        iframe.src = embedUrl; // load YouTube
+        modal.querySelector('.video-player-wrap').innerHTML = '';
+        modal.querySelector('.video-player-wrap').appendChild(iframe);
+      }
+
+      if (modalTitle) modalTitle.textContent = title || '';
+      if (modalDesc) modalDesc.textContent = desc || '';
 
       modal.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
@@ -83,7 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modalClose) {
     modalClose.addEventListener('click', () => {
       modal.setAttribute('hidden', '');
-      iframe.src = ''; // stop playback
+      // clear both created iframe and existing one if present
+      const existing = modal.querySelector('#videoFrame');
+      if (existing) existing.src = '';
+      iframe.src = ''; // stop playback if we had appended one
       document.body.style.overflow = '';
     });
   }
@@ -98,5 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  // Set current year in footer
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
