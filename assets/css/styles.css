@@ -532,6 +532,50 @@ img {
 .video-info p { margin: 0; }
 
 /* =========================
+   MEDIA HUB
+   ========================= */
+.media-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.media-hub-card {
+  background: #11121a;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+}
+
+.media-card-visual {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.media-hub-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+.media-hub-card p {
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+  color: #bbbbc7;
+}
+
+.media-hub-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 @media (max-width: 900px) {

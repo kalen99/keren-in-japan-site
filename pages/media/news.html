@@ -4,31 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>בחדשות – Keren in Japan</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <script defer src="../assets/js/script.js"></script>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <script defer src="../../assets/js/script.js"></script>
 </head>
 <body>
 
+<!-- SITE HEADER -->
 <header class="site-header">
   <div class="container nav-wrap">
-    <div class="brand">Keren in Japan</div>
-    <nav class="nav">
+    <a href="../../index.html" class="brand" aria-label="Keren in Japan">Keren in Japan</a>
+    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label=" תפריט">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="primary-nav" class="nav">
       <ul>
-        <li><a href="../index.html">ראשי</a></li>
-        <li><a href="../media/podcast.html">פודקאסט</a></li>
-        <li><a href="../media/news.html" class="active">בחדשות</a></li>
-        <li><a href="../media/features.html">שיתופי פעולה</a></li>
+        <li><a href="../../services.html">שירותים יפנים</a></li>
+        <li><a href="../../media.html">הופעות במדיה</a></li>
+        <li><a href="../../articles.html">מאמרים וכתבות</a></li>
+        <li><a href="../../about.html">קצת עליי</a></li>
+        <li><a href="../../contact.html" class="btn btn-primary">צרו קשר</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main class="section container">
-
-  <header class="section-head">
-    <h1>הופעות בתקשורת</h1>
-    <p>כאן11 ועוד ראיונות ואייטמים על יפן.</p>
-  </header>
+  <h1>הופעות בתקשורת</h1>
+  <p class="muted">כאן11 ועוד ראיונות ואייטמים על יפן.</p>
 
   <section class="videos-grid">
 
@@ -214,6 +218,28 @@
     </div>
   </div>
 </div>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Keren in Japan</strong>
+      <p>סיורים, הרצאות ועוד, יפן זו קרן..</p>
+    </div>
+    <nav aria-label="קישורי תחתית">
+      <ul>
+        <li><a href="../../services.html">שירותים</a></li>
+        <li><a href="../../media.html">מדיה</a></li>
+        <li><a href="../../articles.html">שיתופי פעולה</a></li>
+        <li><a href="../../about.html">עליי</a></li>
+        <li><a href="../../contact.html">צור קשר</a></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
