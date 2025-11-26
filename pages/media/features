@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <ti שיתופי פעולה Keren in Japan</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body class="page-media">
+
+<header class="subpage-header">
+  <a href="../index.html" class="back-home">← חזרה</a>
+  <h1> שיתופי פעולה</h1>
+  <p class="muted">הרצאות, ראיונות, כנסים ושאר ירקות  </p>
+</header>
+
+<main class="container features-grid">
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\embassy.jpg" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>בבית השגריר</h3>
+      <p>ערב הוקרה לפעילי הסברה ביפן, עומדים לצד הקהילה הישראלית גם מרחוק.</p>
+    </div>
+  </article>
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\kyodonews.jpg" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>בחדשות מקומיות Kyodo news</h3>
+      <p>להבין את הבעיה הפלסטינית עם קרן זוהר, הסטודנטית הישראלית .</p>
+    </div>
+  </article>
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\shalva.jpg" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>שלווה מבקרים ביפן</h3>
+      <p>הקהילה הישראלית ביפן מארחת את מנכ"ל שלווה .</p>
+    </div>
+  </article>
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\iranjapan.jpg" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>ריאיון לטלויזיה מקומית</h3>
+      <p>לאחר התקיפה האיראנית הראשונה החדשות ביפן הגיעו לראיין אותי .</p>
+    </div>
+  </article>
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\nikkeiasiia.png" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>איך מרגישים זרים ביפן</h3>
+      <p>רואיינתי לעיתון Nikei היוקרתי לאחר שמפלגת סנסייטו, שזכתה בקולות רבים, קראה להגביל את כניסת הזרים ליפן .</p>
+    </div>
+  </article>
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\shkulo.jpeg" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>שכולו טוב מבקרים ביפן</h3>
+      <p>ביחד עם הנהלת שכולו טוב בביקורם הראשון ביפן .</p>
+    </div>
+  </article>
+
+  <article class="feature-card">
+    <img src="..assets\images\articles\japantimes.png" alt="" class="feat-img">
+    <div class="feat-body">
+      <h3>קמפיין עבור The Japan Times</h3>
+      <p>מסייעת לאווטאר רובוט קפה לשווק שירות חדש - מדריך טיולים רובוטי .</p>
+    </div>
+  </article>
+
+
+
+</main>
+
+</body>
+</html>
