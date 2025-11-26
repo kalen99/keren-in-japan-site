@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let current = 0;
     let autoplay = true;
-    const AUTOPLAY_MS = 4000;
+    const AUTOPLAY_MS = 2000;
     let timer = null;
 
     function showSlide(i, updateAnnounce = true) {
@@ -221,5 +221,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set current year in footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ============================
+     COLLAPSIBLE MEDIA SECTIONS
+  ============================ */
+  const mediaToggles = document.querySelectorAll('.media-section-toggle');
+  mediaToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const sectionId = toggle.dataset.section;
+      const content = document.getElementById(sectionId);
+      const icon = toggle.querySelector('.toggle-icon');
+      
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.style.transform = 'rotate(90deg)';
+      } else {
+        content.style.display = 'none';
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
 
 });

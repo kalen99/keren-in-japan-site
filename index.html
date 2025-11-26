@@ -34,173 +34,179 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
+    <!-- HERO: Centered with carousel on the side -->
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1>להבין את יפן האמיתית, מבפנים.</h1>
-          <p>
+          <p class="hero-subtitle">
             לכאלה שמחפשים את העומק, הקסם והמבט האמיתי של מי שחיה את יפן כל יום.
           </p>
-            <div class="cta-group">
-            <a href="services.html" class="btn btn-primary">לשירותים והדרכות</a>
+          <div class="cta-group">
+            <a href="services.html" class="btn btn-primary">לשירותים</a>
             <a href="contact.html" class="btn btn-ghost">דברו איתי</a>
           </div>
         </div>
-  <div class="hero-visual">
-  <div class="hero-slider" aria-hidden="true" tabindex="0">
-
-    <div class="hero-slide is-active">
-      <img src="assets/images/index/index1.jpg" alt="" loading="lazy">
-    </div>
-
-    <div class="hero-slide">
-      <img src="assets/images/index/index2.jpg" alt="" loading="lazy">
-    </div>
-
-    <div class="hero-slide">
-      <img src="assets/images/index/index3.jpg" alt="" loading="lazy">
-    </div>
-
-    <div class="hero-slide">
-      <img src="assets/images/index/index4.jpg" alt="" loading="lazy">
-    </div>
-
-    <div class="hero-slide">
-      <img src="assets/images/index/index5.jpg" alt="" loading="lazy">
-    </div>
-
-    <div class="hero-slide">
-      <img src="assets/images/index/index6.jpg" alt="" loading="lazy">
-    </div>
-</div>
-
-    <!-- Slider controls -->
-    <div class="hero-controls" aria-hidden="false">
-      <button class="hero-prev" aria-label="תמונה קודמת">‹</button>
-      <button class="hero-play" aria-pressed="false" aria-label="הפעל/הפסק סיבוב תמונות">⏯</button>
-      <button class="hero-next" aria-label="תמונה הבאה">›</button>
-    </div>
-
-    <div id="heroStatus" class="visually-hidden" aria-live="polite"></div>
-
-  </div>
-  </div>
-</section>
-
-    <!-- QUICK INTRO -->
-    <section class="section">
-      <div class="container intro-grid">
-        <div>
-          <h2>היי, אני קרן</h2>
-          <p>
-            חיה בטוקיו, חוקרת את יפן, ומלווה עסקים, מטיילים ואת כל מי שרוצה להכיר את
-            יפן בצורה עמוקה יותר, אמיתית.
-          </p>
-          <p>
-            אם זה הטיול הראשון שלכם, התייעצות על עבודה, או ערב חשיפה לצוות, בואו נתפור ביחד
-            את החוויה שמתאימה לכם.
-          </p>
-          <a href="about.html" class="text-link">עוד קצת עליי →</a>
-        </div>
-        <div class="intro-cards">
-          <article class="mini-card">
-            <h3>סיורים </h3>
-            <p>שיבויה, אסאקוסה, שכונות מקומיות, סיורי עסקים ואלכוהול.</p>
-            <a href="services.html#tours" class="text-link">לסיורים</a>
-          </article>
-          <article class="mini-card">
-            <h3>הרצאות</h3>
-            <p>תרבות יפן, חדשנות, חינוך, עבודה, טכנולוגיה ונגישות.</p>
-            <a href="services.html#lectures" class="text-link">להרצאות</a>
-          </article>
-          <article class="mini-card">
-            <h3>Japan 1on1</h3>
-            <p>הכה את המנחה בארוחה משותפת בטוקיו, כל מה שרציתם לשאול על יפן יחד עם אוכל טעים.</p>
-            <a href="services.html#japan1on1" class="text-link">ל-Japan 1on1</a>
-          </article>
+        <div class="hero-visual">
+          <div class="hero-slider" aria-hidden="true" tabindex="0">
+            <div class="hero-slide is-active">
+              <img src="assets/images/index/index1.jpg" alt="" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/index/index2.jpg" alt="" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/index/index3.jpg" alt="" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/index/index4.jpg" alt="" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/index/index5.jpg" alt="" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/index/index6.jpg" alt="" loading="lazy">
+            </div>
+          </div>
+          <!-- Slider controls -->
+          <div class="hero-controls" aria-hidden="false">
+            <button class="hero-prev" aria-label="תמונה קודמת">‹</button>
+            <button class="hero-play" aria-pressed="false" aria-label="הפעל/הפסק סיבוב תמונות">⏯</button>
+            <button class="hero-next" aria-label="תמונה הבאה">›</button>
+          </div>
+          <div id="heroStatus" class="visually-hidden" aria-live="polite"></div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES STRIP -->
-    <section class="section alt">
+    <!-- FEATURED SERVICES -->
+    <section class="section">
       <div class="container">
-        <header class="section-head">
-          <h2>איך אני יכולה לעזור?</h2>
-        </header>
-
-        <div class="home-services-grid">
-          <article class="home-service">
+        <h2>מה אני מציעה</h2>
+        <div class="featured-services">
+          <a href="services.html#tours" class="service-card">
+            <span class="service-icon">🗾</span>
             <h3>סיורים בטוקיו</h3>
-            <p>
-              סיורי יום ולילה בשיבויה, אסאקוסה, שכונות מקומיות, וגם סיורי עסקים ואלכוהול.
-            </p>
-            <a href="services.html#tours" class="btn btn-ghost-sm">בחירת סיור</a>
-          </article>
-
-          <article class="home-service">
+            <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
+          </a>
+          <a href="services.html#lectures" class="service-card">
+            <span class="service-icon">🎤</span>
             <h3>הרצאות וימי עיון</h3>
-            <p>
-              הרצאות על יפן, חדשנות, יחסי ישראל–יפן, עבודה, חינוך וטכנולוגיה. לאקדמיה,
-              חברות וקהילות.
-            </p>
-            <a href="services.html#lectures" class="btn btn-ghost-sm">בחירת הרצאה</a>
-          </article>
-
-          <article class="home-service">
+            <p>על יפן, חדשנות, תרבות ועוד</p>
+          </a>
+          <a href="services.html#japan1on1" class="service-card">
+            <span class="service-icon">🍽️</span>
             <h3>Japan 1on1</h3>
-            <p>
-             , ארוחת ערב אינטימית בטוקיו שבה שואלים את כל השאלות שאין איפה לשאול. תרבות, משפחה,
-              זוגיות, עבודה, הכל.
-            </p>
-            <a href="services.html#יפן 1על1" class="btn btn-ghost-sm">להזמנה</a>
-          </article>
+            <p>ארוחת ערב ושיחה אינטימית בטוקיו</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- MEDIA TEASER -->
-    <section class="section">
-      <div class="container">
-        <header class="section-head">
-          <h2>מהתקשורת</h2>
-          <p>ראיונות בטלוויזיה, פודקאסטים ועוד.</p>
-        </header>
-
-        <div class="media-teaser-grid">
-          <article class="media-card">
-            <h3> יפן ב15 דקות</h3>
-            <p class="muted">טעימה מיפן ב15, בכל פרק נצלול לנושא חדש שאולי לא ידעתם עליו.</p>
-            <a href="media.html#podcast" class="text-link">להאזנה →</a>
-          </article>
-          <article class="media-card">
-            <h3>הופעות בטלוויזיה</h3>
-            <p class="muted">קליפים נבחרים מהחדשות.</p>
-            <a href="media.html#news" class="text-link">לצפייה בקטעים →</a>
-          </article>
-          <article class="media-card">
-            <h3>כתבות ורדיו</h3>
-            <p class="muted">ראיונות עומק, שידורי רדיו ומאמרים על יפן.</p>
-            <a href="media.html#radio" class="text-link">עוד במדיה →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ARTICLES TEASER -->
+    <!-- MEDIA GALLERY: Collapsible sections -->
     <section class="section alt">
       <div class="container">
-        <header class="section-head">
-          <h2>מאמרים ורשימות</h2>
-          <p>טקסטים על תרבות, חברה ויום-יום ביפן.</p>
-        </header>
-        <div class="articles-teaser">
-          <p class="muted">
-            בקרוב ארכיון מאמרים מסודר. בינתיים אפשר לפנות אליי אם יש נושא מסוים שמעניין אתכם.
-          </p>
-          <a href="articles.html" class="btn btn-ghost">למאמרים</a>
+        <h2>הופעות במדיה</h2>
+        
+        <!-- Videos Section -->
+        <div class="media-section">
+          <button class="media-section-toggle" data-section="videos">
+            <span class="toggle-icon">›</span>
+            <h3>חדשות ותקשורת</h3>
+          </button>
+          <div class="media-section-content" id="videos" style="display: none;">
+            <div class="media-grid-3">
+              <a href="pages/media/news.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">📺</span>
+                </div>
+                <p>צפה בחדשות ותקשורת ➜</p>
+              </a>
+              <a href="pages/media/news.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">📺</span>
+                </div>
+                <p>צפה בחדשות ותקשורת ➜</p>
+              </a>
+              <a href="pages/media/news.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">📺</span>
+                </div>
+                <p>צפה בחדשות ותקשורת ➜</p>
+              </a>
+            </div>
+            <div class="media-expand">
+              <a href="pages/media/news.html" class="btn btn-ghost">צפה בכל הקטעים</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Podcast Section -->
+        <div class="media-section">
+          <button class="media-section-toggle" data-section="podcast">
+            <span class="toggle-icon">›</span>
+            <h3>יפן ב15 דקות - פודקאסט</h3>
+          </button>
+          <div class="media-section-content" id="podcast" style="display: none;">
+            <div class="media-grid-3">
+              <a href="pages/media/podcast.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">🎙️</span>
+                </div>
+                <p>האזן לפודקאסט ➜</p>
+              </a>
+              <a href="pages/media/podcast.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">🎙️</span>
+                </div>
+                <p>האזן לפודקאסט ➜</p>
+              </a>
+              <a href="pages/media/podcast.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">🎙️</span>
+                </div>
+                <p>האזן לפודקאסט ➜</p>
+              </a>
+            </div>
+            <div class="media-expand">
+              <a href="pages/media/podcast.html" class="btn btn-ghost">האזן לכל הפרקים</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="media-section">
+          <button class="media-section-toggle" data-section="features">
+            <span class="toggle-icon">›</span>
+            <h3>שיתופי פעולה</h3>
+          </button>
+          <div class="media-section-content" id="features" style="display: none;">
+            <div class="media-grid-3">
+              <a href="pages/media/features.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">✨</span>
+                </div>
+                <p>צפה בשיתופים ➜</p>
+              </a>
+              <a href="pages/media/features.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">✨</span>
+                </div>
+                <p>צפה בשיתופים ➜</p>
+              </a>
+              <a href="pages/media/features.html" class="media-preview">
+                <div class="media-thumb" style="background: #11121a;">
+                  <span class="media-badge">✨</span>
+                </div>
+                <p>צפה בשיתופים ➜</p>
+              </a>
+            </div>
+            <div class="media-expand">
+              <a href="pages/media/features.html" class="btn btn-ghost">ראה עוד שיתופים</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
