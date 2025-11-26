@@ -161,14 +161,15 @@ img {
 .hero-inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .hero-copy {
   flex: 1 1 300px;
   max-width: 500px;
+  text-align: center;
 }
 
 .hero-copy h1 {
@@ -189,6 +190,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 /* Right side visual slider */
