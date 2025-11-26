@@ -172,6 +172,15 @@ img {
   text-align: center;
 }
 
+.hero-copy-centered {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.hero-copy-centered ~ .hero-visual {
+  display: none;
+}
+
 .hero-copy-centered h1 {
   margin: 0 0 1rem;
   font-size: 2.8rem;
