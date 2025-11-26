@@ -494,46 +494,51 @@ img {
    ========================= */
 .featured-services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   padding: 2rem 0;
 }
 
 .service-card {
-  background: #11121a;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #11121a 0%, #16171f 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.5rem;
+  border: 1px solid #ffffff11;
+  min-height: 280px;
+  justify-content: center;
 }
 
 .service-card:hover {
-  transform: translateY(-3px);
-  background: #181927;
-  box-shadow: 0 8px 24px rgba(176, 31, 59, 0.2);
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #181927 0%, #1e1f28 100%);
+  box-shadow: 0 12px 32px rgba(176, 31, 59, 0.25);
+  border-color: #ffffff22;
 }
 
 .service-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 140px;
-  padding: 1rem 2rem;
+  min-width: 180px;
+  padding: 1.25rem 2.5rem;
   background: #b01f3b;
   color: #fdfdfd;
   border-radius: 50%;
   aspect-ratio: 1 / 0.6;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   text-align: center;
   word-wrap: break-word;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(176, 31, 59, 0.3);
 }
 
 .service-card h3 {
@@ -544,7 +549,8 @@ img {
 .service-card p {
   margin: 0;
   color: #bbbbc7;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* =========================
