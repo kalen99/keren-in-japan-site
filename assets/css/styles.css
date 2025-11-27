@@ -1533,6 +1533,7 @@ small, .small-text {
   border-radius: 18px;
   aspect-ratio: 5 / 4;
   height: auto;
+  background: var(--color-bg-primary);
 }
 
 /* Swiper navigation buttons */
@@ -1568,7 +1569,7 @@ small, .small-text {
 
 /* shrink the overall services box to 60% (≈40% smaller) so it doesn't span full width */
 .services-swiper { max-width: 660px; margin: 0 auto; }
-.services-swiper .swiper-slide { position: relative; overflow: hidden; border-radius: 18px; aspect-ratio: 5 / 4; height: auto; }
+.services-swiper .swiper-slide { position: relative; overflow: hidden; border-radius: 18px; aspect-ratio: 5 / 4; height: auto; background: var(--color-bg-primary); }
 
 /* image fills the slide */
 .slide-img {
