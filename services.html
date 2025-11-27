@@ -277,42 +277,45 @@
     // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    // Initialize Swiper for lectures
-    const lecturesSwiper = new Swiper('.lectures-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.lectures-swiper .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.lectures-swiper .swiper-button-next',
-        prevEl: '.lectures-swiper .swiper-button-prev',
-      },
-    });
+    // Wait for Swiper to be fully loaded
+    window.addEventListener('DOMContentLoaded', () => {
+      // Initialize Swiper for lectures
+      const lecturesSwiper = new Swiper('.lectures-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.lectures-swiper .swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.lectures-swiper .swiper-button-next',
+          prevEl: '.lectures-swiper .swiper-button-prev',
+        },
+      });
 
-    // Initialize Swiper for tours
-    const toursSwiper = new Swiper('.tours-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.tours-swiper .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.tours-swiper .swiper-button-next',
-        prevEl: '.tours-swiper .swiper-button-prev',
-      },
+      // Initialize Swiper for tours
+      const toursSwiper = new Swiper('.tours-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.tours-swiper .swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.tours-swiper .swiper-button-next',
+          prevEl: '.tours-swiper .swiper-button-prev',
+        },
+      });
     });
   </script>
 
