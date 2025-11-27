@@ -375,6 +375,33 @@ img {
 }
 
 /* =========================
+   CAROUSEL SECTION (HOMEPAGE)
+   ========================= */
+.carousel-section {
+  padding: 2rem 0 4rem;
+  background: var(--color-bg-primary);
+}
+
+.carousel-section .container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.carousel-section .hero-slider {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .carousel-section .container {
+    max-width: 95%;
+  }
+}
+
+/* =========================
    SERVICES HOME SECTION (NEW)
    ========================= */
 .services-home-section {
