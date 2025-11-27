@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let current = 0;
     let autoplay = true;
-    const AUTOPLAY_MS = 2000; // 2 seconds
+    const AUTOPLAY_MS = 4000; // 4 seconds
     let timer = null;
 
     function showSlide(i, updateAnnounce = true) {
