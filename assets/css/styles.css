@@ -1575,8 +1575,8 @@ small, .small-text {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain; /* show the whole image without cropping */
-  background: #000; /* fallback background if image doesn't fully cover */
+  object-fit: cover; /* fill the frame completely */
+  opacity: 0.8;
 }
 
 /* overlay gradient to keep text readable */
