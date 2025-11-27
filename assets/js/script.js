@@ -44,27 +44,40 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================
      HERO SLIDER (AUTO)
   ============================ */
-  // HERO SLIDER: accessible autoplay + controls + pause on hover/focus
+  // HERO SLIDER: accessible autoplay with swipe-right transition
   const heroSlider = document.querySelector('.hero-slider');
   if (heroSlider) {
     const slides = Array.from(heroSlider.querySelectorAll('.hero-slide'));
-    const prevBtn = heroSlider.querySelector('.hero-prev');
-    const nextBtn = heroSlider.querySelector('.hero-next');
-    const playBtn = heroSlider.querySelector('.hero-play');
     const status = document.getElementById('heroStatus');
 
     let current = 0;
     let autoplay = true;
-    const AUTOPLAY_MS = 2000;
+    const AUTOPLAY_MS = 2000; // 2 seconds
     let timer = null;
 
     function showSlide(i, updateAnnounce = true) {
+      const nextIndex = ((i % slides.length) + slides.length) % slides.length;
+      
+      // Add exiting class to current slide
+      if (slides[current]) {
+        slides[current].classList.add('is-exiting');
+        slides[current].classList.remove('is-active');
+      }
+      
+      // Remove exiting class after animation
+      setTimeout(() => {
+        slides.forEach(s => s.classList.remove('is-exiting'));
+      }, 800);
+      
+      // Activate next slide with swipe-right effect
       slides.forEach((s, idx) => {
-        const active = idx === ((i % slides.length) + slides.length) % slides.length;
+        const active = idx === nextIndex;
         s.classList.toggle('is-active', active);
         s.setAttribute('aria-hidden', active ? 'false' : 'true');
       });
-      current = ((i % slides.length) + slides.length) % slides.length;
+      
+      current = nextIndex;
+      
       if (status && updateAnnounce) {
         status.textContent = `תמונה ${current + 1} מתוך ${slides.length}`;
       }
@@ -80,18 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function stopAutoplay() { if (timer) clearInterval(timer); timer = null; }
 
     // Initial state
-    if (slides.length > 0) showSlide(0, false);
+    if (slides.length > 0) {
+      slides[0].classList.add('is-active');
+      slides[0].setAttribute('aria-hidden', 'false');
+      slides.forEach((s, idx) => {
+        if (idx !== 0) s.setAttribute('aria-hidden', 'true');
+      });
+      if (status) status.textContent = `תמונה 1 מתוך ${slides.length}`;
+    }
     startAutoplay();
-
-    // Controls
-    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
-    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
-    if (playBtn) playBtn.addEventListener('click', () => {
-      autoplay = !autoplay;
-      playBtn.setAttribute('aria-pressed', autoplay ? 'false' : 'true');
-      playBtn.textContent = autoplay ? '⏯' : '⏸';
-      if (autoplay) startAutoplay(); else stopAutoplay();
-    });
 
     // Pause on hover or focus inside slider
     heroSlider.addEventListener('mouseenter', () => { stopAutoplay(); });

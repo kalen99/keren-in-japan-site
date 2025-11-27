@@ -400,6 +400,7 @@ img {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .hero-copy {
@@ -411,10 +412,7 @@ img {
 .hero-copy-centered {
   flex: 1 1 100%;
   max-width: 100%;
-}
-
-.hero-copy-centered ~ .hero-visual {
-  display: none;
+  order: 1;
 }
 
 .hero-copy-centered h1 {
@@ -454,19 +452,20 @@ img {
 
 /* Right side visual slider */
 .hero-visual {
-  flex: 1 1 300px;
+  flex: 1 1 100%;
   min-width: 280px;
-  max-width: 520px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  order: 2;
 }
 
 .hero-slider {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 1200px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.25);
@@ -502,12 +501,20 @@ img {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* Visible slide */
+/* Visible slide - swipe from right */
 .hero-slide.is-active {
   opacity: 1;
+  transform: translateX(0);
+}
+
+/* Exiting slide - swipe to left */
+.hero-slide.is-exiting {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 /* 4:3 images, nicely filling the frame */
