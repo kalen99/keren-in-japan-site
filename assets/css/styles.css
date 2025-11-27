@@ -1009,7 +1009,7 @@ textarea {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 30% 70%;
   gap: 3rem;
   align-items: center;
   padding: 3rem 0;
@@ -1039,7 +1039,7 @@ textarea {
 }
 
 .about-text {
-  order: 2;
+  grid-column: 2;
 }
 
 .about-text p {
@@ -1051,7 +1051,7 @@ textarea {
 .about-photo-wrap {
   display: flex;
   justify-content: center;
-  order: 1;
+  grid-column: 1;
 }
 
 .about-photo {
