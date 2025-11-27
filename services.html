@@ -7,7 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script defer src="assets/js/script.js"></script>
 </head>
 <body>
@@ -44,7 +46,7 @@
     </section>
 
     <!-- JAPAN 1on1 SECTION -->
-    <section class="services-section oneonone">
+    <section id="oneonone" class="services-section oneonone">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 2rem;">Japan 1on1</h2>
         <div class="services-swiper">
@@ -65,43 +67,161 @@
     </section>
 
     <!-- LECTURES SECTION -->
-    <section class="services-section">
+    <section id="lectures" class="services-section">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 2rem;">הרצאות ופמי ענן</h2>
-        <div class="services-swiper">
-          <div class="swiper-slide">
-            <img src="assets/images/lectures/lecture-placeholder.jpg" 
-                 alt="הרצאות על יפן" 
-                 class="slide-img" 
-                 loading="lazy">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>הרצאות ופמי ענן</h3>
-              <p>על יפן, הדעות, הרבות ועוד</p>
-              <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+        <div class="swiper lectures-swiper">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/business.jpg" alt="הרצאה: עסקים ביפן" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>עסקים ביפן</h3>
+                <p>תרבות עסקית, משא ומתן, וסודות ההצלחה</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
             </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/custome.jpeg" alt="הרצאה: מנהגים יפניים" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>מנהגים ותרבות</h3>
+                <p>מסורת, טקסים, וחיי היומיום ביפן</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/disability.jpg" alt="הרצאה: נגישות ביפן" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>נגישות ביפן</h3>
+                <p>טכנולוגיות מסייעות וחברה מכילה</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/family.jpg" alt="הרצאה: משפחה ביפן" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>משפחה וחברה</h3>
+                <p>מבנה משפחתי, חינוך, ויחסים חברתיים</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/innovation.jpg" alt="הרצאה: חדשנות יפנית" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>חדשנות וטכנולוגיה</h3>
+                <p>מהמסורת לעתיד: יפן כמובילה טכנולוגית</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/japanbegin.jpeg" alt="הרצאה: יפן למתחילים" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>יפן למתחילים</h3>
+                <p>מדריך מקיף למי שרוצה להכיר את יפן</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/lectures/thethird.png" alt="הרצאה: נושא מיוחד" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>הרצאה מותאמת אישית</h3>
+                <p>נושא לפי הבחירה והצורך שלכם</p>
+                <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
 
     <!-- TOURS SECTION -->
-    <section class="services-section">
+    <section id="tours" class="services-section">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 2rem;">סיורים בטוקיו</h2>
-        <div class="services-swiper">
-          <div class="swiper-slide">
-            <img src="assets/images/tours/tour-placeholder.jpg" 
-                 alt="סיורים בטוקיו" 
-                 class="slide-img" 
-                 loading="lazy">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>סיורים בטוקיו</h3>
-              <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
-              <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+        <div class="swiper tours-swiper">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <img src="assets/images/tours/shibuya.jpg" alt="סיור בשיבויה" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>שיבויה</h3>
+                <p>מרכז האופנה והנוער של טוקיו</p>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+              </div>
             </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/tours/asakusa.jpg" alt="סיור באסאקוסה" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>אסאקוסה</h3>
+                <p>טוקיו המסורתית: מקדשים ותרבות עתיקה</p>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/tours/neighborhoods.jpg" alt="שכונות מקומיות" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>שכונות מקומיות</h3>
+                <p>טוקיו האמיתית מעבר לתיירות</p>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/tours/night.jpg" alt="סיור לילה בטוקיו" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>טוקיו בלילה</h3>
+                <p>חיי הלילה, אורות ניאון, ותרבות הבילויים</p>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/tours/business.jpg" alt="סיור עסקי" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>סיור עסקי</h3>
+                <p>אזורי עסקים, מרכזים כלכליים, וחדשנות</p>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/images/tours/alcohol.jpg" alt="סיור אוכל ומשקאות" class="slide-img" loading="lazy">
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <h3>אוכל ומשקאות</h3>
+                <p>טעימות, מסעדות מקומיות, וסאקה</p>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+              </div>
+            </div>
+
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -147,6 +267,49 @@
       <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
     </div>
   </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Swiper for lectures
+    const lecturesSwiper = new Swiper('.lectures-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    // Initialize Swiper for tours
+    const toursSwiper = new Swiper('.tours-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 
 </body>
 </html>

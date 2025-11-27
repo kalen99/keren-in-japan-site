@@ -34,12 +34,50 @@
   </header>
 
   <main id="main">
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <h1 class="hero-headline">להבין את יפן האמיתית, מבפנים.</h1>
-        <p class="hero-subheadline">רוצים לדעת יותר על יפן, ולא יודעים איפה להתחיל? צרו קשר וביחד נבין איזו יפן מתאימה לכם היום</p>
-        <a href="contact.html" class="btn btn-primary btn-hero">בואו נדבר</a>
+    <!-- HERO SECTION WITH CAROUSEL -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>להבין את יפן האמיתית, מבפנים.</h1>
+          <p class="hero-subtitle">רוצים לדעת יותר על יפן, ולא יודעים איפה להתחיל? צרו קשר וביחד נבין איזו יפן מתאימה לכם היום</p>
+          <div class="cta-group">
+            <a href="contact.html" class="btn btn-primary">בואו נדבר</a>
+          </div>
+        </div>
+
+        <!-- HERO SLIDER -->
+        <div class="hero-visual">
+          <div class="hero-slider" role="region" aria-label="תמונות יפן">
+            <!-- Slides -->
+            <div class="hero-slide is-active" aria-hidden="false">
+              <img src="assets/images/index/index1.jpg" alt="טוקיו, יפן" loading="eager">
+            </div>
+            <div class="hero-slide" aria-hidden="true">
+              <img src="assets/images/index/index2.jpg" alt="תרבות יפנית" loading="lazy">
+            </div>
+            <div class="hero-slide" aria-hidden="true">
+              <img src="assets/images/index/index3.jpg" alt="נופי יפן" loading="lazy">
+            </div>
+            <div class="hero-slide" aria-hidden="true">
+              <img src="assets/images/index/index4.jpg" alt="חיי יום יום ביפן" loading="lazy">
+            </div>
+            <div class="hero-slide" aria-hidden="true">
+              <img src="assets/images/index/index5.jpg" alt="אדריכלות יפנית" loading="lazy">
+            </div>
+            <div class="hero-slide" aria-hidden="true">
+              <img src="assets/images/index/index6.jpg" alt="עיר יפנית" loading="lazy">
+            </div>
+
+            <!-- Controls -->
+            <div class="hero-controls">
+              <button class="hero-prev" aria-label="תמונה קודמת">←</button>
+              <button class="hero-next" aria-label="תמונה הבאה">→</button>
+            </div>
+
+            <!-- Screen reader status -->
+            <div id="heroStatus" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -50,19 +88,19 @@
         <div class="featured-services">
           
           <!-- Card 1: Japan 1on1 -->
-          <a href="contact.html?service=Japan 1on1" class="service-card">
+          <a href="services.html#oneonone" class="service-card">
             <div class="service-badge">Japan 1on1</div>
             <p>אהבת ערב ושיחה אינטימית בטוקיו</p>
           </a>
 
           <!-- Card 2: Lectures -->
-          <a href="contact.html?service=הרצאות ופמי ענן" class="service-card">
+          <a href="services.html#lectures" class="service-card">
             <div class="service-badge">הרצאות ופמי ענן</div>
             <p>על יפן, הדעות, הרבות ועוד</p>
           </a>
 
           <!-- Card 3: Tours -->
-          <a href="contact.html?service=סיורים בטוקיו" class="service-card">
+          <a href="services.html#tours" class="service-card">
             <div class="service-badge">סיורים בטוקיו</div>
             <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
           </a>

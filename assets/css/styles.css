@@ -1433,6 +1433,55 @@ small, .small-text {
 .services-hero h1 { margin: 0 0 .5rem; }
 .services-section { padding: 2.5rem 1.5rem; }
 
+/* LECTURES AND TOURS SWIPER STYLING */
+.lectures-swiper,
+.tours-swiper {
+  max-width: 660px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.lectures-swiper .swiper-slide,
+.tours-swiper .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  aspect-ratio: 5 / 4;
+  height: auto;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-text-primary);
+  background: rgba(0, 0, 0, 0.5);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(217, 68, 82, 0.8);
+}
+
+/* Swiper pagination */
+.swiper-pagination-bullet {
+  background: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-accent-red);
+  opacity: 1;
+}
+
 /* shrink the overall services box to 60% (≈40% smaller) so it doesn't span full width */
 .services-swiper { max-width: 660px; margin: 0 auto; }
 .services-swiper .swiper-slide { position: relative; overflow: hidden; border-radius: 18px; aspect-ratio: 5 / 4; height: auto; }
@@ -1476,11 +1525,15 @@ small, .small-text {
 
 /* responsive tweaks for services slides */
 @media (max-width: 900px) {
-  .services-swiper { max-width: 92%; }
+  .services-swiper,
+  .lectures-swiper,
+  .tours-swiper { max-width: 92%; }
   .slide-content { width: 100%; padding: 1.5rem; }
 }
 @media (max-width: 640px) {
-  .services-swiper { max-width: 100%; }
+  .services-swiper,
+  .lectures-swiper,
+  .tours-swiper { max-width: 100%; }
   .slide-content { position: absolute; right: 0; left: 0; width: 100%; padding: 1rem; align-items: center; text-align: center; }
 }
 
