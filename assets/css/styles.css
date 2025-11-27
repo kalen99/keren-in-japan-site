@@ -1499,8 +1499,22 @@ small, .small-text {
 /* =========================
    SERVICES PAGE (moved from inline)
    ========================= */
-.services-hero { padding: 3.5rem 1.5rem 1.5rem; text-align: center; }
-.services-hero h1 { margin: 0 0 .5rem; }
+.services-hero { 
+  padding: 3.5rem 1.5rem 1.5rem; 
+  text-align: center; 
+}
+
+.services-hero h1 { 
+  margin: 0 0 .5rem; 
+}
+
+.services-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
 .services-section { padding: 2.5rem 1.5rem; }
 
 /* LECTURES AND TOURS SWIPER STYLING */
