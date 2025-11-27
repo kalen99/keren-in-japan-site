@@ -845,8 +845,8 @@ textarea {
    ========================= */
 .features-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   padding-bottom: 3rem;
 }
 
@@ -854,28 +854,45 @@ textarea {
   background: #11121a;
   border-radius: 12px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
 }
 
 .feat-img {
-  flex: 0 0 220px;
-  max-width: 220px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
 }
 
 .feat-body {
-  padding: 1.25rem;
-  flex: 1 1 180px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .feat-body h3 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .feat-body p {
   margin: 0;
   line-height: 1.6;
+  color: #bbbbc7;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================
