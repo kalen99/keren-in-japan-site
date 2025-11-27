@@ -1590,18 +1590,22 @@ small, .small-text {
   left: 0;
   right: 0;
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* center horizontally */
   padding: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   z-index: 3;
   text-align: center; /* center text to align with header */
   color: #fff;
+  overflow: hidden;
 }
 
-.slide-content h3 { margin:0 0 .5rem; font-size:1.6rem; }
-.slide-content p { margin:0 0 1.25rem; color:#ddd; line-height:1.6; }
+.slide-content h3 { margin:0 0 .5rem; font-size:1.6rem; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6); }
+.slide-content p { margin:0 0 1.25rem; color:#ddd; line-height:1.6; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5); }
 .slide-content .btn { padding: .6rem 1.25rem; }
 
 /* 1on1 single feature — use same overlay but center content */
@@ -1612,13 +1616,15 @@ small, .small-text {
   .services-swiper,
   .lectures-swiper,
   .tours-swiper { max-width: 92%; }
-  .slide-content { width: 100%; padding: 1.5rem; }
+  .slide-content { width: 100%; max-width: 100%; padding: 1.5rem; padding-top: 1.25rem; padding-bottom: 1.25rem; overflow: hidden; }
 }
 @media (max-width: 640px) {
   .services-swiper,
   .lectures-swiper,
   .tours-swiper { max-width: 100%; }
-  .slide-content { position: absolute; right: 0; left: 0; width: 100%; padding: 1rem; align-items: center; text-align: center; }
+  .slide-content { position: absolute; right: 0; left: 0; width: 100%; max-width: 100%; padding: 1rem; padding-top: 0.75rem; padding-bottom: 0.75rem; align-items: center; text-align: center; overflow: hidden; }
+  .slide-content h3 { font-size: 1.3rem; }
+  .slide-content p { font-size: 0.9rem; line-height: 1.5; }
 }
 
 /* JAPAN 1on1: present the photo as a 16:9 hero box */
