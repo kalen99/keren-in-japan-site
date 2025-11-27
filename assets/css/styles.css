@@ -1009,9 +1009,10 @@ textarea {
 
 .about-grid {
   display: flex;
+  flex-direction: row;
   gap: 3rem;
-  align-items: center;
-  padding: 3rem 0;
+  align-items: flex-start;
+  padding: 3rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -1037,20 +1038,8 @@ textarea {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
-.about-text {
-  flex: 1;
-  padding-right: 2rem;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
 .about-photo-wrap {
-  flex: 0 0 70%;
-  max-width: 70%;
+  flex: 0 0 35%;
   display: flex;
   justify-content: flex-start;
 }
@@ -1061,6 +1050,17 @@ textarea {
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .about-cta {
