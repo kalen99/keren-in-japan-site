@@ -223,6 +223,35 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ============================
+     SCROLL ANIMATIONS (INTERSECTION OBSERVER)
+  ============================ */
+  // Add fade-in-up animation to elements as they enter viewport
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with fade-in-up class
+  document.querySelectorAll('.fade-in-up').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Also add animation classes to service cards and sections dynamically
+  document.querySelectorAll('.service-card, .media-hub-card, .about-section, .services-home-section').forEach(el => {
+    el.classList.add('fade-in-up');
+    observer.observe(el);
+  });
+
+  /* ============================
      COLLAPSIBLE MEDIA SECTIONS
   ============================ */
   const mediaToggles = document.querySelectorAll('.media-section-toggle');

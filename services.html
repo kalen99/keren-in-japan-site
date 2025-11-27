@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>שירותים יפנים — Keren in Japan</title>
-
+  <title>שירותים יפנים – Keren in Japan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+  <script defer src="assets/js/script.js"></script>
 </head>
 <body>
 
@@ -14,14 +16,14 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="index.html" class="brand" aria-label="Keren in Japan">Keren in Japan</a>
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label=" תפריט">
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="תפריט">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
       <nav id="primary-nav" class="nav">
         <ul>
-          <li><a href="services.html">שירותים יפנים</a></li>
+          <li><a href="services.html" class="active">שירותים יפנים</a></li>
           <li><a href="media.html">הופעות במדיה</a></li>
           <li><a href="articles.html">מאמרים וכתבות</a></li>
           <li><a href="about.html">קצת עליי</a></li>
@@ -31,189 +33,120 @@
     </div>
   </header>
 
-  <main>
-
+  <main id="main">
+    
+    <!-- PAGE HERO -->
     <section class="services-hero">
-      <h1>השירותים שלי</h1>
-      <p class="muted">הרצאות, סיורים ו-1on1 — חוויות מותאמות אישית.</p>
-    </section>
-
-    <!-- LECTURES -->
-    <section id="lectures" class="services-section">
-      <header class="section-head container"><h2>הרצאות</h2></header>
-
-      <div class="services-swiper lectures-swiper swiper container">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/lectures/japanbegin.jpeg" alt="יפן למתחילים">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>יפן למתחילים</h3>
-              <p>סקירה חיה על ההיסטוריה, התרבות והיומיום היפני — מתאים לקהל כללי ולארגונים.</p>
-              <a class="btn btn-primary" href="contact.html?service=הרצאה%20יפן%20למתחילים">אני רוצה!</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/lectures/innovation.jpg" alt="חדשנות ויזמות">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>חדשנות ויזמות</h3>
-              <p>השוואה בין המודלים היפניים והישראלים, תובנות פרקטיות לארגונים וסטארטאפים.</p>
-              <a class="btn btn-primary" href="contact.html?service=הרצאה%20חדשנות">אני רוצה!</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/lectures/family.jpg" alt="חינוך ומשפחה">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>חינוך ומשפחה</h3>
-              <p>מערכת החינוך היפנית, תופעות חברתיות והשפעה על חיי המשפחה.</p>
-              <a class="btn btn-primary" href="contact.html?service=הרצאה%20חינוך">אני רוצה!</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/lectures/business.jpg" alt="שוק העבודה">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>שוק העבודה ביפן</h3>
-              <p>היררכיה, תרבות ארגונית ושינויים עכשוויים — הרצאה מותאמת לאנשי עסקים.</p>
-              <a class="btn btn-primary" href="contact.html?service=הרצאה%20עבודה">אני רוצה!</a>
-            </div>
-          </div>
-
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+      <div class="container">
+        <h1>שירותים יפנים</h1>
+        <p>סיורים בטוקיו, הרצאות על יפן, ומפגשים אחד על אחד למי שרוצה להכיר את יפן לעומק</p>
       </div>
     </section>
 
-    <!-- TOURS -->
-    <section id="tours" class="services-section">
-      <header class="section-head container"><h2>סיורים</h2></header>
-
-      <div class="services-swiper tours-swiper swiper container">
-        <div class="swiper-wrapper">
-
+    <!-- JAPAN 1on1 SECTION -->
+    <section class="services-section oneonone">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Japan 1on1</h2>
+        <div class="services-swiper">
           <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/tours/shibuya.jpg" alt="סיור שיבויה">
+            <img src="https://raw.githubusercontent.com/kalen99/keren-in-japan-site/main/assets/images/1on1/1on1.png" 
+                 alt="Japan 1on1" 
+                 class="slide-img" 
+                 loading="lazy">
             <div class="slide-overlay"></div>
             <div class="slide-content">
-              <h3>סיור שיבויה</h3>
-              <p>שילוב של תרבות פופ, רחובות הומה-אדם וחוויות לילה אותנטיות.</p>
-              <a class="btn btn-primary" href="contact.html?service=סיור%20שיבויה">אני רוצה!</a>
+              <h3>Japan 1on1</h3>
+              <p>אהבת ערב ושיחה אינטימית בטוקיו</p>
+              <a href="contact.html?service=Japan 1on1" class="btn btn-primary">צור קשר</a>
             </div>
           </div>
-
-          <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/tours/asakusa.jpg" alt="סיור אסאקוסה">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>סיור אסאקוסה</h3>
-              <p>מקדשים, שווקים ומסורת — סיור צבעוני ועשיר בתרבות.</p>
-              <a class="btn btn-primary" href="contact.html?service=סיור%20אסאקוסה">אני רוצה!</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="slide-img" src="assets/images/tours/business.jpg" alt="סיור עסקים">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <h3>סיור עסקים</h3>
-              <p>היכרות עם מרכזי עסקים, מטא-תרבות העבודה והזדמנויות עסקיות.</p>
-              <a class="btn btn-primary" href="contact.html?service=סיור%20עסקים">אני רוצה!</a>
-            </div>
-          </div>
-
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
       </div>
     </section>
 
-    <!-- JAPAN 1on1 -->
-    <section id="japan1on1" class="services-section oneonone">
-      <header class="section-head container"><h2>Japan 1on1</h2></header>
-
-      <div class="services-swiper oneonone-swiper swiper container">
-        <div class="swiper-wrapper">
-
+    <!-- LECTURES SECTION -->
+    <section class="services-section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">הרצאות ופמי ענן</h2>
+        <div class="services-swiper">
           <div class="swiper-slide">
-            <img class="slide-img" src="https://raw.githubusercontent.com/kalen99/keren-in-japan-site/main/assets/images/1on1/1on1.png" alt="Japan 1on1">
+            <img src="assets/images/lectures/lecture-placeholder.jpg" 
+                 alt="הרצאות על יפן" 
+                 class="slide-img" 
+                 loading="lazy">
             <div class="slide-overlay"></div>
             <div class="slide-content">
-              <h3>Japan 1on1 — ארוחת ערב ושיחה</h3>
-              <p>פגישה אישית, ארוחת ערב וחוויה אינטימית כדי לענות על כל השאלות שלכם לגבי יפן.</p>
-              <a class="btn btn-primary" href="contact.html?service=Japan%201on1">אני רוצה!</a>
+              <h3>הרצאות ופמי ענן</h3>
+              <p>על יפן, הדעות, הרבות ועוד</p>
+              <a href="contact.html?service=הרצאות ופמי ענן" class="btn btn-primary">צור קשר</a>
             </div>
           </div>
-
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- TOURS SECTION -->
+    <section class="services-section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">סיורים בטוקיו</h2>
+        <div class="services-swiper">
+          <div class="swiper-slide">
+            <img src="assets/images/tours/tour-placeholder.jpg" 
+                 alt="סיורים בטוקיו" 
+                 class="slide-img" 
+                 loading="lazy">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <h3>סיורים בטוקיו</h3>
+              <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
+              <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section">
+      <div class="container final-cta">
+        <h2>מוכנים להתחיל?</h2>
+        <p>בואו נדבר על השירות שמתאים לכם</p>
+        <a href="contact.html" class="btn btn-primary">צרו קשר</a>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <strong>Keren in Japan</strong>
-        <p>סיורים, הרצאות ועוד, יפן זו קרן..</p>
+      <div class="footer-column">
+        <strong class="footer-brand">Keren in Japan</strong>
+        <p class="footer-description">סיורים, הרצאות ועוד, יפן זו קרן..</p>
       </div>
-      <nav aria-label="קישורי תחתית">
-        <ul>
-          <li><a href="services.html">שירותים</a></li>
-          <li><a href="media.html">מדיה</a></li>
-          <li><a href="articles.html">שיתופי פעולה</a></li>
-          <li><a href="about.html">עליי</a></li>
-          <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-      </nav>
-      <div class="legal">
-        <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+      <div class="footer-column">
+        <h3>קישורים מהירים</h3>
+        <nav aria-label="קישורי תחתית">
+          <ul>
+            <li><a href="services.html">שירותים</a></li>
+            <li><a href="media.html">מדיה</a></li>
+            <li><a href="articles.html">שיתופי פעולה</a></li>
+            <li><a href="about.html">עליי</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-column">
+        <h3>צור קשר</h3>
+        <div class="footer-contact">
+          <p class="footer-contact-item">יפן, טוקיו</p>
+        </div>
       </div>
     </div>
+    <div class="copyright-bar">
+      <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+    </div>
   </footer>
-
-  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    // init Swiper instances
-    new Swiper('.lectures-swiper', {
-      loop: true,
-      slidesPerView: 1,
-      navigation: { nextEl: '.lectures-swiper .swiper-button-next', prevEl: '.lectures-swiper .swiper-button-prev' },
-      pagination: { el: '.lectures-swiper .swiper-pagination', clickable: true }
-    });
-
-    new Swiper('.tours-swiper', {
-      loop: true,
-      slidesPerView: 1,
-      navigation: { nextEl: '.tours-swiper .swiper-button-next', prevEl: '.tours-swiper .swiper-button-prev' },
-      pagination: { el: '.tours-swiper .swiper-pagination', clickable: true }
-    });
-
-    new Swiper('.oneonone-swiper', {
-      loop: true,
-      slidesPerView: 1,
-      navigation: { nextEl: '.oneonone-swiper .swiper-button-next', prevEl: '.oneonone-swiper .swiper-button-prev' },
-      pagination: { el: '.oneonone-swiper .swiper-pagination', clickable: true }
-    });
-
-    // set current year in footer
-    document.addEventListener('DOMContentLoaded', () => {
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    });
-  </script>
 
 </body>
 </html>

@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Keren in Japan יפן זו קרן</title>
-  <meta name="description" content="קרן ביפן: סיורים מודרכים, הרצאות,יפן 1על1 ." />
+  <title>Keren in Japan – להבין את יפן האמיתית</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/script.js"></script>
 </head>
 <body>
-  <!-- Skip link -->
-  <a class="skip-link" href="#main"> לתוכן</a>
 
-  <!-- HEADER -->
+  <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="index.html" class="brand" aria-label="Keren in Japan">Keren in Japan</a>
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label=" תפריט">
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="תפריט">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -34,68 +34,39 @@
   </header>
 
   <main id="main">
-    <!-- HERO: Centered with carousel on the side -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy hero-copy-centered">
-          <h1>להבין את יפן האמיתית, מבפנים.</h1>
-          <p class="hero-subtitle">
-            לכאלה שמחפשים את העומק, הקסם והמבט האמיתי של מי שחיה את יפן כל יום.
-          </p>
-          <div class="cta-group">
-            <a href="services.html" class="btn btn-primary">לשירותים</a>
-            <a href="contact.html" class="btn btn-ghost">דברו איתי</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-slider" aria-hidden="true" tabindex="0">
-            <div class="hero-slide is-active">
-              <img src="assets/images/index/index1.jpg" alt="טוקיו" loading="lazy">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/index/index2.jpg" alt="יפן" loading="lazy">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/index/index3.jpg" alt="תרבות יפנית" loading="lazy">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/index/index4.jpg" alt="טיול ביפן" loading="lazy">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/index/index5.jpg" alt="חוויה ביפן" loading="lazy">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/index/index6.jpg" alt="קרן ביפן" loading="lazy">
-            </div>
-          </div>
-          <!-- Slider controls -->
-          <div class="hero-controls" aria-hidden="false">
-            <button class="hero-prev" aria-label="תמונה קודמת">‹</button>
-            <button class="hero-play" aria-pressed="false" aria-label="הפעל/הפסק סיבוב תמונות">⏯</button>
-            <button class="hero-next" aria-label="תמונה הבאה">›</button>
-          </div>
-          <div id="heroStatus" class="visually-hidden" aria-live="polite"></div>
-        </div>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1 class="hero-headline">להבין את יפן האמיתית, מבפנים.</h1>
+        <p class="hero-subheadline">רוצים לדעת יותר על יפן, ולא יודעים איפה להתחיל? צרו קשר וביחד נבין איזו יפן מתאימה לכם היום</p>
+        <a href="contact.html" class="btn btn-primary btn-hero">בואו נדבר</a>
       </div>
     </section>
 
-    <!-- FEATURED SERVICES -->
-    <section class="section">
+    <!-- SERVICES SECTION -->
+    <section class="services-home-section">
       <div class="container">
-        <h2>מה אני מציעה</h2>
+        <h2 class="services-home-title">השירותים שלנו</h2>
         <div class="featured-services">
-          <a href="services.html#tours" class="service-card">
-            <span class="service-badge">סיורים בטוקיו</span>
+          
+          <!-- Card 1: Japan 1on1 -->
+          <a href="contact.html?service=Japan 1on1" class="service-card">
+            <div class="service-badge">Japan 1on1</div>
+            <p>אהבת ערב ושיחה אינטימית בטוקיו</p>
+          </a>
+
+          <!-- Card 2: Lectures -->
+          <a href="contact.html?service=הרצאות ופמי ענן" class="service-card">
+            <div class="service-badge">הרצאות ופמי ענן</div>
+            <p>על יפן, הדעות, הרבות ועוד</p>
+          </a>
+
+          <!-- Card 3: Tours -->
+          <a href="contact.html?service=סיורים בטוקיו" class="service-card">
+            <div class="service-badge">סיורים בטוקיו</div>
             <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
           </a>
-          <a href="services.html#lectures" class="service-card">
-            <span class="service-badge">הרצאות וימי עיון</span>
-            <p>על יפן, חדשנות, תרבות ועוד</p>
-          </a>
-          <a href="services.html#japan1on1" class="service-card">
-            <span class="service-badge">Japan 1on1</span>
-            <p>ארוחת ערב ושיחה אינטימית בטוקיו</p>
-          </a>
+
         </div>
       </div>
     </section>
@@ -103,35 +74,49 @@
     <!-- FINAL CTA -->
     <section class="section">
       <div class="container final-cta">
-        <h2>רוצים לדעת יותר על יפן, ולא יודעים איפה להתחיל?</h2>
-        <p>
-          צרו קשר וביחד נבין איזו יפן מתאימה לכם היום
-        </p>
-        <a href="contact.html" class="btn btn-primary">בואו נדבר</a>
+        <h2>מוכנים להכיר את יפן?</h2>
+        <p>בואו נדבר על מה שמעניין אתכם</p>
+        <a href="contact.html" class="btn btn-primary">צרו קשר</a>
       </div>
     </section>
+
   </main>
 
-  <!-- FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <strong>Keren in Japan</strong>
-        <p>סיורים, הרצאות ועוד, יפן זו קרן..</p>
+      <div class="footer-column">
+        <strong class="footer-brand">Keren in Japan</strong>
+        <p class="footer-description">סיורים, הרצאות ועוד, יפן זו קרן..</p>
       </div>
-      <nav aria-label="קישורי תחתית">
-        <ul>
-          <li><a href="services.html">שירותים</a></li>
-          <li><a href="media.html">מדיה</a></li>
-          <li><a href="articles.html">שיתופי פעולה</a></li>
-          <li><a href="about.html">עליי</a></li>
-          <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-      </nav>
-      <div class="legal">
-        <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+      <div class="footer-column">
+        <h3>קישורים מהירים</h3>
+        <nav aria-label="קישורי תחתית">
+          <ul>
+            <li><a href="services.html">שירותים</a></li>
+            <li><a href="media.html">מדיה</a></li>
+            <li><a href="articles.html">שיתופי פעולה</a></li>
+            <li><a href="about.html">עליי</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-column">
+        <h3>צור קשר</h3>
+        <div class="footer-contact">
+          <p class="footer-contact-item">יפן, טוקיו</p>
+        </div>
       </div>
     </div>
+    <div class="copyright-bar">
+      <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+    </div>
   </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

@@ -4,67 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>קצת עליי Keren in Japan</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <style>
-    .about-wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
-    }
-
-    .about-head {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .about-head h1 {
-      margin-bottom: 0.5rem;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: start;
-    }
-
-    .about-text p {
-      margin-bottom: 1rem;
-      line-height: 1.8;
-    }
-
-    .about-photo-wrap {
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-photo {
-      max-width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 0 28px rgba(0,0,0,0.2);
-      object-fit: cover;
-    }
-
-    .about-cta {
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 800px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-photo-wrap {
-        order: -1; /* show photo first on mobile if you prefer */
-      }
-    }
-  </style>
+  <script defer src="assets/js/script.js"></script>
 </head>
 <body>
-
-  <body>
 
   <!-- SITE HEADER -->
   <header class="site-header">
@@ -134,13 +80,15 @@
 
   </main>
 
-    <!-- SITE FOOTER -->
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <strong>Keren in Japan</strong>
-          <p>סיורים, הרצאות ועוד, יפן זו קרן..</p>
-        </div>
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <strong class="footer-brand">Keren in Japan</strong>
+        <p class="footer-description">סיורים, הרצאות ועוד, יפן זו קרן..</p>
+      </div>
+      <div class="footer-column">
+        <h3>קישורים מהירים</h3>
         <nav aria-label="קישורי תחתית">
           <ul>
             <li><a href="services.html">שירותים</a></li>
@@ -150,12 +98,18 @@
             <li><a href="contact.html">צור קשר</a></li>
           </ul>
         </nav>
-        <div class="legal">
-          <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+      </div>
+      <div class="footer-column">
+        <h3>צור קשר</h3>
+        <div class="footer-contact">
+          <p class="footer-contact-item">יפן, טוקיו</p>
         </div>
       </div>
-    </footer>
+    </div>
+    <div class="copyright-bar">
+      <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+    </div>
+  </footer>
 
-  </body>
-  </html>
-
+</body>
+</html>
