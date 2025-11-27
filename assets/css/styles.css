@@ -1008,12 +1008,11 @@ textarea {
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 30% 70%;
+  display: flex;
   gap: 3rem;
   align-items: center;
   padding: 3rem 0;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -1039,7 +1038,8 @@ textarea {
 }
 
 .about-text {
-  grid-column: 2;
+  flex: 1;
+  padding-right: 2rem;
 }
 
 .about-text p {
@@ -1049,13 +1049,15 @@ textarea {
 }
 
 .about-photo-wrap {
+  flex: 0 0 70%;
+  max-width: 70%;
   display: flex;
-  justify-content: center;
-  grid-column: 1;
+  justify-content: flex-start;
 }
 
 .about-photo {
   width: 100%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   object-fit: cover;
@@ -1081,11 +1083,47 @@ textarea {
   }
   
   .about-grid {
-    grid-template-columns: 1fr;
+    position: relative;
+    display: block;
+    padding: 0;
   }
   
   .about-photo-wrap {
-    order: -1;
+    position: relative;
+    max-width: 100%;
+    flex: none;
+  }
+  
+  .about-photo {
+    opacity: 0.7;
+    border-radius: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .about-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .about-text p {
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.7);
+    font-size: 1rem;
+  }
+  
+  .about-head h1,
+  .about-head p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.7);
   }
 }
 
