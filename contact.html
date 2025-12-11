@@ -42,18 +42,24 @@
     </div>
 
     <!-- FORM -->
-<form name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      class="contact-form">
+    <form action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form">
 
-  <!-- Required Netlify field -->
-  <input type="hidden" name="form-name" value="contact" />
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="10eeffad-4bf1-4cd4-a4b1-7bca1b141662">
+      <input type="hidden" name="subject" value="הודעה חדשה מאתר Keren in Japan">
+      <input type="hidden" name="redirect" value="https://kereninjapan.com/contact.html?success=true">
 
-  <!-- Honeypot (anti-spam) -->
-  <input type="text" name="bot-field" style="display:none;">
+      <div>
+        <label>שם מלא <span style="color: var(--color-accent-red);">*</span></label>
+        <input type="text" name="name" placeholder="איך קוראים לכם?" required />
+      </div>
 
+      <div>
+        <label>אימייל <span style="color: var(--color-accent-red);">*</span></label>
+        <input type="email" name="email" placeholder="כתובת המייל שלכם" required />
+      </div>
 
       <div class="grid-2">
         <div>
@@ -63,7 +69,7 @@
 
         <div>
           <label>תאריכים משוערים</label>
-          <input name="dates" placeholder="למשל: סוף מרץ, או 10–18 באוקטובר" />
+          <input type="text" name="dates" placeholder="למשל: סוף מרץ, או 10–18 באוקטובר" />
         </div>
       </div>
 
