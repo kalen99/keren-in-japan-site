@@ -177,9 +177,9 @@ img {
 }
 
 .nav-wrap {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 0 40px;
 }
@@ -192,6 +192,8 @@ img {
   transition: opacity 0.3s ease;
   display: inline-flex;
   align-items: center;
+  grid-column: 1;
+  justify-self: start;
 }
 
 .brand:hover {
@@ -204,6 +206,11 @@ img {
   width: auto;
   display: block;
   transition: opacity 0.3s ease;
+}
+
+.nav {
+  grid-column: 2;
+  justify-self: center;
 }
 
 .nav ul {
