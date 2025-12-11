@@ -1977,23 +1977,27 @@ small, .small-text {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE - TABLET & MOBILE
    ========================= */
+
+/* Tablet Layout (max-width: 900px) */
 @media (max-width: 900px) {
+  /* Services Grid - Single Column for Tablet */
   .featured-services {
-    grid-template-columns: 1fr !important;
-    gap: 1.25rem !important;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
   
   .service-card {
-    flex-direction: column !important;
-    align-items: flex-end !important;
+    flex-direction: column;
+    align-items: flex-end;
   }
   
   .service-badge {
-    align-self: flex-end !important;
+    align-self: flex-end;
   }
-}
+  
+  /* Content Grids */
   .about-grid {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -2021,49 +2025,50 @@ small, .small-text {
   }
 }
 
+/* Mobile Layout (max-width: 768px) */
 @media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column-reverse;
-    align-items: stretch;
+  /* ===== GLOBAL MOBILE STYLES ===== */
+  .container {
+    padding: 0 16px;
   }
-
-  .hero {
-    padding: 2rem 16px 3rem;
+  
+  body {
+    font-size: 16px;
   }
-
-  .hero-copy h1 {
-    font-size: 1.75rem;
+  
+  h1 {
+    font-size: 1.875rem;
     line-height: 1.3;
-    margin-bottom: 1rem;
   }
   
-  .hero-subtitle {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  p {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.6;
   }
   
-  /* Make CTA buttons full width and more touchable */
-  .btn {
-    min-height: 48px;
-    padding: 14px 32px;
-    font-size: 1rem;
+  /* Touch-friendly interactive elements (44px minimum) */
+  a, button, input, select, textarea {
+    min-height: 44px;
   }
   
-  .cta-group {
-    width: 100%;
-  }
-  
-  .cta-group .btn {
-    width: 100%;
-    max-width: 320px;
+  .section {
+    padding: 2rem 0;
   }
 
-  /* Show burger button */
+  /* ===== HEADER & NAVIGATION ===== */
   .nav-toggle {
     display: block;
   }
 
-  /* Full-screen mobile menu overlay */
   .nav {
     position: fixed;
     top: 0;
@@ -2081,14 +2086,12 @@ small, .small-text {
     z-index: 999;
   }
 
-  /* When menu is open */
   .nav.is-open {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
   }
 
-  /* Stack links vertically with larger spacing */
   .nav ul {
     flex-direction: column;
     gap: 60px;
@@ -2098,21 +2101,48 @@ small, .small-text {
   
   .nav a {
     font-size: 32px;
+    padding: 12px 0;
   }
 
-  .videos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1rem;
+  /* ===== HERO SECTION ===== */
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 1.5rem;
   }
 
-  .video-card h3 {
-    font-size: 0.9rem;
+  .hero {
+    padding: 2rem 16px 3rem;
   }
 
-  .video-card p {
-    font-size: 0.85rem;
+  .hero-copy h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ===== BUTTONS & CTAs ===== */
+  .btn {
+    min-height: 48px;
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+  
+  .cta-group {
+    width: 100%;
+  }
+  
+  .cta-group .btn {
+    width: 100%;
+    max-width: 320px;
   }
 
+  /* ===== SERVICES SECTION ===== */
   .services-home-section {
     padding: 2.5rem 16px;
   }
@@ -2128,36 +2158,36 @@ small, .small-text {
   }
 
   .service-card {
-    min-height: 200px !important;
-    gap: 1.5rem !important;
-    padding: 2rem 1.75rem !important;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-    justify-content: flex-start !important;
-    text-align: right !important;
-    border-radius: 24px !important;
-    direction: rtl !important;
+    min-height: 200px;
+    gap: 1.5rem;
+    padding: 2rem 1.75rem;
+    border-radius: 24px;
+    direction: rtl;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: right;
   }
 
   .service-badge {
-    min-width: 180px !important;
-    padding: 1rem 2.25rem !important;
-    font-size: 1.1rem !important;
+    min-width: 180px;
+    padding: 1rem 2.25rem;
+    font-size: 1.1rem;
+    border-radius: 60px;
     flex-shrink: 0;
-    align-self: flex-end !important;
-    border-radius: 60px !important;
+    align-self: flex-end;
   }
 
   .service-card p {
-    font-size: 1.05rem !important;
-    line-height: 1.65 !important;
-    text-align: right !important;
-    margin: 0 !important;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    text-align: right;
+    margin: 0;
     width: 100%;
     direction: rtl;
   }
   
-  /* Final CTA section */
+  /* ===== FINAL CTA ===== */
   .final-cta {
     padding: 0 16px;
     margin-bottom: 60px;
@@ -2171,12 +2201,58 @@ small, .small-text {
     font-size: 1rem;
   }
 
+  /* ===== MEDIA & VIDEO GRIDS ===== */
+  .videos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .video-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .video-card p {
+    font-size: 0.85rem;
+  }
+
   .media-grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .media-section-toggle {
     padding: 1rem 1.25rem;
+  }
+  
+  /* ===== THANK YOU PAGE ===== */
+  .thank-you-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .thank-you-image {
+    flex: none;
+    max-width: 100%;
+  }
+  
+  .thank-you-content h1 {
+    font-size: 2rem;
+  }
+  
+  .thank-you-actions {
+    flex-direction: column;
+  }
+  
+  .thank-you-actions .btn {
+    width: 100%;
+  }
+  
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .social-icon-link {
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -2267,94 +2343,7 @@ small, .small-text {
   height: 24px;
 }
 
-@media (max-width: 768px) {
-  .thank-you-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .thank-you-image {
-    flex: none;
-    max-width: 100%;
-  }
-  
-  .thank-you-content h1 {
-    font-size: 2rem;
-  }
-  
-  .thank-you-actions {
-    flex-direction: column;
-  }
-  
-  .thank-you-actions .btn {
-    width: 100%;
-  }
-  
-  .social-icons {
-    gap: 1rem;
-  }
-  
-  .social-icon-link {
-    width: 45px;
-    height: 45px;
-  }
-}
-
-/* =========================
-   GLOBAL MOBILE OPTIMIZATIONS
-   ========================= */
-@media (max-width: 768px) {
-  /* Ensure all containers have proper mobile padding */
-  .container {
-    padding: 0 16px;
-  }
-  
-  /* Base typography adjustments */
-  body {
-    font-size: 16px;
-  }
-  
-  h1 {
-    font-size: 1.875rem;
-    line-height: 1.3;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
-  
-  h3 {
-    font-size: 1.25rem;
-  }
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* Ensure all interactive elements have minimum 44px touch target */
-  a, button, input, select, textarea {
-    min-height: 44px;
-  }
-  
-  /* Make all links more touchable */
-  .nav a {
-    padding: 12px 0;
-  }
-  
-  /* Section spacing */
-  .section {
-    padding: 2rem 0;
-  }
-  
-  /* Reduce large spacing values for mobile */
-  .hero-inner {
-    gap: 1.5rem;
-  }
-}
-
-/* Small mobile devices (max-width: 480px) */
+/* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .site-header {
     height: 60px;
