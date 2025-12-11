@@ -190,11 +190,19 @@ img {
   font-size: 24px;
   color: var(--color-text-primary);
   transition: opacity 0.3s ease;
+  display: inline-block;
 }
 
 .brand:hover {
   opacity: 0.8;
   text-decoration: none;
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s ease;
 }
 
 .nav ul {
