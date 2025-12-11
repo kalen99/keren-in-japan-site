@@ -2071,66 +2071,69 @@ small, .small-text {
 
   .nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: var(--color-bg-primary);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
+    top: 70px;
+    right: 16px;
+    left: 16px;
+    max-width: 360px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(25, 45, 91, 0.15);
+    transform: translateY(-20px);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 9999;
-    overflow-y: auto;
+    overflow: hidden;
   }
 
   .nav.is-open {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
 
   .nav ul {
     flex-direction: column;
-    gap: 32px;
+    gap: 0;
     margin: 0;
-    padding: 80px 40px 40px;
+    padding: 16px;
     text-align: center;
     list-style: none;
     width: 100%;
-    max-width: 400px;
   }
   
   .nav li {
     width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .nav li:last-child {
+    border-bottom: none;
   }
   
   .nav a {
-    font-size: 24px;
-    padding: 16px 24px;
+    font-size: 18px;
+    padding: 16px 20px;
     display: block;
     width: 100%;
     color: var(--color-text-primary);
-    background: var(--color-bg-secondary);
-    border-radius: 12px;
+    background: transparent;
     transition: all 0.2s ease;
     font-weight: 500;
+    text-align: right;
   }
   
   .nav a:hover {
-    background: var(--color-accent-red);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(238, 130, 124, 0.3);
+    background: var(--color-bg-secondary);
+    color: var(--color-accent-red);
   }
   
   .nav a.btn-primary {
     background: var(--color-accent-red);
     color: #ffffff;
+    border-radius: 12px;
+    margin-top: 8px;
   }
   
   .nav a.btn-primary:hover {
