@@ -483,7 +483,8 @@ img {
   margin: 0 0 1.5rem;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #bbbbc7;
+  color: var(--color-text-primary);
+  text-decoration: underline;
 }
 
 /* CTA buttons */
