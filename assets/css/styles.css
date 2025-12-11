@@ -1400,6 +1400,9 @@ small, .small-text {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.footer-grid ul:not(.footer-links-grid) {
   display: flex;
   flex-direction: column;
   gap: 12px;
