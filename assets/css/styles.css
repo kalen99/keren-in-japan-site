@@ -168,7 +168,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 88px;
+  height: 110px;
   background: rgba(245, 244, 242, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(25, 45, 91, 0.1);
@@ -179,9 +179,9 @@ img {
 .nav-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  gap: 40px;
+  padding: 0 40px;
 }
 
 .brand {
@@ -192,7 +192,6 @@ img {
   transition: opacity 0.3s ease;
   display: inline-flex;
   align-items: center;
-  margin-right: 60px;
 }
 
 .brand:hover {
