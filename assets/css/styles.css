@@ -200,7 +200,7 @@ img {
 }
 
 .brand-logo {
-  height: 48px;
+  height: 96px;
   width: auto;
   display: block;
   transition: opacity 0.3s ease;
