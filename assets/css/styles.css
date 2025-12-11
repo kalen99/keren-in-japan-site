@@ -86,12 +86,12 @@ html {
 :root {
   --color-bg-primary: #f5f4f2;
   --color-bg-secondary: #e8e6e3;
-  --color-accent-red: #fcb32b;
-  --color-accent-red-hover: #fdc454;
+  --color-accent-red: #ee827c;
+  --color-accent-red-hover: #f39a92;
   --color-text-primary: #192d5b;
   --color-text-secondary: #2a4170;
   --color-border: #dddbd8;
-  --color-border-red: #fcb32b;
+  --color-border-red: #ee827c;
   
   --font-primary: 'Noto Sans Hebrew', sans-serif;
   
@@ -109,7 +109,7 @@ html {
   --shadow-sm: 0 2px 8px rgba(25, 45, 91, 0.1);
   --shadow-md: 0 4px 12px rgba(25, 45, 91, 0.15);
   --shadow-lg: 0 8px 20px rgba(25, 45, 91, 0.2);
-  --shadow-red: 0 4px 12px rgba(252, 179, 43, 0.3);
+  --shadow-red: 0 4px 12px rgba(238, 130, 124, 0.3);
 }
 
 body {
@@ -292,7 +292,7 @@ img {
   background: var(--color-accent-red-hover);
   border-color: var(--color-accent-red-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(252, 179, 43, 0.4);
+  box-shadow: 0 6px 16px rgba(238, 130, 124, 0.4);
 }
 
 .btn-ghost {
@@ -323,7 +323,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(252, 179, 43, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(238, 130, 124, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -670,7 +670,7 @@ img {
 .contact-form select:focus {
   outline: none;
   border-color: var(--color-accent-red);
-  box-shadow: 0 0 0 3px rgba(252, 179, 43, 0.2);
+  box-shadow: 0 0 0 3px rgba(238, 130, 124, 0.2);
 }
 
 textarea {
@@ -1158,8 +1158,8 @@ textarea {
 
 .service-card:hover {
   transform: translateY(-6px);
-  border-color: #fcb32b;
-  box-shadow: 0 8px 24px rgba(252, 179, 43, 0.25);
+  border-color: #ee827c;
+  box-shadow: 0 8px 24px rgba(238, 130, 124, 0.25);
 }
 
 .service-badge {
@@ -1168,8 +1168,8 @@ textarea {
   justify-content: center;
   min-width: 120px;
   padding: 0.8rem 1.6rem;
-  background: #fcb32b;
-  color: #192d5b;
+  background: #ee827c;
+  color: #ffffff;
   border-radius: 999px;
   aspect-ratio: 1 / 0.6;
   font-weight: 700; /* bold badge text */
@@ -1177,7 +1177,7 @@ textarea {
   text-align: center;
   word-wrap: break-word;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(252, 179, 43, 0.3);
+  box-shadow: 0 2px 8px rgba(238, 130, 124, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -1223,8 +1223,8 @@ small, .small-text {
 }
 
 .service-card:hover .service-badge {
-  background: #fdc454;
-  box-shadow: 0 4px 12px rgba(252, 179, 43, 0.5);
+  background: #f39a92;
+  box-shadow: 0 4px 12px rgba(238, 130, 124, 0.5);
 }
 
 .service-card h3 {
@@ -1617,7 +1617,7 @@ small, .small-text {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: rgba(252, 179, 43, 0.9);
+  background: rgba(238, 130, 124, 0.9);
 }
 
 /* Swiper pagination */
@@ -1730,7 +1730,7 @@ small, .small-text {
 
 .media-package:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(252, 179, 43, 0.15);
+  box-shadow: 0 16px 48px rgba(238, 130, 124, 0.15);
 }
 
 .media-package-image {
@@ -1799,10 +1799,10 @@ small, .small-text {
 
 .btn-secondary:hover {
   background: var(--color-accent-red);
-  color: var(--color-text-primary);
+  color: #ffffff;
   border-color: var(--color-accent-red);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(252, 179, 43, 0.2);
+  box-shadow: 0 8px 20px rgba(238, 130, 124, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -2074,9 +2074,9 @@ small, .small-text {
 
 .social-icon-link:hover {
   background: var(--color-accent-red);
-  color: var(--color-text-primary);
+  color: #ffffff;
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(252, 179, 43, 0.4);
+  box-shadow: 0 8px 20px rgba(238, 130, 124, 0.4);
 }
 
 .social-icon-link svg {
