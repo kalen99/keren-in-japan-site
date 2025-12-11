@@ -2115,25 +2115,30 @@ small, .small-text {
   
   .featured-services {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .service-card {
-    min-height: 240px;
-    gap: 1rem;
-    padding: 1.75rem 1.25rem;
-    min-height: 48px;
+    min-height: 140px;
+    max-height: 160px;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .service-badge {
-    min-width: 100px;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    min-width: auto;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
   .service-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: right;
   }
   
   /* Final CTA section */
