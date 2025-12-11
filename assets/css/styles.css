@@ -1981,8 +1981,8 @@ small, .small-text {
    ========================= */
 @media (max-width: 900px) {
   .featured-services {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 }
   .about-grid {
