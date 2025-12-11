@@ -1152,7 +1152,7 @@ textarea {
   gap: 1.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   min-height: 320px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .service-card:hover {
