@@ -2075,15 +2075,17 @@ small, .small-text {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(245, 244, 242, 0.98);
+    background: var(--color-bg-primary);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease-in-out;
-    z-index: 999;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 9999;
+    overflow-y: auto;
   }
 
   .nav.is-open {
@@ -2094,14 +2096,45 @@ small, .small-text {
 
   .nav ul {
     flex-direction: column;
-    gap: 60px;
+    gap: 32px;
     margin: 0;
+    padding: 80px 40px 40px;
     text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .nav li {
+    width: 100%;
   }
   
   .nav a {
-    font-size: 32px;
-    padding: 12px 0;
+    font-size: 24px;
+    padding: 16px 24px;
+    display: block;
+    width: 100%;
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .nav a:hover {
+    background: var(--color-accent-red);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(238, 130, 124, 0.3);
+  }
+  
+  .nav a.btn-primary {
+    background: var(--color-accent-red);
+    color: #ffffff;
+  }
+  
+  .nav a.btn-primary:hover {
+    background: var(--color-accent-red-hover);
   }
 
   /* ===== HERO SECTION ===== */
