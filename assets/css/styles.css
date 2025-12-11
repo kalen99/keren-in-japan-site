@@ -1408,9 +1408,7 @@ small, .small-text {
 .footer-links-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
   gap: 6px 20px;
-  grid-auto-flow: column;
 }
 
 .footer-grid ul li a {
