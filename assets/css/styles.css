@@ -190,7 +190,8 @@ img {
   font-size: 24px;
   color: var(--color-text-primary);
   transition: opacity 0.3s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
 .brand:hover {
@@ -199,7 +200,7 @@ img {
 }
 
 .brand-logo {
-  height: 50px;
+  height: 32px;
   width: auto;
   display: block;
   transition: opacity 0.3s ease;
