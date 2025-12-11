@@ -177,11 +177,13 @@ img {
 }
 
 .nav-wrap {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  max-width: 1100px;
   padding: 0 40px;
+  margin: 0 auto;
 }
 
 .brand {
@@ -192,8 +194,6 @@ img {
   transition: opacity 0.3s ease;
   display: inline-flex;
   align-items: center;
-  grid-column: 1;
-  justify-self: start;
 }
 
 .brand:hover {
@@ -206,11 +206,6 @@ img {
   width: auto;
   display: block;
   transition: opacity 0.3s ease;
-}
-
-.nav {
-  grid-column: 2;
-  justify-self: center;
 }
 
 .nav ul {
