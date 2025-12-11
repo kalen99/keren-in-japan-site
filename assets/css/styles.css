@@ -1339,7 +1339,7 @@ small, .small-text {
 .site-footer {
   background: var(--color-bg-secondary);
   border-top: 1px solid var(--color-border);
-  padding: 32px 40px 24px;
+  padding: 16px 40px 12px;
   width: 100%;
 }
 
@@ -1348,7 +1348,7 @@ small, .small-text {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 40px;
   justify-content: space-between;
 }
 
@@ -1361,7 +1361,7 @@ small, .small-text {
   font-weight: 600;
   font-size: 18px;
   color: var(--color-text-primary);
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0;
 }
 
 .footer-brand {
@@ -1369,7 +1369,7 @@ small, .small-text {
   font-weight: 700;
   font-size: 20px;
   color: var(--color-text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   display: block;
 }
 
@@ -1382,9 +1382,9 @@ small, .small-text {
 }
 
 .footer-image-placeholder {
-  margin-top: 16px;
-  width: 150px;
-  height: 150px;
+  margin-top: 8px;
+  width: 100px;
+  height: 100px;
   background: var(--color-bg-primary);
   border-radius: 8px;
   overflow: hidden;
@@ -1407,8 +1407,10 @@ small, .small-text {
 
 .footer-links-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 6px 20px;
+  grid-auto-flow: column;
 }
 
 .footer-grid ul li a {
@@ -1436,7 +1438,7 @@ small, .small-text {
 
 .footer-column:last-child .social-icons {
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .footer-contact-item {
