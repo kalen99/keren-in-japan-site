@@ -1409,9 +1409,13 @@ small, .small-text {
 }
 
 .footer-links-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px 20px;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 6px 20px !important;
+}
+
+.footer-links-grid li {
+  display: block;
 }
 
 .footer-grid ul li a {
