@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>תודה על הפניה – Keren in Japan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Keren in Japan">Keren in Japan</a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="תפריט">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="primary-nav" class="nav">
+        <ul>
+          <li><a href="services.html">שירותים יפנים</a></li>
+          <li><a href="media.html">הופעות במדיה</a></li>
+          <li><a href="articles.html">מאמרים וכתבות</a></li>
+          <li><a href="about.html">קצת עליי</a></li>
+          <li><a href="contact.html" class="btn btn-primary">צרו קשר</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- THANK YOU SECTION -->
+    <section class="section thank-you-section">
+      <div class="container thank-you-container">
+        
+        <!-- Image Placeholder -->
+        <div class="thank-you-image">
+          <img src="assets/images/thank-you-placeholder.jpg" 
+               alt="תודה על הפניה" 
+               class="thank-you-photo"
+               loading="lazy">
+        </div>
+
+        <!-- Thank You Message -->
+        <div class="thank-you-content">
+          <h1>תודה רבה על הפניה!</h1>
+          
+          <p class="thank-you-message">
+            [הוסיפו כאן את המסר שלכם בעברית]
+          </p>
+
+          <p class="thank-you-message">
+            אחזור אליכם בהקדם האפשרי. בינתיים, אשמח אם תעקבו אחריי ברשתות החברתיות 
+            לעדכונים נוספים על יפן, טיפים מועילים וסיפורים מעניינים.
+          </p>
+
+          <div class="thank-you-actions">
+            <a href="index.html" class="btn btn-primary">חזרה לדף הבית</a>
+            <a href="services.html" class="btn btn-secondary">השירותים שלנו</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOCIAL MEDIA SECTION -->
+    <section class="section social-section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">עקבו אחריי ברשתות</h2>
+        
+        <div class="social-links">
+          
+          <a href="https://instagram.com/YOUR_INSTAGRAM" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-card">
+            <div class="social-icon">📷</div>
+            <h3>Instagram</h3>
+            <p>תמונות מיפן והחיים בטוקיו</p>
+          </a>
+
+          <a href="https://facebook.com/YOUR_FACEBOOK" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-card">
+            <div class="social-icon">👍</div>
+            <h3>Facebook</h3>
+            <p>עדכונים ומאמרים על יפן</p>
+          </a>
+
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-card">
+            <div class="social-icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p>תוכן מקצועי על יפן ועסקים</p>
+          </a>
+
+          <a href="https://youtube.com/@YOUR_YOUTUBE" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-card">
+            <div class="social-icon">🎥</div>
+            <h3>YouTube</h3>
+            <p>סרטונים והרצאות על יפן</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <strong class="footer-brand">Keren in Japan</strong>
+        <p class="footer-description">סיורים, הרצאות ועוד, יפן זו קרן..</p>
+      </div>
+      <div class="footer-column">
+        <h3>קישורים מהירים</h3>
+        <nav aria-label="קישורי תחתית">
+          <ul>
+            <li><a href="services.html">שירותים</a></li>
+            <li><a href="media.html">מדיה</a></li>
+            <li><a href="articles.html">שיתופי פעולה</a></li>
+            <li><a href="about.html">עליי</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-column">
+        <h3>צור קשר</h3>
+        <div class="footer-contact">
+          <p class="footer-contact-item">יפן, טוקיו</p>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-bar">
+      <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

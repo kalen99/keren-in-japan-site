@@ -1995,3 +1995,138 @@ small, .small-text {
     padding: 1rem 1.25rem;
   }
 }
+
+/* =========================
+   THANK YOU PAGE
+   ========================= */
+.thank-you-section {
+  padding: 4rem 0;
+}
+
+.thank-you-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thank-you-image {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.thank-you-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+.thank-you-content {
+  flex: 1;
+  text-align: center;
+}
+
+.thank-you-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent-red);
+}
+
+.thank-you-message {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Social Section */
+.social-section {
+  background: var(--color-bg-secondary);
+  padding: 3rem 0;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.social-card {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(217, 68, 82, 0.3);
+  border-color: var(--color-accent-red);
+}
+
+.social-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.social-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: var(--color-text-primary);
+}
+
+.social-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #bbbbc7;
+}
+
+@media (max-width: 768px) {
+  .thank-you-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .thank-you-image {
+    flex: none;
+    max-width: 100%;
+  }
+  
+  .thank-you-content h1 {
+    font-size: 2rem;
+  }
+  
+  .thank-you-actions {
+    flex-direction: column;
+  }
+  
+  .thank-you-actions .btn {
+    width: 100%;
+  }
+  
+  .social-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+}
