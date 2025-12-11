@@ -79,8 +79,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Import Fredoka font from Google Fonts (weights: 300-700 variable) */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+/* Import Noto Sans Hebrew font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100..900&display=swap');
 
 /* CSS Custom Properties - Design System */
 :root {
@@ -93,7 +93,7 @@ html {
   --color-border: #4a4a4a;
   --color-border-red: #5a3a3a;
   
-  --font-primary: 'Fredoka', sans-serif;
+  --font-primary: 'Noto Sans Hebrew', sans-serif;
   
   --spacing-xs: 8px;
   --spacing-sm: 16px;
@@ -114,7 +114,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Fredoka', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: 'Noto Sans Hebrew', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, sans-serif;
   font-weight: 400; /* default body weight */
   font-size: 18px; /* spec body size */
@@ -1180,30 +1180,30 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* Headings use Fredoka Bold per spec */
+/* Headings use Noto Sans Hebrew Bold */
 h1 {
-  font-family: 'Fredoka', system-ui, sans-serif;
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.2;
 }
 
 h2 {
-  font-family: 'Fredoka', system-ui, sans-serif;
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
   font-weight: 600; /* SemiBold for H2 */
   font-size: 36px;
   line-height: 1.3;
 }
 
 h3 {
-  font-family: 'Fredoka', system-ui, sans-serif;
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
   font-weight: 600; /* SemiBold for H3 */
   font-size: 28px;
   line-height: 1.4;
 }
 
 h4, h5, h6 {
-  font-family: 'Fredoka', system-ui, sans-serif;
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
   font-weight: 600;
   line-height: 1.15;
 }
