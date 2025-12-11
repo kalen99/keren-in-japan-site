@@ -2128,29 +2128,28 @@ small, .small-text {
   }
 
   .service-card {
-    min-height: 160px !important;
-    max-height: 200px !important;
-    gap: 1rem !important;
-    padding: 1.75rem 1.5rem !important;
+    min-height: 200px !important;
+    gap: 1.5rem !important;
+    padding: 2rem 1.75rem !important;
     flex-direction: column !important;
     align-items: flex-end !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     text-align: right !important;
-    border-radius: 20px !important;
+    border-radius: 24px !important;
   }
 
   .service-badge {
-    min-width: 160px !important;
-    padding: 0.9rem 2rem !important;
-    font-size: 1.05rem !important;
+    min-width: 180px !important;
+    padding: 1rem 2.25rem !important;
+    font-size: 1.1rem !important;
     flex-shrink: 0;
-    align-self: flex-end;
-    border-radius: 50px !important;
+    align-self: flex-end !important;
+    border-radius: 60px !important;
   }
 
   .service-card p {
-    font-size: 1rem !important;
-    line-height: 1.55 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
     text-align: right !important;
     margin: 0 !important;
     width: 100%;
