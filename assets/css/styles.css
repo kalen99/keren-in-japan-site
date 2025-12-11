@@ -1981,8 +1981,17 @@ small, .small-text {
    ========================= */
 @media (max-width: 900px) {
   .featured-services {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+  
+  .service-card {
+    flex-direction: column !important;
+    align-items: flex-end !important;
+  }
+  
+  .service-badge {
+    align-self: flex-end !important;
   }
 }
   .about-grid {
