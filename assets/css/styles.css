@@ -2119,28 +2119,29 @@ small, .small-text {
   }
 
   .service-card {
-    min-height: 160px;
-    gap: 1rem;
-    padding: 1.5rem;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: right;
+    min-height: 180px !important;
+    gap: 1.25rem !important;
+    padding: 2rem 1.5rem !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
   }
 
   .service-badge {
-    min-width: 140px;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.95rem;
+    min-width: 150px !important;
+    padding: 0.85rem 1.75rem !important;
+    font-size: 1rem !important;
     flex-shrink: 0;
-    order: -1;
+    align-self: flex-end;
   }
 
   .service-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: right;
-    margin: 0;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    text-align: right !important;
+    margin: 0 !important;
+    width: 100%;
   }
   
   /* Final CTA section */
