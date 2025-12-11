@@ -2396,3 +2396,29 @@ small, .small-text {
     gap: 32px;
   }
 }
+
+/* FORCE BADGES TO RIGHT (RTL FIX) */
+
+.service-card {
+    /* Ensure the parent allows positioning */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* In RTL, flex-start is the RIGHT side. 
+       If they are on the left, your current CSS might have 'align-items: flex-end' 
+       or 'text-align: left' */
+    align-items: flex-start; 
+}
+
+.service-badge {
+    /* OPTION A: If your badge is using Absolute Positioning */
+    right: 20px !important;  /* Force it to the right */
+    left: auto !important;   /* Unset any left positioning */
+    
+    /* OPTION B: If your badge is a normal block element */
+    margin-right: 0;
+    margin-left: auto; /* Pushes the element to the right side */
+    
+    /* Ensure text alignment inside the badge is centered */
+    text-align: center;
+}
