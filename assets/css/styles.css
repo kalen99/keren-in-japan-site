@@ -2276,18 +2276,18 @@ small, .small-text {
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
-    min-height: 220px !important;
-    gap: 1.25rem !important;
-    padding: 2rem !important;
+    min-height: 286px !important;
+    gap: 1.625rem !important;
+    padding: 2.6rem !important;
     border-radius: 24px !important;
     text-align: right !important;
   }
 
   .service-badge {
-    min-width: 160px !important;
-    max-width: 250px !important;
-    padding: 0.85rem 2rem !important;
-    font-size: 1.05rem !important;
+    min-width: 208px !important;
+    max-width: 325px !important;
+    padding: 1.1rem 2.6rem !important;
+    font-size: 1.365rem !important;
     border-radius: 50px !important;
     flex-shrink: 0 !important;
     margin-right: 0 !important;
@@ -2296,12 +2296,13 @@ small, .small-text {
   }
 
   .service-card p {
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
+    font-size: 1.365rem !important;
+    line-height: 1.7 !important;
     text-align: right !important;
     margin: 0 !important;
     width: 100% !important;
     order: 1 !important;
+    padding: 0.5rem 0 !important;
   }
   
   /* ===== FINAL CTA ===== */
