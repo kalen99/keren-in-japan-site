@@ -1168,7 +1168,7 @@ textarea {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
   }
   
@@ -1181,12 +1181,16 @@ textarea {
   
   .about-text {
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    transform: translateY(-50%);
-    padding: 2rem 20px;
+    padding: 3rem 20px 2rem 20px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
   }
   
   .about-text p {
