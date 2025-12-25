@@ -279,6 +279,14 @@ document.addEventListener('DOMContentLoaded', () => {
       closeFeatureModal();
     }
   });
+
+  // Auto-open once per session after short delay
+  if (featureModal && !sessionStorage.getItem('featureVideoShown')) {
+    setTimeout(() => {
+      openFeatureModal();
+      sessionStorage.setItem('featureVideoShown', '1');
+    }, 1200);
+  }
   // Set current year in footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
