@@ -594,8 +594,8 @@ img {
 .video-frame-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 80vh;
+  aspect-ratio: 4 / 3;
+  max-height: 75vh;
   border-radius: 16px;
   overflow: hidden;
   background: #000;
@@ -2279,7 +2279,7 @@ small, .small-text {
 
   .video-frame-wrap {
     border-radius: 12px;
-    max-height: 78vh;
+    max-height: 72vh;
   }
   
   h1 {
