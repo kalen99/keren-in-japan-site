@@ -476,6 +476,131 @@ img {
 }
 
 /* =========================
+   FEATURE VIDEO PROMO
+   ========================= */
+.video-promo {
+  background: var(--color-bg-primary);
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.video-promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+}
+
+.video-promo-text h3 {
+  margin: 0 0 0.5rem;
+}
+
+.video-promo-text p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.video-promo-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--color-accent-red);
+  text-transform: uppercase;
+}
+
+.video-promo .btn {
+  white-space: nowrap;
+}
+
+/* =========================
+   FEATURE VIDEO MODAL
+   ========================= */
+.video-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1200;
+}
+
+.video-popup[hidden] {
+  display: none;
+}
+
+.video-popup-content {
+  position: relative;
+  width: min(900px, 94vw);
+  max-height: 90vh;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+
+.video-popup-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.video-popup-eyebrow {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--color-accent-red);
+  text-transform: uppercase;
+}
+
+.video-popup-close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.video-popup-close:hover,
+.video-popup-close:focus-visible {
+  background: #dddbd880;
+  transform: scale(1.02);
+}
+
+.video-frame-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================
    HERO SECTION + SLIDER (OLD - KEEP FOR OTHER PAGES)
    ========================= */
 .hero {
@@ -2109,6 +2234,42 @@ small, .small-text {
   
   body {
     font-size: 16px;
+  }
+
+  .video-promo {
+    padding: 1.75rem 16px;
+  }
+
+  .video-promo-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .video-promo .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .video-popup {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .video-popup-content {
+    width: 100%;
+    max-height: 86vh;
+    padding: 1.25rem;
+  }
+
+  .video-popup-close {
+    top: 8px;
+    left: 8px;
+  }
+
+  .video-frame-wrap {
+    border-radius: 12px;
   }
   
   h1 {
