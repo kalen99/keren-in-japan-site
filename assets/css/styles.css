@@ -479,6 +479,7 @@ img {
    FEATURE VIDEO PROMO
    ========================= */
 .video-promo {
+  display: none; /* popup only, no inline section */
   background: var(--color-bg-primary);
   padding: var(--spacing-xl) var(--spacing-lg);
 }

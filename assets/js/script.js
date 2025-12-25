@@ -278,6 +278,15 @@ document.addEventListener('DOMContentLoaded', () => {
       closeFeatureModal();
     }
   });
+
+  // Auto-open on page load (no autoplay; user still clicks play)
+  if (featureModal) {
+    setTimeout(() => {
+      if (featureModal.hasAttribute('hidden')) {
+        openFeatureModal();
+      }
+    }, 900);
+  }
   // Set current year in footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
