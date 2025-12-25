@@ -245,8 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     featureModal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
     if (featureFrame && featureSrc) {
-      const sep = featureSrc.includes('?') ? '&' : '?';
-      featureFrame.src = `${featureSrc}${sep}autoplay=1`;
+      featureFrame.src = featureSrc; // no autoplay, user clicks to play
     }
   };
 
@@ -279,14 +278,6 @@ document.addEventListener('DOMContentLoaded', () => {
       closeFeatureModal();
     }
   });
-
-  // Auto-open once per session after short delay
-  if (featureModal && !sessionStorage.getItem('featureVideoShown')) {
-    setTimeout(() => {
-      openFeatureModal();
-      sessionStorage.setItem('featureVideoShown', '1');
-    }, 1200);
-  }
   // Set current year in footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
