@@ -281,15 +281,11 @@
     
     // Wait for Swiper to be fully loaded
     window.addEventListener('DOMContentLoaded', () => {
-      // Initialize Swiper for lectures
+      // Initialize Swiper for lectures (manual swipe only)
       const lecturesSwiper = new Swiper('.lectures-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+        loop: false,
         pagination: {
           el: '.lectures-swiper .swiper-pagination',
           clickable: true,
@@ -300,15 +296,11 @@
         },
       });
 
-      // Initialize Swiper for tours
+      // Initialize Swiper for tours (manual swipe only)
       const toursSwiper = new Swiper('.tours-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+        loop: false,
         pagination: {
           el: '.tours-swiper .swiper-pagination',
           clickable: true,
