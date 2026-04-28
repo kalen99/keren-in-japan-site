@@ -1801,6 +1801,29 @@ small, .small-text {
   text-decoration: underline;
 }
 
+.commercial-disclosure-jp-title {
+  font-weight: 500;
+  font-size: 0.55em;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .commercial-disclosure-jp-title {
+    display: block;
+    white-space: normal;
+    margin-top: 0.35em;
+  }
+}
+
+.commercial-disclosure-note {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  border-left: 3px solid var(--color-border);
+  padding-left: 1rem;
+  margin-top: 0.75rem;
+}
+
 .legal {
   text-align: center;
 }
