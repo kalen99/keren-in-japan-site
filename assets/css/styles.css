@@ -1718,6 +1718,89 @@ small, .small-text {
   margin: 0;
 }
 
+.footer-legal-links {
+  margin: 12px 0 0;
+}
+
+.footer-legal-links a {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  color: var(--color-accent-red);
+  text-decoration: underline;
+}
+
+.footer-legal-current {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.commercial-disclosure-main {
+  background: var(--color-bg-primary);
+  min-height: 50vh;
+  padding: 48px 20px 64px;
+}
+
+.commercial-disclosure-article {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.commercial-disclosure-head {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.commercial-disclosure-head h1 {
+  color: var(--color-text-primary);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.commercial-disclosure-lead {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.commercial-disclosure-body {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+.commercial-disclosure-body h2 {
+  color: var(--color-text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 28px 0 10px;
+}
+
+.commercial-disclosure-body h2:first-of-type {
+  margin-top: 0;
+}
+
+.commercial-disclosure-body p {
+  margin: 0 0 1em;
+}
+
+.commercial-disclosure-body a {
+  color: var(--color-accent-red);
+  text-decoration: none;
+}
+
+.commercial-disclosure-body a:hover {
+  color: var(--color-accent-red-hover);
+  text-decoration: underline;
+}
+
 .legal {
   text-align: center;
 }
