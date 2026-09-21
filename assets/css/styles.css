@@ -2801,3 +2801,338 @@ small, .small-text {
     gap: 32px;
   }
 }
+
+/* =========================================================
+   ACCESSIBILITY OVERRIDES
+   Israeli Standard SI 5568 part 1 (= WCAG 2.0, level AA)
+   Loaded last on purpose: these win over the rules above.
+   ========================================================= */
+
+:root {
+  /* Darker brand red for TEXT. #ee827c on the beige backgrounds is only ~2.4:1.
+     #b3352e = 5.4:1 on --color-bg-primary, 4.8:1 on --color-bg-secondary (1.4.3 needs 4.5:1). */
+  --color-accent-red-dark: #b3352e;
+}
+
+/* --- Focus visibility (2.4.7): two-tone ring readable on light AND dark surfaces --- */
+*:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-text-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* The form used "outline: none" on :focus; keep a real ring for keyboard users */
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.contact-form select:focus-visible {
+  outline: 3px solid var(--color-text-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* <main> receives programmatic focus from the skip link – no ring around the whole page */
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* --- Text contrast (1.4.3) --- */
+.nav a:hover,
+.nav a.active {
+  color: var(--color-accent-red-dark);
+}
+
+.nav a.btn-primary,
+.nav a.btn-primary:hover {
+  color: var(--color-text-primary);
+}
+
+.muted {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.video-card,
+.feature-card,
+.episode-card {
+  color: #fdfdfd;
+}
+
+.video-card .muted,
+.feature-card .muted,
+.episode-card .muted,
+.page-media .muted,
+.feat-body p {
+  color: #d9d9e3;
+}
+
+.media-package-content p {
+  color: var(--color-text-secondary);
+}
+
+.btn-secondary {
+  color: var(--color-accent-red-dark);
+}
+
+.btn-secondary:hover {
+  color: var(--color-text-primary);
+}
+
+.service-badge {
+  color: var(--color-text-primary);
+}
+
+.social-icon-link:hover {
+  color: var(--color-text-primary);
+}
+
+.video-popup-eyebrow,
+.video-promo-eyebrow {
+  color: var(--color-accent-red-dark);
+}
+
+.thank-you-content h1 {
+  color: var(--color-accent-red-dark);
+}
+
+.video-modal-close:hover {
+  color: #ffd1ce;
+}
+
+/* Text on the slide photos: stronger scrim + pure white */
+.slide-overlay,
+.oneonone .slide-overlay {
+  background: rgba(5, 6, 10, 0.6);
+}
+
+.slide-content p {
+  color: #ffffff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--color-text-primary);
+}
+
+/* --- Footer --- */
+.site-footer {
+  color: var(--color-text-primary); /* podcast page body is light-on-dark; footer is beige */
+}
+
+.copyright-bar p,
+.legal p {
+  color: var(--color-text-secondary);
+}
+
+.footer-grid ul li a:hover,
+.footer-legal-links a:hover {
+  color: var(--color-accent-red-dark);
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+}
+
+.footer-legal-links a {
+  text-decoration: underline; /* not identified by colour alone (1.4.1) */
+}
+
+/* --- Links inside running text --- */
+.commercial-disclosure-body a,
+.doc-page a {
+  color: var(--color-accent-red-dark);
+  text-decoration: underline;
+}
+
+.commercial-disclosure-body a:hover,
+.doc-page a:hover {
+  color: var(--color-text-primary);
+}
+
+/* --- Forms (3.3.2, 1.4.3) --- */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #5f5f5f;
+}
+
+.form-ok {
+  color: #0a6b3a;
+}
+
+.form-note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.req {
+  color: var(--color-accent-red-dark);
+  font-weight: 700;
+}
+
+/* --- Home slider controls (2.2.2 pause / stop / hide) --- */
+.hero-controls button {
+  min-width: 44px;
+  min-height: 44px;
+  background: rgba(0, 0, 0, 0.7);
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.hero-controls .hero-toggle {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* --- Mobile menu: closed menu must not be reachable by keyboard / screen reader (2.4.3) --- */
+@media (max-width: 768px) {
+  .nav {
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+
+  .nav.is-open {
+    visibility: visible;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s;
+  }
+
+  .nav a.btn-primary,
+  .nav a.btn-primary:hover {
+    color: var(--color-text-primary); /* was white on #ee827c = 2.9:1 */
+  }
+}
+
+/* --- Text-only pages: accessibility statement, sitemap --- */
+.doc-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+  line-height: 1.7;
+}
+
+.doc-page h1 {
+  margin: 0 0 16px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.doc-page h2 {
+  margin: 36px 0 12px;
+  font-size: 1.4rem;
+}
+
+.doc-page ul {
+  padding-inline-start: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.doc-page li {
+  margin-bottom: 0.4rem;
+}
+
+.doc-page .doc-meta {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.sitemap-list ul {
+  margin: 0.4rem 0 0.6rem;
+}
+
+/* --- Reduced motion: also stop hover lifts / scale on cards --- */
+@media (prefers-reduced-motion: reduce) {
+  .service-card:hover,
+  .media-package:hover,
+  .feature-card:hover,
+  .video-card:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .social-icon-link:hover,
+  .media-package:hover .media-package-image img {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   UPDATE NOTICE POPUP (home page, opens after the video popup)
+   Site palette: beige surface, coral accent, navy text.
+   ========================================================= */
+.notice-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1300;
+}
+
+.notice-popup[hidden] {
+  display: none;
+}
+
+.notice-popup-box {
+  position: relative;
+  width: min(460px, 92vw);
+  padding: 2.5rem 2rem 2rem;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border: 3px solid var(--color-accent-red);
+  border-radius: 20px;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.notice-popup-badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 1.4rem;
+  background: var(--color-accent-red);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-full);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.notice-popup-text {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.notice-popup-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.notice-popup-close:hover {
+  background: var(--color-bg-secondary);
+}

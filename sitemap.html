@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Commercial Disclosure | Keren in Japan</title>
-  <meta name="description" content="Commercial disclosure and business information for Keren in Japan." />
+  <title>מפת אתר – Keren in Japan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100..900&display=swap" rel="stylesheet">
@@ -14,6 +13,7 @@
 <body>
   <a href="#main" class="skip-to-content">דלג לתוכן הראשי</a>
 
+  <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="index.html" class="brand" aria-label="Keren in Japan – דף הבית">
@@ -37,49 +37,40 @@
     </div>
   </header>
 
-  <main id="main" tabindex="-1" class="commercial-disclosure-main">
-    <article class="commercial-disclosure-article" dir="ltr" lang="en">
-      <header class="commercial-disclosure-head">
-        <h1>Commercial Disclosure <span lang="ja" class="commercial-disclosure-jp-title">(特定商取引法に基づく表記)</span></h1>
-      </header>
-      <div class="commercial-disclosure-body">
-        <h2>Legal name</h2>
-        <p>Keren Zohar</p>
+  <main id="main" tabindex="-1" class="doc-page">
+    <h1>מפת אתר</h1>
+    <p>רשימת כל העמודים באתר.</p>
 
-        <h2>Address</h2>
-        <p>Disclosure will be provided immediately upon request via email.</p>
-        
-
-        <h2>Phone number</h2>
-        <p><a href="tel:+817026155406">070-2615-5406</a></p>
-
-        <h2>Email address</h2>
-        <p><a href="mailto:kerenzoharinjapan@gmail.com">kerenzoharinjapan@gmail.com</a></p>
-
-        <h2>Head of operations</h2>
-        <p>Keren Zohar</p>
-
-        <h2>Additional fees</h2>
-        <p>No additional fees are charged by the provider. However, internet connection fees or data charges required to access the platform are the responsibility of the user. For international transactions, the user&rsquo;s card issuer may charge a foreign exchange fee.</p>
-
-        <h2>Exchanges &amp; returns (refund policy)</h2>
-        <p>Due to the nature of digital support and donations (&ldquo;Buy Me a Coffee&rdquo;), all transactions are final. Refunds are not provided once the support transaction is completed.</p>
-
-        <h2>Delivery times</h2>
-        <p>This is a digital support/donation service. The transaction is processed immediately upon completion of the payment. No physical product will be shipped.</p>
-
-        <h2>Accepted payment methods</h2>
-        <p>Credit cards (Visa, Mastercard, American Express, etc.) and other payment methods supported by Stripe.</p>
-
-        <h2>Payment period</h2>
-        <p>Payments are processed immediately at the time of the transaction.</p>
-
-        <h2>Price</h2>
-        <p>The price is determined by the amount selected by the user on the support platform.</p>
-      </div>
-    </article>
+    <ul class="sitemap-list">
+      <li><a href="index.html">דף הבית</a></li>
+      <li><a href="visa-finder/">מציאת ויזה</a> (כלי אינטראקטיבי באנגלית)</li>
+      <li><a href="services.html">שירותים יפנים</a>
+        <ul>
+          <li><a href="services.html#oneonone">Japan 1 on 1</a></li>
+          <li><a href="services.html#lectures">הרצאות</a></li>
+          <li><a href="services.html#tours">סיורים בטוקיו</a></li>
+        </ul>
+      </li>
+      <li><a href="media.html">הופעות במדיה</a>
+        <ul>
+          <li><a href="pages/media/podcast.html">פודקאסט: יפן ב-15 דקות</a></li>
+          <li><a href="pages/media/news.html">הופעות בחדשות</a></li>
+          <li><a href="pages/media/features.html">שיתופי פעולה</a></li>
+        </ul>
+      </li>
+      <li><a href="articles.html">מאמרים וכתבות</a>
+        <ul>
+          <li><a href="visa-types.html">סוגי ויזות ליפן</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">קצת עליי</a></li>
+      <li><a href="contact.html">צרו קשר</a></li>
+      <li><a href="accessibility.html">הצהרת נגישות</a></li>
+      <li><a href="commercial-disclosure.html">Commercial Disclosure</a></li>
+    </ul>
   </main>
 
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-column">
@@ -108,15 +99,9 @@
     </div>
     <div class="copyright-bar">
       <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
-      <p class="footer-legal-links"><a href="accessibility.html">הצהרת נגישות</a><a href="sitemap.html">מפת אתר</a><span class="footer-legal-current" aria-current="page">Commercial Disclosure</span></p>
+      <p class="footer-legal-links"><a href="accessibility.html">הצהרת נגישות</a><span class="footer-legal-current" aria-current="page">מפת אתר</span><a href="commercial-disclosure.html" target="_blank" rel="noopener noreferrer">Commercial Disclosure<span class="visually-hidden"> (נפתח בחלון חדש)</span></a></p>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>

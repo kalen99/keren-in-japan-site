@@ -13,11 +13,12 @@
   <script defer src="assets/js/script.js"></script>
 </head>
 <body>
+  <a href="#main" class="skip-to-content">דלג לתוכן הראשי</a>
 
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand" aria-label="Keren in Japan">
+      <a href="index.html" class="brand" aria-label="Keren in Japan – דף הבית">
         <img src="assets/images/head/japan.png" alt="Keren in Japan" class="brand-logo">
       </a>
       <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="תפריט">
@@ -28,7 +29,7 @@
       <nav id="primary-nav" class="nav">
         <ul>
           <li><a href="visa-finder/">מציאת ויזה</a></li>
-          <li><a href="services.html" class="active">שירותים יפנים</a></li>
+          <li><a href="services.html" class="active" aria-current="page">שירותים יפנים</a></li>
           <li><a href="media.html">הופעות במדיה</a></li>
           <li><a href="articles.html">מאמרים וכתבות</a></li>
           <li><a href="about.html">קצת עליי</a></li>
@@ -38,7 +39,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     
     <!-- PAGE HERO -->
     <section class="services-hero">
@@ -65,7 +66,7 @@
               <p>היפנים יוצאים לדייטים? למה הן לבושות ככה? זה נכון שהם אלרגים לאלכוהול? 
               יש לכם הרבה שאלות על יפן? רוצים לשבת ולדבר בנחת?
               חדש! יפן 1על1 ארוחה יפנית מהממת בה נשב בנחת ותוכלו לשמוע על יפן בפרטי פרטים מהעיניים של מקומית.</p>
-              <a href="contact.html?service=Japan 1on1" class="btn btn-primary">צור קשר</a>
+              <a href="contact.html?service=Japan 1on1" class="btn btn-primary" aria-label="צור קשר בנושא: ארוחה עם יפן">צור קשר</a>
             </div>
           </div>
         </div>
@@ -76,7 +77,7 @@
     <section id="lectures" class="services-section">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 2rem;">הרצאות</h2>
-        <div class="swiper lectures-swiper">
+        <div class="swiper lectures-swiper" role="region" aria-label="הרצאות">
           <div class="swiper-wrapper">
             
             <div class="swiper-slide">
@@ -85,7 +86,7 @@
               <div class="slide-content">
                 <h3>עסקים ביפן</h3>
                 <p>שבוע קצר, שעות ארוכות, היררכיה, חליפות וכרטיסי ביקור. מבט מעמיק אל תוך שוק העבודה היפני, השוני מתרבות העבודה הישראלית, והשינויים שבפתח</p>
-                <a href="contact.html?service= הרצאות" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service= הרצאות" class="btn btn-primary" aria-label="צור קשר בנושא: עסקים ביפן">צור קשר</a>
               </div>
             </div>
 
@@ -95,7 +96,7 @@
               <div class="slide-content">
                 <h3>הרצאה בהתאמה אישית</h3>
                 <p>יש לכם רעיון, כנס או אירוע מיוחד? נבנה יחד הרצאה בול בשבילכם! מתרבות האלכוהול, לאופנה יפנית, ועד חגים ומנהגים. צרו קשר ובואו נחשוב יחד</p>
-                <a href="contact.html?service= הרצאות" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service= הרצאות" class="btn btn-primary" aria-label="צור קשר בנושא: הרצאה בהתאמה אישית">צור קשר</a>
               </div>
             </div>
 
@@ -103,9 +104,9 @@
               <img src="assets/images/lectures/disability.jpg" alt="רובוטים, מוגבלויות ויפן" class="slide-img" loading="lazy">
               <div class="slide-overlay"></div>
               <div class="slide-content">
-                <h3></h3>רובוטים, מוגבלויות ויפן</h3>
+                <h3>רובוטים, מוגבלויות ויפן</h3>
                 <p>איך הפכה יפן למדינת הרובוטים השירותיים, ואיך מנסים, בעזרת חדשנות טכנולוגית, להקל את חייהם של בעלי מוגבלויות, בחברה שמדירה אותם מהעין הציבורית</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צור קשר בנושא: רובוטים, מוגבלויות ויפן">צור קשר</a>
               </div>
             </div>
 
@@ -115,7 +116,7 @@
               <div class="slide-content">
                 <h3>משפחה יפנית</h3>
                 <p>ליפנים אין ילדים? החינוך היפני קפדני, הם לא מתחבקים? אין שם אפידורל?? וכל מה שרציתם לדעת על חינוך ומשפחה ביפן</p>
-                <a href="contact.html?service=הרצאות " class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=הרצאות " class="btn btn-primary" aria-label="צור קשר בנושא: משפחה יפנית">צור קשר</a>
               </div>
             </div>
 
@@ -125,7 +126,7 @@
               <div class="slide-content">
                 <h3>חדשנות ויזמות-ישראל מול יפן</h3>
                 <p>ביפן יש 128 מיליון איש, ורק 10 יוניקורנים. איך מדינה שהייתה הכלכלה השלישית בגודלה בעולם מגיעה למצב הזה? ומה ההזדמנויות עבור ישראל</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צור קשר בנושא: חדשנות ויזמות-ישראל מול יפן">צור קשר</a>
               </div>
             </div>
 
@@ -135,7 +136,7 @@
               <div class="slide-content">
                 <h3>יפן למתחילים-היכרות עם התרבות והחברה</h3>
                 <p>סקירה חיה ומצחיקה על ההיסטוריה, התרבות והיומיום היפני בגובה העיניים</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צור קשר בנושא: יפן למתחילים-היכרות עם התרבות והחברה">צור קשר</a>
               </div>
             </div>
 
@@ -145,7 +146,7 @@
               <div class="slide-content">
                 <h3>הרצאה מותאמת אישית</h3>
                 <p>נושא לפי הבחירה והצורך שלכם</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צור קשר בנושא: הרצאה מותאמת אישית">צור קשר</a>
               </div>
             </div>
 
@@ -161,7 +162,7 @@
     <section id="tours" class="services-section">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 2rem;">סיורים בטוקיו</h2>
-        <div class="swiper tours-swiper">
+        <div class="swiper tours-swiper" role="region" aria-label="סיורים בטוקיו">
           <div class="swiper-wrapper">
             
             <div class="swiper-slide">
@@ -170,7 +171,7 @@
               <div class="slide-content">
                 <h3>שיבויה</h3>
                 <p>ממקדש מייג'י העמוס היסטוריה ויופי, נמשיך לפארקים המקיפים ונדבר על תרבות הפנאי וחיי המשפחה. נקפוץ לרחוב טאקשיטה האופנתי על אלף חנויותיו, ונמשיך לצדדים הסודיים של האראג'וקו. הסיור מתרכז בתרבות פופ, ההיסטוריה שהובילה צעירים רבים כל כך לאהוב את יפן, ומעבר חצייה איימתני אחד</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צור קשר בנושא: שיבויה">צור קשר</a>
               </div>
             </div>
 
@@ -180,7 +181,7 @@
               <div class="slide-content">
                 <h3>אסאקוסה</h3>
                 <p>במקום אחד נראה את הדתות של יפן, נשים בקימונו, נהגי ריקשות ודוכנים מלאי מתוקים. נבקר במקדש הגדול של אסאקוסה, בעיר שהייתה לב התרבות היפנית, ממלכת כלי המטבח, והבניין שהיה הגבוה ביותר בעולם! משם נמשיך לעיר החשמל אקיהאברה ונבקר גם בפרויקט טכנולוגי חברתי מיוחד במינו</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צור קשר בנושא: אסאקוסה">צור קשר</a>
               </div>
             </div>
 
@@ -190,7 +191,7 @@
               <div class="slide-content">
                 <h3>שכונות מקומיות</h3>
                 <p>טוקיו האמיתית מעבר לתיירות. מחוץ לשיבויה ושינג'וקו ישנן שכונות קטנות ומקסימות שאוצרות בתוכן סיפורים, תיירות, ומסורת מרתקת. במהלך הסיור נדגום ארבע שכונות, חלכן חדשות ונוצצות, חלקן ישנות ומסורתיות, ובדרך נדבר על ההיסטוריה של יפן, חיי המשפחות, החינוך, הגיל השלישי, ועוד ועוד</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צור קשר בנושא: שכונות מקומיות">צור קשר</a>
               </div>
             </div>
 
@@ -201,7 +202,7 @@
               <div class="slide-content">
                 <h3>סיור עסקי</h3>
                 <p>מרכזי עסקים, טכנולוגיה וקצת רכילות משרדית, נצא לסיור היכרות עם עולם העבודה היפני ונלמד מקרוב על תרבות העבודה הקפדנית, ההיררכיה ויחסי הכבוד, היום יום של איש עסקים יפני, ונתרכז גם ביוזמות חדשות, הזדמנויות עסקיות וחייהם של סטארטאפיסטים ביפן</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צור קשר בנושא: סיור עסקי">צור קשר</a>
               </div>
             </div>
 
@@ -211,7 +212,7 @@
               <div class="slide-content">
                 <h3>טוקיו בלילה</h3>
                 <p>חיי הלילה, אורות ניאון, ותרבות הבילויים</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צור קשר בנושא: טוקיו בלילה">צור קשר</a>
               </div>
             </div>
 
@@ -220,9 +221,9 @@
               <img src="assets/images/tours/alcohol.jpg" alt="אלכוהול ותרבות" class="slide-img" loading="lazy">
               <div class="slide-overlay"></div>
               <div class="slide-content">
-                <h3> אלכוהול ותרבות</h3>
+                <h3>אלכוהול ותרבות</h3>
                 <p>כוס סאקה, כוס בירה, אולי קוקטייל עם יוזו ואורז? בסיור נעבור בין כמה מאבני היסוד של תרבות האלכוהול ביפן, נדבר על הרגלי השתיה, התפקיד שלה בחברה, והמרטיני הכי טוב שנוצר בטוקיו</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary">צור קשר</a>
+                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צור קשר בנושא: אלכוהול ותרבות">צור קשר</a>
               </div>
             </div>
 
@@ -259,7 +260,7 @@
             <li><a href="visa-finder/">מציאת ויזה</a></li>
             <li><a href="services.html">שירותים</a></li>
             <li><a href="media.html">מדיה</a></li>
-            <li><a href="articles.html">שיתופי פעולה</a></li>
+            <li><a href="articles.html">מאמרים וכתבות</a></li>
             <li><a href="about.html">עליי</a></li>
             <li><a href="contact.html">צור קשר</a></li>
           </ul>
@@ -274,7 +275,7 @@
     </div>
     <div class="copyright-bar">
       <p>© <span id="year"></span> Keren in Japan. כל הזכויות שמורות.</p>
-      <p class="footer-legal-links"><a href="commercial-disclosure.html" target="_blank" rel="noopener noreferrer">Commercial Disclosure</a></p>
+      <p class="footer-legal-links"><a href="accessibility.html">הצהרת נגישות</a><a href="sitemap.html">מפת אתר</a><a href="commercial-disclosure.html" target="_blank" rel="noopener noreferrer">Commercial Disclosure<span class="visually-hidden"> (נפתח בחלון חדש)</span></a></p>
     </div>
   </footer>
 
@@ -289,6 +290,16 @@
         slidesPerView: 1,
         spaceBetween: 30,
         loop: false,
+        keyboard: { enabled: true },
+        a11y: {
+          enabled: true,
+          prevSlideMessage: 'השקופית הקודמת',
+          nextSlideMessage: 'השקופית הבאה',
+          firstSlideMessage: 'זו השקופית הראשונה',
+          lastSlideMessage: 'זו השקופית האחרונה',
+          paginationBulletMessage: 'מעבר לשקופית {{index}}',
+          slideLabelMessage: 'שקופית {{index}} מתוך {{slidesLength}}'
+        },
         pagination: {
           el: '.lectures-swiper .swiper-pagination',
           clickable: true,
@@ -304,6 +315,16 @@
         slidesPerView: 1,
         spaceBetween: 30,
         loop: false,
+        keyboard: { enabled: true },
+        a11y: {
+          enabled: true,
+          prevSlideMessage: 'השקופית הקודמת',
+          nextSlideMessage: 'השקופית הבאה',
+          firstSlideMessage: 'זו השקופית הראשונה',
+          lastSlideMessage: 'זו השקופית האחרונה',
+          paginationBulletMessage: 'מעבר לשקופית {{index}}',
+          slideLabelMessage: 'שקופית {{index}} מתוך {{slidesLength}}'
+        },
         pagination: {
           el: '.tours-swiper .swiper-pagination',
           clickable: true,
