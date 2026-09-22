@@ -1,2 +1,9 @@
 # Large video files (over GitHub's 100MB limit)
 assets/media/news/*.mp4
+
+# Japan Visa Finder app (source of the built pages under visa-finder/)
+visa-finder-src/node_modules/
+visa-finder-src/.next/
+visa-finder-src/out/
+visa-finder-src/next-env.d.ts
+visa-finder-src/*.tsbuildinfo

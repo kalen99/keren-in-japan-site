@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #1a1a1a;
+  --background: #fafafa;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Better touch targets and prevent double-tap zoom delay on mobile */
+button:not(:disabled) {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Visible keyboard focus ring (WCAG 2.4.7). Most buttons here rely on the
+   browser default, which is faint on some platforms; this makes it explicit. */
+:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+/* Headings that receive programmatic focus on step change (see
+   QuestionStep.tsx) aren't real controls, so they don't get a visible ring. */
+h2[tabindex="-1"]:focus {
+  outline: none;
+}
+
+/* Respect "reduce motion" for the plain-CSS keyframe animations (gold
+   sparkle glow, sparkle twinkle, button sheen) that framer-motion's
+   MotionConfig can't reach. WCAG 2.2.2 / 2.3.3. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes gold-sparkle {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes gold-sheen {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
