@@ -153,7 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function syncToggleLabel() {
-      if (btnToggle) btnToggle.textContent = userPaused ? 'הפעלה' : 'השהיה';
+      // Icon only; the spoken name comes from aria-label (WCAG 2.2.2 still met)
+      if (btnToggle) btnToggle.innerHTML = '<span aria-hidden="true">' + (userPaused ? '▶' : '❚❚') + '</span>';
       if (btnToggle) btnToggle.setAttribute('aria-label', userPaused ? 'הפעלת מצגת התמונות' : 'השהיית מצגת התמונות');
     }
 
@@ -370,7 +371,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================
      UPDATE NOTICE POPUP
-     Opens after the feature video popup is closed (once per page load).
+     Opens after the feature video popup is closed, or on load when there is
+     no feature video (once per page load).
   ============================ */
   const noticeModal = document.getElementById('updateNoticeModal');
   let noticeShown = false;
@@ -403,13 +405,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && !noticeModal.hasAttribute('hidden')) closeNoticeModal();
     });
   }
-  // Auto-open on page load (no autoplay; user still clicks play)
+  // Auto-open on page load (no autoplay; user still clicks play).
+  // Without a feature video, the update notice opens on its own.
   if (featureModal) {
     setTimeout(() => {
       if (featureModal.hasAttribute('hidden')) {
         openFeatureModal();
       }
     }, 900);
+  } else if (noticeModal) {
+    setTimeout(openNoticeModal, 900);
   }
   // Set current year in footer
   const yearEl = document.getElementById('year');

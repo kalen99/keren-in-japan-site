@@ -79,7 +79,7 @@
           <!-- Slider controls: pause/play (WCAG 2.2.2) and previous/next -->
           <div class="hero-controls">
             <button type="button" class="hero-prev" aria-label="התמונה הקודמת"><span aria-hidden="true">›</span></button>
-            <button type="button" class="hero-toggle">השהיה</button>
+            <button type="button" class="hero-toggle" aria-label="השהיית מצגת התמונות"><span aria-hidden="true">❚❚</span></button>
             <button type="button" class="hero-next" aria-label="התמונה הבאה"><span aria-hidden="true">‹</span></button>
           </div>
 
@@ -97,14 +97,14 @@
           
           <!-- Card 0: Visa Finder -->
           <a href="visa-finder/" class="service-card">
-            <span class="stamp" aria-hidden="true">壱</span>
+            <span class="stamp" aria-hidden="true">外</span>
             <div class="service-badge">מציאת ויזה</div>
             <p>גלו איזו ויזה ליפן מתאימה לכם – כלי אינטראקטיבי שיעזור לכם למצוא את הדרך ליפן</p>
           </a>
 
           <!-- Card 1: Japan 1on1 -->
           <a href="services.html#oneonone" class="service-card">
-            <span class="stamp" aria-hidden="true">弐</span>
+            <span class="stamp" aria-hidden="true">探し</span>
             <div class="service-badge">Japan 1on1</div>
             <p>הכה את המומחה!
               כל מה שרציתם לשאול על יפן 
@@ -122,27 +122,11 @@
 
           <!-- Card 3: Tours -->
           <a href="services.html#tours" class="service-card">
-            <span class="stamp" aria-hidden="true">四</span>
+            <span class="stamp" aria-hidden="true">緒</span>
             <div class="service-badge">סיורים בטוקיו</div>
             <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
           </a>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURE VIDEO PROMO -->
-    <section class="video-promo">
-      <div class="container">
-        <div class="video-promo-card">
-          <div class="video-promo-text">
-            <p class="video-promo-eyebrow">Have you seen this video?</p>
-            <h3>קרן ביפן - בכאן11!</h3>
-            <p>הלכתי לברר למה ישראלים כל כך אוהבים את יפן.</p>
-          </div>
-          <button type="button" class="btn btn-primary open-feature-video" aria-haspopup="dialog" aria-controls="featureVideoModal">
-            צפו בסרטון
-          </button>
         </div>
       </div>
     </section>
@@ -222,26 +206,7 @@
     </div>
   </footer>
 
-  <!-- FEATURE VIDEO MODAL -->
-  <div id="featureVideoModal" class="video-popup" hidden role="dialog" aria-modal="true" aria-labelledby="featureVideoTitle">
-    <div class="video-popup-content">
-      <button class="video-popup-close" type="button" aria-label="סגירת החלון">×</button>
-      <div class="video-popup-header">
-        <p class="video-popup-eyebrow">Have you seen this video?</p>
-        <h3 id="featureVideoTitle">קרן ביפן - בכאן11!</h3>
-        <p class="video-popup-lead">הלכתי לברר למה ישראלים כל כך אוהבים את יפן.</p>
-      </div>
-      <div class="video-frame-wrap">
-        <iframe id="featureVideoFrame"
-                data-src="https://www.youtube-nocookie.com/embed/MrScNmk6kdk?rel=0&amp;cc_load_policy=1&amp;hl=he"
-                title="נגן וידאו: קרן ביפן בכאן 11"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- UPDATE NOTICE POPUP (opens after the video popup is closed) -->
+  <!-- UPDATE NOTICE POPUP (opens on page load) -->
   <div id="updateNoticeModal" class="notice-popup" hidden role="dialog" aria-modal="true" aria-labelledby="updateNoticeTitle" aria-describedby="updateNoticeText">
     <div class="notice-popup-box">
       <button class="notice-popup-close" type="button" aria-label="סגירת החלון" data-notice-close>×</button>
