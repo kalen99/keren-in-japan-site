@@ -3026,7 +3026,7 @@ select:focus-visible,
   padding: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: -0.1em;
+  letter-spacing: 0.1em;
 }
 
 /* --- Mobile menu: closed menu must not be reachable by keyboard / screen reader (2.4.3) --- */
@@ -3382,8 +3382,9 @@ h1, h2, h3 {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  /* An older mobile rule sets min-height: 340px !important */
   .service-card {
-    min-height: 0;
+    min-height: 0 !important;
   }
 }
 
@@ -3546,6 +3547,18 @@ main hr {
   padding: 1.25rem 1.5rem;
 }
 
+.spotify-player iframe {
+  display: block;
+  border: 0;
+  border-radius: var(--radius-card);
+  margin: 0.5rem 0 1rem;
+}
+
+.spotify-player a {
+  color: var(--shu-deep);
+  text-decoration: underline;
+}
+
 /* --- About: photo as a manga panel --- */
 .about-photo,
 .about-pic,
@@ -3553,6 +3566,47 @@ main hr {
   border: 3px solid var(--sumi);
   border-radius: var(--radius-slide);
   box-shadow: 8px 8px 0 var(--suna-300);
+}
+
+/* About on phones: photo panel, then the text below it
+   (replaces the old 252vh full-bleed photo with text laid over it) */
+@media (max-width: 768px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 0;
+    padding: 0 0 1rem;
+  }
+
+  .about-photo-wrap {
+    height: auto;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .about-photo-wrap::after {
+    display: none;
+  }
+
+  .about-photo {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-slide);
+  }
+
+  .about-text {
+    position: static;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .about-text p {
+    color: var(--umi);
+    text-shadow: none;
+    text-align: right;
+  }
 }
 
 /* --- Services page slides --- */
