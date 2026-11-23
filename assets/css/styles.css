@@ -3333,6 +3333,18 @@ h1, h2, h3 {
   margin-bottom: 0;
 }
 
+/* Keep a phrase on one line; the line can only break between phrases */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Very small phones: shrink so "קוראים לי קרן זוהר," still fits on one line */
+@media (max-width: 360px) {
+  .hero--intro .hero-copy-centered h1 {
+    font-size: 2.1rem;
+  }
+}
+
 /* Home "first look": Instagram reel + podcast, side by side */
 .spotlight-section {
   padding: 8px 0 56px;
@@ -3390,11 +3402,11 @@ h1, h2, h3 {
   border-radius: var(--radius-card);
 }
 
-/* Desktop: the reel is taller, so centre the Spotify player in its card */
+/* Desktop: line the Spotify player up with the top of the reel; buttons follow right under it */
 @media (min-width: 769px) {
   .spotlight-media:not(.spotlight-ig) {
-    display: flex;
-    align-items: center;
+    flex: 0 0 auto;
+    max-width: 400px; /* same width as the Instagram reel */
   }
 }
 
