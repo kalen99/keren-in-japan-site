@@ -39,15 +39,89 @@
 
   <main id="main" tabindex="-1">
     <!-- HERO SECTION WITH TEXT -->
-    <section class="hero">
+    <section class="hero hero--intro">
       <div class="container hero-inner hero-copy-centered">
         <div class="hero-copy hero-copy-centered">
-          <p class="eyebrow"><span lang="en">Keren in Japan</span> <span aria-hidden="true">·</span> <span class="jp" lang="ja">日本へようこそ</span></p>
-          <h1>להבין את יפן <span class="highlight">האמיתית</span>, מבפנים.</h1>
-          <p class="hero-subtitle"><strong>איך נראים חיי היומיום ביפן ולמי זה מתאים? בואו לגלות</strong></p>
-          <div class="cta-group">
-            <a href="contact.html" class="btn btn-primary">בואו נדבר</a>
+          <p class="eyebrow"><span class="jp" lang="ja" dir="ltr">初めまして、ケレンと申します。</span></p>
+          <h1>קוראים לי <span class="highlight">קרן זוהר</span>, אני גרה ביפן</h1>        </div>
+      </div>
+    </section>
+
+    <!-- FIRST LOOK: INSTAGRAM REEL + PODCAST -->
+    <section class="spotlight-section" aria-label="אינסטגרם ופודקאסט">
+      <div class="container spotlight-grid">
+
+        <!-- Instagram: Keren's intro reel -->
+        <article class="spotlight-card" aria-labelledby="spotIgTitle">
+          <div class="spotlight-title-row">
+            <span class="stamp" aria-hidden="true">私</span>
+            <h2 id="spotIgTitle">אני עושה <span class="highlight">תוכן</span>,</h2>
           </div>
+          <div class="spotlight-media spotlight-ig">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQ_2MbpEntX/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DQ_2MbpEntX/" target="_blank" rel="noopener noreferrer">צפו ברילס של קרן באינסטגרם<span class="visually-hidden"> (נפתח בחלון חדש)</span></a>
+            </blockquote>
+            <script async src="https://www.instagram.com/embed.js"></script>
+          </div>        </article>
+
+        <!-- Podcast: Spotify player -->
+        <article class="spotlight-card" aria-labelledby="spotPodTitle">
+          <div class="spotlight-title-row">
+            <span class="stamp" aria-hidden="true">聞</span>
+            <h2 id="spotPodTitle">אני מדברת על <span class="highlight">יפן</span>,</h2>
+          </div>          <div class="spotlight-media">
+            <iframe src="https://open.spotify.com/embed/episode/6ONJ8bX3oM0JlWBheBFD5p?theme=0"
+                    title="נגן Spotify: מאחורי הקלעים של עולם האנימה ביפן עם יותם ליברמן"
+                    width="100%" height="352" loading="lazy"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class="spotlight-links">
+            <a href="https://open.spotify.com/show/6T5VhT26vZS4HflX3Wtvt4" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Spotify<span class="visually-hidden"> (נפתח בחלון חדש)</span></a>
+            <a href="https://podcasts.apple.com/us/podcast/%D7%99%D7%A4%D7%9F-%D7%9115-%D7%93%D7%A7%D7%95%D7%AA/id1863971048" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Apple Podcasts<span class="visually-hidden"> (נפתח בחלון חדש)</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-home-section">
+      <div class="container">
+        <h2 class="services-home-title">ויש לי המון, <span class="highlight">שירותים יפניים</span></h2>
+        <div class="featured-services">
+          
+          <!-- Card 0: Visa Finder -->
+          <a href="visa-finder/" class="service-card">
+            <span class="stamp" aria-hidden="true">外</span>
+            <div class="service-badge">מציאת ויזה</div>
+            <p>גלו איזו ויזה ליפן מתאימה לכם – כלי אינטראקטיבי שיעזור לכם למצוא את הדרך ליפן</p>
+          </a>
+
+          <!-- Card 1: Japan 1on1 -->
+          <a href="services.html#oneonone" class="service-card">
+            <span class="stamp" aria-hidden="true">探し</span>
+            <div class="service-badge">Japan 1on1</div>
+            <p>הכה את המומחה!
+              כל מה שרציתם לשאול על יפן 
+              יחד עם ארוחת ערב בלתי נשכחת</p>
+          </a>
+
+          <!-- Card 2: Lectures -->
+          <a href="services.html#lectures" class="service-card">
+            <span class="stamp" aria-hidden="true">参</span>
+            <div class="service-badge">הרצאות</div>
+            <p>על יפן, היפנים וכל השאר
+            עולם העסקים ביפן, רווחה, חינוך, ועוד.
+            ניתן לבקש הרצאה בהתאמה אישית</p>
+          </a>
+
+          <!-- Card 3: Tours -->
+          <a href="services.html#tours" class="service-card">
+            <span class="stamp" aria-hidden="true">緒</span>
+            <div class="service-badge">סיורים בטוקיו</div>
+            <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
+          </a>
+
         </div>
       </div>
     </section>
@@ -85,48 +159,6 @@
 
           <!-- Screen reader status -->
           <div id="heroStatus" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section class="services-home-section">
-      <div class="container">
-        <h2 class="services-home-title">שירותים יפניים</h2>
-        <div class="featured-services">
-          
-          <!-- Card 0: Visa Finder -->
-          <a href="visa-finder/" class="service-card">
-            <span class="stamp" aria-hidden="true">外</span>
-            <div class="service-badge">מציאת ויזה</div>
-            <p>גלו איזו ויזה ליפן מתאימה לכם – כלי אינטראקטיבי שיעזור לכם למצוא את הדרך ליפן</p>
-          </a>
-
-          <!-- Card 1: Japan 1on1 -->
-          <a href="services.html#oneonone" class="service-card">
-            <span class="stamp" aria-hidden="true">探し</span>
-            <div class="service-badge">Japan 1on1</div>
-            <p>הכה את המומחה!
-              כל מה שרציתם לשאול על יפן 
-              יחד עם ארוחת ערב בלתי נשכחת</p>
-          </a>
-
-          <!-- Card 2: Lectures -->
-          <a href="services.html#lectures" class="service-card">
-            <span class="stamp" aria-hidden="true">参</span>
-            <div class="service-badge">הרצאות</div>
-            <p>על יפן, היפנים וכל השאר
-            עולם העסקים ביפן, רווחה, חינוך, ועוד.
-            ניתן לבקש הרצאה בהתאמה אישית</p>
-          </a>
-
-          <!-- Card 3: Tours -->
-          <a href="services.html#tours" class="service-card">
-            <span class="stamp" aria-hidden="true">緒</span>
-            <div class="service-badge">סיורים בטוקיו</div>
-            <p>שיבויה, אסאקוסה, שכונות מקומיות ועוד</p>
-          </a>
-
         </div>
       </div>
     </section>

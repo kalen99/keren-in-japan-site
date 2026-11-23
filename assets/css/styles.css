@@ -3312,6 +3312,130 @@ h1, h2, h3 {
   pointer-events: none;
 }
 
+/* Home intro: text sits in the middle of the circle */
+.hero--intro {
+  display: flex;
+  align-items: center;
+  min-height: 412px;
+  padding: 36px 0;
+}
+
+.hero--intro::before {
+  top: 50%;
+  margin-top: -170px;
+}
+
+.hero--intro .hero-inner {
+  width: 100%;
+}
+
+.hero--intro h1 {
+  margin-bottom: 0;
+}
+
+/* Home "first look": Instagram reel + podcast, side by side */
+.spotlight-section {
+  padding: 8px 0 56px;
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  align-items: stretch;
+}
+
+/* Stamp sits to the right of the title (RTL start) */
+.spotlight-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.spotlight-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.spotlight-card .stamp {
+  position: static;
+}
+
+.spotlight-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.spotlight-text {
+  margin: 0;
+  color: var(--umi-700);
+}
+
+.spotlight-media {
+  width: 100%;
+  flex: 1;
+}
+
+.spotlight-media iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-card);
+}
+
+/* Desktop: the reel is taller, so centre the Spotify player in its card */
+@media (min-width: 769px) {
+  .spotlight-media:not(.spotlight-ig) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.spotlight-ig .instagram-media {
+  margin: 0 auto !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 400px;
+}
+
+/* Shown until the reel loads (or if it is blocked) */
+.spotlight-ig blockquote.instagram-media {
+  padding: 40px 16px;
+  background: var(--suna);
+  border: 0;
+  border-radius: var(--radius-card);
+}
+
+.spotlight-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 0 16px;
+  }
+
+  .spotlight-card {
+    padding: 0;
+  }
+
+  .spotlight-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -3705,6 +3829,15 @@ main hr {
     width: 240px;
     height: 240px;
     margin-left: -120px;
+  }
+
+  .hero--intro {
+    min-height: 288px;
+    padding: 24px 0;
+  }
+
+  .hero--intro::before {
+    margin-top: -120px;
   }
 
   .carousel-section .hero-slider,
