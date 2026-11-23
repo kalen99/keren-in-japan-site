@@ -4108,3 +4108,175 @@ main hr {
   font-size: 0.9rem;
   color: var(--umi-700);
 }
+
+/* =========================
+   HOME: CONTENT CAROUSEL ("קצת מזמני הפנוי")
+   ========================= */
+.cc-section {
+  padding: 3rem 0 4rem;
+}
+
+.cc-heading {
+  margin: 0 0 1.75rem;
+  text-align: center;
+}
+
+.cc-wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cc-track {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 6px 4px 14px; /* room for the offset shadow */
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cc-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ~3 cards plus a peek of the next on desktop */
+.cc-card {
+  flex: 0 0 calc((100% - 2 * 20px) / 3.25);
+  scroll-snap-align: start;
+}
+
+.cc-link {
+  /* fixed card shape: 70% photo, 30% text */
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 3px solid var(--sumi);
+  border-radius: var(--radius-slide);
+  background: var(--white);
+  color: var(--umi);
+  text-decoration: none;
+  box-shadow: 6px 6px 0 var(--suna-300);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cc-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 9px 0 var(--suna-300);
+  text-decoration: none;
+}
+
+.cc-link:focus-visible {
+  outline: 3px solid var(--shu);
+  outline-offset: 3px;
+}
+
+.cc-media {
+  display: block;
+  min-height: 0;
+  overflow: hidden;
+  border-bottom: 3px solid var(--sumi);
+  background: var(--suna);
+}
+
+.cc-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cc-body {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 10px 16px 12px;
+  overflow: hidden;
+}
+
+.cc-label {
+  padding: 2px 12px;
+  border-radius: var(--radius-full);
+  background: var(--shu);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.cc-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cc-cta {
+  margin-top: auto;
+  color: var(--shu-deep);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.cc-arrow {
+  position: absolute;
+  top: 38%;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--sumi);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--sumi);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--suna-300);
+}
+
+.cc-prev { right: -22px; }
+.cc-next { left: -22px; }
+
+.cc-arrow:hover:not(:disabled) {
+  background: var(--suna);
+}
+
+.cc-arrow:focus-visible {
+  outline: 3px solid var(--shu);
+  outline-offset: 2px;
+}
+
+.cc-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-track { scroll-behavior: auto; }
+  .cc-link { transition: none; }
+}
+
+@media (max-width: 1000px) {
+  .cc-card { flex-basis: calc((100% - 20px) / 2.2); }
+}
+
+@media (max-width: 1180px) {
+  .cc-prev { right: 4px; }
+  .cc-next { left: 4px; }
+}
+
+/* Phones: one card with a peek, swipe; arrows hidden */
+@media (max-width: 600px) {
+  .cc-section { padding: 2rem 0 3rem; }
+  .cc-card { flex-basis: 82%; }
+  .cc-arrow { display: none; }
+}

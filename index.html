@@ -87,7 +87,7 @@
     <!-- SERVICES SECTION -->
     <section class="services-home-section">
       <div class="container">
-        <h2 class="services-home-title">ויש לי המון, <span class="highlight">שירותים יפניים</span></h2>
+        <h2 class="services-home-title">ויש לי המון, <span class="highlight">שירותים יפניים</span>.</h2>
         <div class="featured-services">
           
           <!-- Card 0: Visa Finder -->
@@ -126,39 +126,85 @@
       </div>
     </section>
 
-    <!-- IMAGE CAROUSEL SECTION -->
-    <section class="carousel-section">
+    <!-- CONTENT CAROUSEL: news, interviews, lectures, tours -->
+    <section class="cc-section" aria-labelledby="ccTitle">
       <div class="container">
-        <div class="hero-slider" role="region" aria-label="תמונות יפן">
-          <!-- Slides -->
-          <div class="hero-slide is-active" aria-hidden="false">
-            <img src="assets/images/index/index1.jpg" alt="טוקיו, יפן" loading="eager">
-          </div>
-          <div class="hero-slide" aria-hidden="true">
-            <img src="assets/images/index/index2.jpg" alt="תרבות יפנית" loading="lazy">
-          </div>
-          <div class="hero-slide" aria-hidden="true">
-            <img src="assets/images/index/index3.jpg" alt="נופי יפן" loading="lazy">
-          </div>
-          <div class="hero-slide" aria-hidden="true">
-            <img src="assets/images/index/index4.jpg" alt="חיי יום יום ביפן" loading="lazy">
-          </div>
-          <div class="hero-slide" aria-hidden="true">
-            <img src="assets/images/index/index5.jpg" alt="אדריכלות יפנית" loading="lazy">
-          </div>
-          <div class="hero-slide" aria-hidden="true">
-            <img src="assets/images/index/index6.jpg" alt="עיר יפנית" loading="lazy">
-          </div>
-
-          <!-- Slider controls: pause/play (WCAG 2.2.2) and previous/next -->
-          <div class="hero-controls">
-            <button type="button" class="hero-prev" aria-label="התמונה הקודמת"><span aria-hidden="true">›</span></button>
-            <button type="button" class="hero-toggle" aria-label="השהיית מצגת התמונות"><span aria-hidden="true">❚❚</span></button>
-            <button type="button" class="hero-next" aria-label="התמונה הבאה"><span aria-hidden="true">‹</span></button>
-          </div>
-
-          <!-- Screen reader status -->
-          <div id="heroStatus" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+        <h2 id="ccTitle" class="cc-heading"><span class="highlight">קצת</span> מזמני הפנוי</h2>
+        <div class="cc-wrap">
+          <button type="button" class="cc-arrow cc-prev" aria-label="הקודם"><svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="cc-track" role="list">
+          <li class="cc-card">
+            <a href="pages/media/news.html#ep12" class="cc-link">
+              <span class="cc-media"><img src="assets/images/news/ep12.china.png" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">בחדשות</span>
+                <span class="cc-title">יפן וסין – מלחמה בפתח?</span>
+                <span class="cc-cta" aria-hidden="true">לצפייה ←</span>
+              </span>
+            </a>
+          </li>
+          <li class="cc-card">
+            <a href="pages/media/features.html#nikkei" class="cc-link">
+              <span class="cc-media"><img src="assets/images/articles/nikkeiasiia.png" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">ראיון</span>
+                <span class="cc-title">איך מרגישים זרים ביפן</span>
+                <span class="cc-cta" aria-hidden="true">לקריאה ←</span>
+              </span>
+            </a>
+          </li>
+          <li class="cc-card">
+            <a href="services.html#lectures" class="cc-link">
+              <span class="cc-media"><img src="assets/images/lectures/anime-lecture.jpg" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">הרצאה</span>
+                <span class="cc-title">אנימה והפלת הממשלה</span>
+                <span class="cc-cta" aria-hidden="true">להרצאות ←</span>
+              </span>
+            </a>
+          </li>
+          <li class="cc-card">
+            <a href="services.html#tours" class="cc-link">
+              <span class="cc-media"><img src="assets/images/tours/asakusa.jpg" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">סיור</span>
+                <span class="cc-title">אסאקוסה: הלב של טוקיו הישנה</span>
+                <span class="cc-cta" aria-hidden="true">לסיורים ←</span>
+              </span>
+            </a>
+          </li>
+          <li class="cc-card">
+            <a href="pages/media/features.html#kyodo" class="cc-link">
+              <span class="cc-media"><img src="assets/images/articles/kyodonews.jpg" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">בחדשות</span>
+                <span class="cc-title">בחדשות המקומיות של Kyodo</span>
+                <span class="cc-cta" aria-hidden="true">לקריאה ←</span>
+              </span>
+            </a>
+          </li>
+          <li class="cc-card">
+            <a href="pages/media/features.html#japantimes" class="cc-link">
+              <span class="cc-media"><img src="assets/images/articles/japantimes.png" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">שיתוף פעולה</span>
+                <span class="cc-title">קמפיין עבור The Japan Times</span>
+                <span class="cc-cta" aria-hidden="true">לקריאה ←</span>
+              </span>
+            </a>
+          </li>
+          <li class="cc-card">
+            <a href="pages/media/news.html#ep6" class="cc-link">
+              <span class="cc-media"><img src="assets/images/news/ep6.takaichi.png" alt="" loading="lazy"></span>
+              <span class="cc-body">
+                <span class="cc-label">בחדשות</span>
+                <span class="cc-title">אשת הברזל של יפן</span>
+                <span class="cc-cta" aria-hidden="true">לצפייה ←</span>
+              </span>
+            </a>
+          </li>
+          </ul>
+          <button type="button" class="cc-arrow cc-next" aria-label="הבא"><svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
     </section>
@@ -248,6 +294,31 @@
   <script>
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Content carousel: arrows scroll one card; disabled at the ends (RTL-aware)
+    (function () {
+      const wrap = document.querySelector('.cc-wrap');
+      if (!wrap) return;
+      const track = wrap.querySelector('.cc-track');
+      const prev = wrap.querySelector('.cc-prev');
+      const next = wrap.querySelector('.cc-next');
+      const rtl = getComputedStyle(track).direction === 'rtl';
+      const step = () => track.querySelector('.cc-card').getBoundingClientRect().width + 20;
+      const go = dir => track.scrollBy({ left: (rtl ? -dir : dir) * step(), behavior: 'smooth' });
+      next.addEventListener('click', () => go(1));
+      prev.addEventListener('click', () => go(-1));
+      const update = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        const pos = Math.abs(track.scrollLeft);
+        prev.disabled = pos <= 10;
+        next.disabled = pos >= max - 10;
+      };
+      track.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
   </script>
 
 </body>
