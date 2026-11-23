@@ -3868,3 +3868,243 @@ main hr {
 .footer-image-placeholder {
   display: none;
 }
+
+/* =========================
+   LECTURES: FLIP CARDS + DETAILS POPUP (services.html)
+   ========================= */
+.lecture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lecture-card {
+  margin: 0;
+}
+
+.lecture-flip {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  perspective: 1200px;
+  font: inherit;
+  color: inherit;
+  border-radius: var(--radius-slide);
+}
+
+.lecture-flip:focus-visible {
+  outline: 3px solid var(--shu);
+  outline-offset: 4px;
+}
+
+.lecture-flip-inner {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.lecture-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border: 3px solid var(--sumi);
+  border-radius: var(--radius-slide);
+  box-shadow: 6px 6px 0 var(--suna-300);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.lecture-face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Front: photo with the lecture title on a bar */
+.lecture-title {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 14px 16px;
+  background: rgba(15, 42, 74, 0.82);
+  color: var(--white);
+  font-family: var(--font-sub);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* Back: the same photo at 80% opacity with "למידע נוסף" */
+.lecture-back {
+  transform: rotateY(180deg);
+  background: var(--umi);
+}
+
+.lecture-back img {
+  opacity: 0.8;
+}
+
+.lecture-more {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  background: var(--shu);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.15rem;
+  white-space: nowrap;
+  box-shadow: var(--shadow-red);
+}
+
+@media (hover: hover) {
+  .lecture-flip:hover .lecture-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.lecture-flip:focus-visible .lecture-flip-inner {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lecture-flip-inner {
+    transition: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .lecture-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .lecture-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Details popup */
+.lecture-dialog {
+  width: min(640px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  overflow: auto;
+  border: 3px solid var(--sumi);
+  border-radius: var(--radius-slide);
+  background: var(--kami);
+  color: var(--umi);
+  box-shadow: 8px 8px 0 var(--suna-300);
+}
+
+.lecture-dialog::backdrop {
+  background: rgba(15, 42, 74, 0.6);
+}
+
+.lecture-dialog-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.lecture-dialog-body {
+  padding: 24px 28px 28px;
+  text-align: center;
+}
+
+.lecture-dialog-body h3 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+.lecture-dialog-text p {
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+.lecture-dialog-close {
+  /* stays visible while a long popup scrolls */
+  position: sticky;
+  top: 12px;
+  float: left;
+  margin: 12px 12px -56px 0;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--sumi);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--sumi);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lecture-dialog-close:hover {
+  background: var(--suna);
+}
+
+.lecture-dialog-close:focus-visible {
+  outline: 3px solid var(--shu);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .lecture-dialog-body {
+    padding: 20px 18px 24px;
+  }
+
+  .lecture-title,
+  .lecture-more {
+    font-size: 1.05rem;
+  }
+}
+
+.lecture-intro {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--umi-700);
+}
+
+/* "מתאים ל:" tag chips in the lecture popup */
+.lecture-dialog-text .lecture-tags-label {
+  margin: 4px 0 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--shu-deep);
+}
+
+.lecture-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.lecture-tags li {
+  padding: 4px 14px;
+  border: 1.5px solid var(--suna-400);
+  border-radius: var(--radius-full);
+  background: var(--white);
+  font-size: 0.9rem;
+  color: var(--umi-700);
+}

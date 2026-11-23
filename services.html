@@ -76,85 +76,251 @@
     <!-- LECTURES SECTION -->
     <section id="lectures" class="services-section">
       <div class="container">
-        <h2 style="text-align: center; margin-bottom: 2rem;">הרצאות</h2>
-        <div class="swiper lectures-swiper" role="region" aria-label="הרצאות">
-          <div class="swiper-wrapper">
-            
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/business.jpg" alt="עסקים ביפן" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>עסקים ביפן</h3>
-                <p>שבוע קצר, שעות ארוכות, היררכיה, חליפות וכרטיסי ביקור. מבט מעמיק אל תוך שוק העבודה היפני, השוני מתרבות העבודה הישראלית, והשינויים שבפתח</p>
-                <a href="contact.html?service= הרצאות" class="btn btn-primary" aria-label="צרו קשר בנושא: עסקים ביפן">צרו קשר</a>
-              </div>
+        <h2 style="text-align: center; margin-bottom: 0.75rem;">הרצאות</h2>
+        <p class="lecture-intro">הרצאות על יפן לחברות וארגונים, ימי כיף ואירועי עבודה, כנסים, אקדמיה, קהילות, נוער וגופים ממשלתיים</p>
+        <ul class="lecture-grid" role="list">
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-1">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/myths.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">ניפוץ מיתוסים</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/myths.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-1" hidden>
+              <img src="assets/images/lectures/myths.jpg" alt="ניפוץ מיתוסים על יפן">
+              <h3>ניפוץ מיתוסים</h3>
+              <p>ביפן אין ילדים, אפשר להסתובב יום שלם ברחוב עם גרביים לבנות ולחזור בלי כתם, הרכבות תמיד מגיעות בזמן ויפן היא העתיד הטכנולוגי של העולם! או שמא?</p>
+              <p>ביחד נפרק את התפיסות הכי נפוצות על יפן, נבין מאיפה הן הגיעו ונחפש את גרעין האמת שבכל אחת מהן. ונגלה שיפן היא פחות עולם חיצון ממה שהתרגלנו לחשוב, ובזה נמצא גם הקסם שלה.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>חברות וארגונים</li>
+                <li>קהילות</li>
+                <li>נוער</li>
+                <li>אקדמיה</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/custome.jpeg" alt="הרצאה בהתאמה אישית" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>הרצאה בהתאמה אישית</h3>
-                <p>יש לכם רעיון, כנס או אירוע מיוחד? נבנה יחד הרצאה בול בשבילכם! מתרבות האלכוהול, לאופנה יפנית, ועד חגים ומנהגים. צרו קשר ובואו נחשוב יחד</p>
-                <a href="contact.html?service= הרצאות" class="btn btn-primary" aria-label="צרו קשר בנושא: הרצאה בהתאמה אישית">צרו קשר</a>
-              </div>
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-2">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/bl-platform.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">בנים לאהוב: עולם ה-BL</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/bl-platform.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-2" hidden>
+              <img src="assets/images/lectures/bl-platform.jpg" alt="שתי צעירות חולפות על פני שלט פרסומת של מנגת BL בתחנת רכבת בטוקיו">
+              <h3>בנים לאהוב: עולם ה-BL</h3>
+              <p>ביפן עדיין אין נישואים חד-מיניים, אבל סיפורי אהבה מצוירים בין גברים מגלגלים שם מיליונים וכובשים את העולם. איך זה מסתדר?</p>
+              <p>נכיר את עולם ה-BL (<bdi lang="en">Boys' Love</bdi>), נחזור לשורשים שלו בחצר הקיסרית לפני יותר מאלף שנה ונגלה מי בעצם קוראות אותו (רמז: בעיקר נשים). נבין איזו מטרה הוא משרת, ואיך חברה שמרנית מחזיקה במקביל את אחד מז'אנרי הפופ הכי מתירניים שיש.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>כנסים</li>
+                <li>אקדמיה</li>
+                <li>ימי כיף ואירועי עבודה</li>
+                <li>חברות וארגונים</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/disability.jpg" alt="רובוטים, מוגבלויות ויפן" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>רובוטים, מוגבלויות ויפן</h3>
-                <p>איך הפכה יפן למדינת הרובוטים השירותיים, ואיך מנסים, בעזרת חדשנות טכנולוגית, להקל את חייהם של בעלי מוגבלויות, בחברה שמדירה אותם מהעין הציבורית</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צרו קשר בנושא: רובוטים, מוגבלויות ויפן">צרו קשר</a>
-              </div>
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-3">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/business-escalator.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">ביזנס מן: איך עובדים ביפן (ומה אפשר ללמוד מזה)</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/business-escalator.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-3" hidden>
+              <img src="assets/images/lectures/business-escalator.jpg" alt="עסקים ותרבות עבודה ביפן">
+              <h3>ביזנס מן: איך עובדים ביפן (ומה אפשר ללמוד מזה)</h3>
+              <p>היפנים עובדים שעות ארוכות, מגיעים בזמן ולא מוותרים על אף פרט, ובכל זאת התפוקה לשעת עבודה שם היא מהנמוכות ב-G7. איך זה קורה?</p>
+              <p>נעבור מהנס הכלכלי של אחרי המלחמה דרך שלושה עשורים אבודים, ונבין איך הסדר החברתי שהופך את יפן לכל כך אמינה הוא גם מה שמאט אותה. ובעיקר: מה ישראלים יכולים לקחת מזה, מה יפן מחפשת דווקא מאיתנו, ואיך עושים איתה עסקים בלי לפשל בפגישה הראשונה.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>חברות וארגונים</li>
+                <li>ימי כיף ואירועי עבודה</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/family.jpg" alt="משפחה ביפן" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>משפחה יפנית</h3>
-                <p>ליפנים אין ילדים? החינוך היפני קפדני, הם לא מתחבקים? אין שם אפידורל?? וכל מה שרציתם לדעת על חינוך ומשפחה ביפן</p>
-                <a href="contact.html?service=הרצאות " class="btn btn-primary" aria-label="צרו קשר בנושא: משפחה יפנית">צרו קשר</a>
-              </div>
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-4">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/ten-lessons.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">עשרה שיעורים ממעבר ליפן</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/ten-lessons.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-4" hidden>
+              <img src="assets/images/lectures/ten-lessons.jpg" alt="עשרה שיעורים ממעבר ליפן">
+              <h3>עשרה שיעורים ממעבר ליפן</h3>
+              <p>מעבר לטוקיו, ישראלית אחת ועשרה שיעורים שלא תמצאו באף מדריך טיולים. כל שיעור הוא סיפור קטן מהחיים פה, וביחד הם עונים על השאלה הגדולה: איך שומרים על הישראליות שלנו באחת החברות הכי הומוגניות בעולם?</p>
+              <p>מצחיק, כואב, ובעיקר אמיתי.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>קהילות</li>
+                <li>כנסים</li>
+                <li>ימי כיף ואירועי עבודה</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/innovation.jpg" alt="חדשנות ויזמות-ישראל מול יפן" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>חדשנות ויזמות-ישראל מול יפן</h3>
-                <p>ביפן יש 128 מיליון איש, ורק 10 יוניקורנים. איך מדינה שהייתה הכלכלה השלישית בגודלה בעולם מגיעה למצב הזה? ומה ההזדמנויות עבור ישראל</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צרו קשר בנושא: חדשנות ויזמות-ישראל מול יפן">צרו קשר</a>
-              </div>
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-5">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/anime-lecture.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">אנימה והפלת הממשלה</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/anime-lecture.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-5" hidden>
+              <img src="assets/images/lectures/anime-lecture.jpg" alt="קרן זוהר מרצה על אנימה ומחאה, ודגל כובע הקש על המסך">
+              <h3>אנימה והפלת הממשלה</h3>
+              <p>גולגולת מצוירת עם כובע קש מתנופפת מעל הפגנות באינדונזיה, בפיליפינים, בנפאל, במדגסקר, בפריז ובארה"ב, ובתאילנד שירים יפניים הופכים להמנון מחאה. איך תרבות פופ יפנית הפכה לשפה של מחאה בשביל דור שלם?</p>
+              <p>נבין למה דווקא אנימה, מה הסיפורים האלה מלמדים על צדק וחברות, ומה יפן עצמה חושבת על זה שהגיבורים שלה הפכו לסמלים פוליטיים.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>ימי כיף ואירועי עבודה</li>
+                <li>כנסים</li>
+                <li>נוער</li>
+                <li>אקדמיה</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/japanbegin.jpeg" alt="יפן למתחילים" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>יפן למתחילים-היכרות עם התרבות והחברה</h3>
-                <p>סקירה חיה ומצחיקה על ההיסטוריה, התרבות והיומיום היפני בגובה העיניים</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צרו קשר בנושא: יפן למתחילים-היכרות עם התרבות והחברה">צרו קשר</a>
-              </div>
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-6">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/recovery-pine.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">לתקומה: אסון, שיקום ומה שבאמצע</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/recovery-pine.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-6" hidden>
+              <img src="assets/images/lectures/recovery-pine.jpg" alt="אסון ושיקום ביפן">
+              <h3>לתקומה: אסון, שיקום ומה שבאמצע</h3>
+              <p>1995: רעידת האדמה בקובה. 2011: האסון המשולש. 2024: חצי האי נוטו.</p>
+              <p>יפן יודעת ליפול, והיא גם יודעת לקום.</p>
+              <p>נדבר על מה שקורה אחרי שהאבק שוכך: הממשלה שמגיעה לאט, אזרחים שמתארגנים לבד, ואפילו היאקוזה שחילקה אוכל לפני כולם. נכיר גם את החלק הישראלי בסיפור, מהמרפאה של צה"ל באזור האסון ועד <bdi lang="en">IsraAID</bdi> שנשארה בטוהוקו שנים. ונשאל מה יפן יכולה ללמד את ישראל על שיקום קהילות לטווח הארוך.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>אקדמיה</li>
+                <li>ימי כיף ואירועי עבודה</li>
+                <li>קהילות</li>
+                <li>גופים ממשלתיים</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/lectures/thethird.png" alt="הרצאה: נושא מיוחד" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>הרצאה מותאמת אישית</h3>
-                <p>נושא לפי הבחירה והצורך שלכם</p>
-                <a href="contact.html?service=הרצאות" class="btn btn-primary" aria-label="צרו קשר בנושא: הרצאה מותאמת אישית">צרו קשר</a>
-              </div>
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-7">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/robots-android.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">רובוטים, מוגבלויות ויפן</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/robots-android.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-7" hidden>
+              <img src="assets/images/lectures/robots-android.jpg" alt="רובוטים, מוגבלויות ויפן">
+              <h3>רובוטים, מוגבלויות ויפן</h3>
+              <p>מה נעשה כשהרובוטים יחליפו אותנו? נעבוד איתם!</p>
+              <p>עוד לפני שאר העולם, יפן הייתה חלוצה בהכנסת רובוטים לחיי היומיום, מתוך אמונה שאפשר לחיות לצידם, ביחד. נבין איך יפן הפכה למעצמת רובוטים שירותיים, איך טכנולוגיה מנסה לפתוח דלתות לאנשים עם מוגבלויות, ומה קורה כשחדשנות פוגשת חברה שעדיין מעדיפה שלא יראו.</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>אקדמיה</li>
+                <li>נוער</li>
+                <li>גופים ממשלתיים</li>
+              </ul>
             </div>
+          </li>
 
+          <li class="lecture-card">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="lecture-8">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/lectures/custom-room.jpg" alt="" loading="lazy">
+                  <span class="lecture-title">הרצאה בהתאמה אישית</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/lectures/custom-room.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="lecture-8" hidden>
+              <img src="assets/images/lectures/custom-room.jpg" alt="הרצאה בהתאמה אישית">
+              <h3>הרצאה בהתאמה אישית</h3>
+              <p>יש לכם כנס, צוות או אירוע עם נושא משלו? בואו נחשוב יחד על הרצאה שמתאימה בדיוק לכם!</p>
+              <p class="lecture-tags-label">מתאים ל:</p>
+              <ul class="lecture-tags">
+                <li>חברות וארגונים</li>
+                <li>ימי כיף ואירועי עבודה</li>
+                <li>כנסים</li>
+                <li>אקדמיה</li>
+                <li>קהילות</li>
+                <li>נוער</li>
+                <li>גופים ממשלתיים</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Lecture details popup (filled from the clicked card) -->
+        <dialog class="lecture-dialog" aria-labelledby="lectureDialogTitle">
+          <button type="button" class="lecture-dialog-close" aria-label="סגירה">&times;</button>
+          <div class="lecture-dialog-media"></div>
+          <div class="lecture-dialog-body">
+            <h3 id="lectureDialogTitle"></h3>
+            <div class="lecture-dialog-text"></div>
+            <a href="contact.html?service=הרצאות" class="btn btn-primary lecture-dialog-cta">צרו קשר</a>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
+        </dialog>
       </div>
     </section>
 
@@ -313,31 +479,6 @@
     
     // Wait for Swiper to be fully loaded
     window.addEventListener('DOMContentLoaded', () => {
-      // Initialize Swiper for lectures (manual swipe only)
-      const lecturesSwiper = new Swiper('.lectures-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: false,
-        keyboard: { enabled: true },
-        a11y: {
-          enabled: true,
-          prevSlideMessage: 'השקופית הקודמת',
-          nextSlideMessage: 'השקופית הבאה',
-          firstSlideMessage: 'זו השקופית הראשונה',
-          lastSlideMessage: 'זו השקופית האחרונה',
-          paginationBulletMessage: 'מעבר לשקופית {{index}}',
-          slideLabelMessage: 'שקופית {{index}} מתוך {{slidesLength}}'
-        },
-        pagination: {
-          el: '.lectures-swiper .swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.lectures-swiper .swiper-button-next',
-          prevEl: '.lectures-swiper .swiper-button-prev',
-        },
-      });
-
       // Initialize Swiper for tours (manual swipe only)
       const toursSwiper = new Swiper('.tours-swiper', {
         slidesPerView: 1,
@@ -363,6 +504,38 @@
         },
       });
     });
+  </script>
+
+  <script>
+    // Lecture cards: open the details popup
+    (function () {
+      const dialog = document.querySelector('.lecture-dialog');
+      if (!dialog) return;
+      const media = dialog.querySelector('.lecture-dialog-media');
+      const title = dialog.querySelector('#lectureDialogTitle');
+      const text = dialog.querySelector('.lecture-dialog-text');
+      const cta = dialog.querySelector('.lecture-dialog-cta');
+      let opener = null;
+
+      document.querySelectorAll('.lecture-flip').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const info = document.getElementById(btn.dataset.info);
+          media.innerHTML = '';
+          media.appendChild(info.querySelector('img').cloneNode());
+          title.textContent = info.querySelector('h3').textContent;
+          text.innerHTML = '';
+          info.querySelectorAll('p, ul').forEach(el => text.appendChild(el.cloneNode(true)));
+          cta.setAttribute('aria-label', 'צרו קשר בנושא: ' + title.textContent);
+          opener = btn;
+          dialog.showModal();
+        });
+      });
+
+      dialog.querySelector('.lecture-dialog-close').addEventListener('click', () => dialog.close());
+      // Click on the dark backdrop closes it
+      dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', () => { if (opener) opener.focus(); });
+    })();
   </script>
 
 </body>
