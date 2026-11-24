@@ -4302,12 +4302,7 @@ main hr {
   min-width: 190px;
 }
 
-.footer-grid > .footer-column-links {
-  min-width: 250px;
-}
-
-.footer-brand,
-.footer-links-grid a {
+.footer-brand {
   white-space: nowrap;
 }
 
@@ -4380,8 +4375,8 @@ main hr {
   }
 }
 
-/* Medium screens: not enough room for 4 columns, so the idiom gets its own row below */
-@media (max-width: 1300px) and (min-width: 769px) {
+/* Medium screens: not enough room for 3 columns, so the idiom gets its own row below */
+@media (max-width: 1000px) and (min-width: 769px) {
   .footer-grid { flex-wrap: wrap; }
   .footer-column-idiom { order: 10; flex-basis: 100%; margin-top: 8px; }
   .footer-idiom-jp { font-size: 46px; }
