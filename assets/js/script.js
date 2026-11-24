@@ -471,4 +471,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Footer idiom: "write" the calligraphy stroke by stroke when it scrolls into view
+  const idiom = document.querySelector('.footer-idiom');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (idiom && !reduceMotion && 'IntersectionObserver' in window) {
+    idiom.querySelectorAll('.ink-col > span').forEach((ch, i) => ch.style.setProperty('--i', i));
+    idiom.classList.add('js-ink');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          idiom.classList.add('is-written');
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.6 });
+    io.observe(idiom.querySelector('.footer-idiom-jp'));
+  }
+
 });

@@ -4280,3 +4280,129 @@ main hr {
   .cc-card { flex-basis: 82%; }
   .cc-arrow { display: none; }
 }
+
+/* =========================
+   FOOTER: Japanese idiom in brush calligraphy (own middle column)
+   Font: Kouzan Brush Font (衡山毛筆フォント), cut to the characters used (3KB)
+   ========================= */
+@font-face {
+  font-family: 'Kouzan Brush';
+  src: url('../fonts/kouzan-idiom.woff2') format('woff2');
+  font-display: swap;
+}
+
+.footer-column-idiom {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+/* keep the other footer columns readable next to the idiom */
+.footer-grid > .footer-column:not(.footer-column-idiom) {
+  min-width: 190px;
+}
+
+.footer-grid > .footer-column-links {
+  min-width: 250px;
+}
+
+.footer-brand,
+.footer-links-grid a {
+  white-space: nowrap;
+}
+
+.footer-idiom {
+  margin: 0;
+  text-align: center;
+}
+
+/* Desktop: one line of large brush writing */
+.footer-idiom-jp {
+  margin: 0 0 6px;
+  direction: ltr;
+  font-family: 'Kouzan Brush', 'Yuji Syuku', var(--font-jp);
+  font-weight: 400;
+  font-size: clamp(34px, 3.2vw, 60px);
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: #8A2E1B; /* deep shu, almost brown, like dried ink */
+}
+
+.footer-idiom-jp .ink-col {
+  display: inline;
+}
+
+.footer-idiom-jp .ink-col > span {
+  display: inline-block;
+}
+
+.footer-idiom figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Shodo animation: each character is brushed in, in reading order ----------
+   Only when script.js adds .js-ink; without it the text just shows. */
+.footer-idiom.js-ink .ink-col > span {
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(135deg, #000 0%, #000 45%, transparent 60%);
+          mask-image: linear-gradient(135deg, #000 0%, #000 45%, transparent 60%);
+  -webkit-mask-size: 320% 320%;
+          mask-size: 320% 320%;
+  -webkit-mask-position: 100% 100%;
+          mask-position: 100% 100%;
+}
+
+.footer-idiom.is-written .ink-col > span {
+  animation: brush-in 0.75s cubic-bezier(0.5, 0, 0.2, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 170ms);
+}
+
+@keyframes brush-in {
+  0% {
+    opacity: 1;
+    -webkit-mask-position: 100% 100%;
+            mask-position: 100% 100%;
+    filter: blur(1.5px);
+    transform: scale(1.06);
+  }
+  70% {
+    filter: blur(0.4px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-mask-position: 0% 0%;
+            mask-position: 0% 0%;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+/* Medium screens: not enough room for 4 columns, so the idiom gets its own row below */
+@media (max-width: 1300px) and (min-width: 769px) {
+  .footer-grid { flex-wrap: wrap; }
+  .footer-column-idiom { order: 10; flex-basis: 100%; margin-top: 8px; }
+  .footer-idiom-jp { font-size: 46px; }
+}
+
+/* Stacked footer (tablet/phone): tagline centred; idiom written vertically in two columns */
+@media (max-width: 768px) {
+  .footer-description {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .footer-idiom-jp {
+    writing-mode: vertical-rl;
+    margin: 0 auto 10px;
+    font-size: clamp(34px, 9vw, 42px);
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-idiom-jp .ink-col {
+    display: block;
+  }
+}
