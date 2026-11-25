@@ -4402,3 +4402,79 @@ main hr {
     display: block;
   }
 }
+
+/* =========================
+   TOURS: flip cards (reuse the lecture cards) + "כדאי לדעת" box (services.html)
+   ========================= */
+.tour-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 14px;
+  border: 2px solid var(--sumi);
+  border-radius: var(--radius-full);
+  background: var(--kami);
+  color: var(--umi);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.tour-card--night .tour-badge {
+  background: var(--umi);
+  border-color: var(--umi);
+  color: var(--white);
+}
+
+/* Details list inside the popup */
+.tour-facts {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 22px;
+  padding: 14px 18px;
+  list-style: none;
+  border: 1.5px solid var(--suna-400);
+  border-radius: var(--radius-md, 12px);
+  background: var(--white);
+  text-align: right;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tour-facts strong {
+  color: var(--shu-deep);
+}
+
+.tour-terms {
+  max-width: 820px;
+  margin: 48px auto 0;
+  padding: 24px 28px;
+  border: 3px solid var(--sumi);
+  border-radius: var(--radius-slide);
+  background: var(--kami);
+  box-shadow: 6px 6px 0 var(--suna-300);
+}
+
+.tour-terms h3 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.tour-terms ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0 1.2em 0 0;
+  line-height: 1.7;
+}
+
+.tour-terms strong {
+  color: var(--shu-deep);
+}
+
+@media (max-width: 600px) {
+  .tour-terms {
+    margin-top: 36px;
+    padding: 20px 18px;
+  }
+}

@@ -327,76 +327,194 @@
     <!-- TOURS SECTION -->
     <section id="tours" class="services-section">
       <div class="container">
-        <h2 style="text-align: center; margin-bottom: 2rem;">סיורים בטוקיו</h2>
-        <div class="swiper tours-swiper" role="region" aria-label="סיורים בטוקיו">
-          <div class="swiper-wrapper">
-            
-            <div class="swiper-slide">
-              <img src="assets/images/tours/shibuya.jpg" alt="סיור בשיבויה" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>שיבויה</h3>
-                <p>ממקדש מייג'י העמוס היסטוריה ויופי, נמשיך לפארקים המקיפים ונדבר על תרבות הפנאי וחיי המשפחה. נקפוץ לרחוב טאקשיטה האופנתי על אלף חנויותיו, ונמשיך לצדדים הסודיים של האראג'וקו. הסיור מתרכז בתרבות פופ, ההיסטוריה שהובילה צעירים רבים כל כך לאהוב את יפן, ומעבר חצייה איימתני אחד</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צרו קשר בנושא: שיבויה">צרו קשר</a>
-              </div>
+        <h2 style="text-align: center; margin-bottom: 1rem;">סיורים בטוקיו</h2>
+        <p class="lecture-intro">סיורים בעברית, ביום ובלילה, בקבוצה סגורה או בהצטרפות לקבוצה</p>
+        <ul class="lecture-grid tour-grid" role="list">
+          <li class="lecture-card tour-card tour-card--day">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="tour-1">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/tours/asakusa-gate.jpg" alt="" loading="lazy">
+                  <span class="tour-badge">סיור יום</span>
+                  <span class="lecture-title">אסאקוסה</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/tours/asakusa-gate.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, סיור יום, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="tour-1" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+              <img src="assets/images/tours/asakusa-gate.jpg" alt="השלט המוזהב 浅草寺 על שער המקדש באסאקוסה">
+              <h3>אסאקוסה</h3>
+              <p>היסטוריה, דתות, בידור ומודרניזציה.</p>
+              <p>הסיור עובר בשכונות אסאקוסה, שין אוקאצ'ימאצ'י ואקיהאברה.</p>
+              <ul class="tour-facts">
+                <li><strong>משך:</strong> כ-6 שעות</li>
+                <li><strong>נפגשים:</strong> בלובי המלון ב-09:30 או ב-10:00</li>
+                <li><strong>קבוצה סגורה:</strong> 450$</li>
+                <li><strong>הצטרפות לקבוצה:</strong> 100$ למשתתף</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/tours/asakusa.jpg" alt="סיור באסאקוסה" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>אסאקוסה</h3>
-                <p>במקום אחד נראה את הדתות של יפן, נשים בקימונו, נהגי ריקשות ודוכנים מלאי מתוקים. נבקר במקדש הגדול של אסאקוסה, בעיר שהייתה לב התרבות היפנית, ממלכת כלי המטבח, והבניין שהיה הגבוה ביותר בעולם! משם נמשיך לעיר החשמל אקיהאברה ונבקר גם בפרויקט טכנולוגי חברתי מיוחד במינו</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צרו קשר בנושא: אסאקוסה">צרו קשר</a>
-              </div>
+          <li class="lecture-card tour-card tour-card--day">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="tour-2">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/tours/neighborhoods-hose.jpg" alt="" loading="lazy">
+                  <span class="tour-badge">סיור יום</span>
+                  <span class="lecture-title">סיור שכונות</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/tours/neighborhoods-hose.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, סיור יום, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="tour-2" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+              <img src="assets/images/tours/neighborhoods-hose.jpg" alt="עובדת חנות משקה את המדרכה ליד שערי טוריי של מקדש שכונתי בטוקיו">
+              <h3>סיור שכונות</h3>
+              <p>להכיר את החלקים היומיומיים של טוקיו: מחיי היפני העובד, למוקדי מחלוקת פוליטית, חיי משפחה ותרבות פופולרית.</p>
+              <p>הסיור עובר בהאמאמאצוצ'ו, קאנדה, קאגוראזקה ואיקבוקורו.</p>
+              <ul class="tour-facts">
+                <li><strong>משך:</strong> כ-6 שעות</li>
+                <li><strong>נפגשים:</strong> בלובי המלון ב-09:30 או ב-10:00</li>
+                <li><strong>קבוצה סגורה:</strong> 450$</li>
+                <li><strong>הצטרפות לקבוצה:</strong> 100$ למשתתף</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/tours/neighborhoods.jpg" alt="שכונות מקומיות" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>שכונות מקומיות</h3>
-                <p>טוקיו האמיתית מעבר לתיירות. מחוץ לשיבויה ושינג'וקו ישנן שכונות קטנות ומקסימות שאוצרות בתוכן סיפורים, תיירות, ומסורת מרתקת. במהלך הסיור נדגום ארבע שכונות, חלכן חדשות ונוצצות, חלקן ישנות ומסורתיות, ובדרך נדבר על ההיסטוריה של יפן, חיי המשפחות, החינוך, הגיל השלישי, ועוד ועוד</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צרו קשר בנושא: שכונות מקומיות">צרו קשר</a>
-              </div>
+          <li class="lecture-card tour-card tour-card--day">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="tour-3">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/tours/holidays-halloween.jpg" alt="" loading="lazy">
+                  <span class="tour-badge">סיור יום</span>
+                  <span class="lecture-title">סיור חגים</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/tours/holidays-halloween.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, סיור יום, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="tour-3" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+              <img src="assets/images/tours/holidays-halloween.jpg" alt="שלד עם כובע בוקרים ודלעות ליד מרפאה בטוקיו, קישוטי ליל כל הקדושים">
+              <h3>סיור חגים</h3>
+              <p>סיור מיוחד במינו שעובר בין כל החגים של יפן! נצלול לאיזון בין מזרח למערב, נבין למה אוכלים עוף בחג המולד, ואיפה יש השפעה יהודית על כל העניין.</p>
+              <p>מתקיים כל השנה.</p>
+              <ul class="tour-facts">
+                <li><strong>משך:</strong> כ-6 שעות</li>
+                <li><strong>נפגשים:</strong> בלובי המלון ב-09:30 או ב-10:00</li>
+                <li><strong>קבוצה סגורה:</strong> 450$</li>
+                <li><strong>הצטרפות לקבוצה:</strong> 100$ למשתתף</li>
+              </ul>
             </div>
+          </li>
 
-            
-            <div class="swiper-slide">
-              <img src="assets/images/tours/business.jpg" alt="סיור עסקי" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>סיור עסקי</h3>
-                <p>מרכזי עסקים, טכנולוגיה וקצת רכילות משרדית, נצא לסיור היכרות עם עולם העבודה היפני ונלמד מקרוב על תרבות העבודה הקפדנית, ההיררכיה ויחסי הכבוד, היום יום של איש עסקים יפני, ונתרכז גם ביוזמות חדשות, הזדמנויות עסקיות וחייהם של סטארטאפיסטים ביפן</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צרו קשר בנושא: סיור עסקי">צרו קשר</a>
-              </div>
+          <li class="lecture-card tour-card tour-card--day">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="tour-4">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/tours/coffee-teacup.jpg" alt="" loading="lazy">
+                  <span class="tour-badge">סיור יום</span>
+                  <span class="lecture-title">סיור קפה</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/tours/coffee-teacup.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, סיור יום, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="tour-4" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+              <img src="assets/images/tours/coffee-teacup.jpg" alt="קרן זוהר שותה מכוס פורצלן כחולה-לבנה">
+              <h3>סיור קפה</h3>
+              <p>סיור לחובבי קפה שרוצים לצלול אל תרבות השתייה המיוחדת ביפן: מבתי קפה שקיימים מתקופת המלחמה, למודרניזציה של חללים נקיים, אומוראיס (חביתה עם קטשופ ואורז) ומאצ'ה לאטה.</p>
+              <p>סיור חובה לאנשים שקפאין זורם להם בדם.</p>
+              <ul class="tour-facts">
+                <li><strong>משך:</strong> כ-4 שעות</li>
+                <li><strong>נפגשים:</strong> בלובי המלון ב-09:30 או ב-10:00</li>
+                <li><strong>קבוצה סגורה בלבד:</strong> 450$, כולל הקפה</li>
+              </ul>
             </div>
+          </li>
 
-            <div class="swiper-slide">
-              <img src="assets/images/tours/night.jpg" alt="סיור לילה בטוקיו" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>טוקיו בלילה</h3>
-                <p>חיי הלילה, אורות ניאון, ותרבות הבילויים</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צרו קשר בנושא: טוקיו בלילה">צרו קשר</a>
-              </div>
+          <li class="lecture-card tour-card tour-card--night">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="tour-5">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/tours/night.jpg" alt="" loading="lazy">
+                  <span class="tour-badge">סיור לילה</span>
+                  <span class="lecture-title">סיור לילה: טוקיו המלוכלכת</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/tours/night.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, סיור לילה, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="tour-5" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+              <img src="assets/images/tours/night.jpg" alt="טוקיו בלילה">
+              <h3>סיור לילה: טוקיו המלוכלכת</h3>
+              <p>סיור ברחבי שינג'וקו, בו נבין איך נראים חיי הלילה ביפן, איך הם משתנים ולמה האזור האפור כל כך רחב.</p>
+              <p>מגיל 18.</p>
+              <ul class="tour-facts">
+                <li><strong>משך:</strong> 3–4 שעות</li>
+                <li><strong>נפגשים:</strong> בלובי המלון ב-19:00</li>
+                <li><strong>קבוצה סגורה:</strong> 500$ כולל משקאות, או 400$ בלי</li>
+                <li><strong>הצטרפות לקבוצה:</strong> 100$ למשתתף</li>
+              </ul>
             </div>
+          </li>
 
-
-            <div class="swiper-slide">
-              <img src="assets/images/tours/alcohol.jpg" alt="אלכוהול ותרבות" class="slide-img" loading="lazy">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-                <h3>אלכוהול ותרבות</h3>
-                <p>כוס סאקה, כוס בירה, אולי קוקטייל עם יוזו ואורז? בסיור נעבור בין כמה מאבני היסוד של תרבות האלכוהול ביפן, נדבר על הרגלי השתיה, התפקיד שלה בחברה, והמרטיני הכי טוב שנוצר בטוקיו</p>
-                <a href="contact.html?service=סיורים בטוקיו" class="btn btn-primary" aria-label="צרו קשר בנושא: אלכוהול ותרבות">צרו קשר</a>
-              </div>
+          <li class="lecture-card tour-card tour-card--night">
+            <button type="button" class="lecture-flip" aria-haspopup="dialog" data-info="tour-6">
+              <span class="lecture-flip-inner">
+                <span class="lecture-face lecture-front">
+                  <img src="assets/images/tours/sake-shochu.jpg" alt="" loading="lazy">
+                  <span class="tour-badge">סיור לילה</span>
+                  <span class="lecture-title">סיור לילה: סאקה</span>
+                </span>
+                <span class="lecture-face lecture-back" aria-hidden="true">
+                  <img src="assets/images/tours/sake-shochu.jpg" alt="" loading="lazy">
+                  <span class="lecture-more">למידע נוסף</span>
+                </span>
+              </span>
+              <span class="visually-hidden">, סיור לילה, למידע נוסף</span>
+            </button>
+            <div class="lecture-info" id="tour-6" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+              <img src="assets/images/tours/sake-shochu.jpg" alt="שלושה בקבוקי שוצ'ו משעורה וכוס על הבר באיזקאיה">
+              <h3>סיור לילה: סאקה</h3>
+              <p>מושלם למי שרוצה לצלול אל תרבות השתייה היפנית. מיין אורז ועד בירה וויסקי, נדגום את תרבות השתייה ונבין את מקומו החשוב של האלכוהול בנימוסי החברה היפנית.</p>
+              <p>מגיל 20, גיל השתייה החוקי ביפן.</p>
+              <ul class="tour-facts">
+                <li><strong>משך:</strong> 3–4 שעות</li>
+                <li><strong>נפגשים:</strong> בלובי המלון ב-19:00</li>
+                <li><strong>קבוצה סגורה:</strong> 500$ כולל משקאות, או 400$ בלי</li>
+                <li><strong>הצטרפות לקבוצה:</strong> 100$ למשתתף</li>
+              </ul>
             </div>
+          </li>
+        </ul>
 
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+        <div class="tour-terms">
+          <h3>כדאי לדעת</h3>
+          <ul>
+            <li><strong>סיורי יום:</strong> כ-6 שעות, 450$ לקבוצה סגורה. סיור הקפה נמשך כ-4 שעות, באותו מחיר וכולל את הקפה.</li>
+            <li><strong>סיורי לילה:</strong> 3–4 שעות, 500$ לקבוצה סגורה כולל משקאות, או 400$ בלי, ואתם בוחרים אם לשתות.</li>
+            <li><strong>הצטרפות לקבוצה:</strong> 100$ למשתתף, 4 עד 10 משתתפים בקבוצה. סיור הקפה לקבוצות סגורות בלבד.</li>
+            <li><strong>נפגשים:</strong> בלובי המלון, ב-09:30 או ב-10:00 בסיורי יום וב-19:00 בסיורי לילה.</li>
+            <li><strong>על חשבון המטיילים:</strong> תחבורה, כניסות, אוכל ושתייה, חוץ ממה שכלול במחיר.</li>
+            <li><strong>ביטול:</strong> ביטול בפחות מ-24 שעות לפני הסיור כרוך בדמי ביטול של 20% מהמחיר.</li>
+            <li><strong>שפה:</strong> כל הסיורים בעברית.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -469,34 +587,6 @@
   <script>
     // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Wait for Swiper to be fully loaded
-    window.addEventListener('DOMContentLoaded', () => {
-      // Initialize Swiper for tours (manual swipe only)
-      const toursSwiper = new Swiper('.tours-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: false,
-        keyboard: { enabled: true },
-        a11y: {
-          enabled: true,
-          prevSlideMessage: 'השקופית הקודמת',
-          nextSlideMessage: 'השקופית הבאה',
-          firstSlideMessage: 'זו השקופית הראשונה',
-          lastSlideMessage: 'זו השקופית האחרונה',
-          paginationBulletMessage: 'מעבר לשקופית {{index}}',
-          slideLabelMessage: 'שקופית {{index}} מתוך {{slidesLength}}'
-        },
-        pagination: {
-          el: '.tours-swiper .swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.tours-swiper .swiper-button-next',
-          prevEl: '.tours-swiper .swiper-button-prev',
-        },
-      });
-    });
   </script>
 
   <script>
@@ -518,6 +608,7 @@
           title.textContent = info.querySelector('h3').textContent;
           text.innerHTML = '';
           info.querySelectorAll('p, ul').forEach(el => text.appendChild(el.cloneNode(true)));
+          cta.href = info.dataset.cta || 'contact.html?service=הרצאות';
           cta.setAttribute('aria-label', 'צרו קשר בנושא: ' + title.textContent);
           opener = btn;
           dialog.showModal();
