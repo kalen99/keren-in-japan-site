@@ -4417,6 +4417,17 @@ main hr {
   color: var(--umi);
   font-weight: 700;
   font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* very small phones: keep the type, length and price on one line */
+@media (max-width: 360px) {
+  .tour-badge {
+    top: 10px;
+    right: 10px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+  }
 }
 
 .tour-card--night .tour-badge {
