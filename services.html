@@ -345,7 +345,7 @@
               </span>
               <span class="visually-hidden">, סיור יום, למידע נוסף</span>
             </button>
-            <div class="lecture-info" id="tour-1" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+            <div class="lecture-info" id="tour-1" data-kind="tour" hidden>
               <img src="assets/images/tours/asakusa-gate.jpg" alt="השלט המוזהב 浅草寺 על שער המקדש באסאקוסה">
               <h3>אסאקוסה</h3>
               <p>היסטוריה, דתות, בידור ומודרניזציה.</p>
@@ -374,7 +374,7 @@
               </span>
               <span class="visually-hidden">, סיור יום, למידע נוסף</span>
             </button>
-            <div class="lecture-info" id="tour-2" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+            <div class="lecture-info" id="tour-2" data-kind="tour" hidden>
               <img src="assets/images/tours/neighborhoods-hose.jpg" alt="עובדת חנות משקה את המדרכה ליד שערי טוריי של מקדש שכונתי בטוקיו">
               <h3>סיור שכונות</h3>
               <p>להכיר את החלקים היומיומיים של טוקיו: מחיי היפני העובד, למוקדי מחלוקת פוליטית, חיי משפחה ותרבות פופולרית.</p>
@@ -403,7 +403,7 @@
               </span>
               <span class="visually-hidden">, סיור יום, למידע נוסף</span>
             </button>
-            <div class="lecture-info" id="tour-3" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+            <div class="lecture-info" id="tour-3" data-kind="tour" hidden>
               <img src="assets/images/tours/holidays-halloween.jpg" alt="שלד עם כובע בוקרים ודלעות ליד מרפאה בטוקיו, קישוטי ליל כל הקדושים">
               <h3>סיור חגים</h3>
               <p>סיור מיוחד במינו שעובר בין כל החגים של יפן! נצלול לאיזון בין מזרח למערב, נבין למה אוכלים עוף בחג המולד, ואיפה יש השפעה יהודית על כל העניין.</p>
@@ -432,7 +432,7 @@
               </span>
               <span class="visually-hidden">, סיור יום, למידע נוסף</span>
             </button>
-            <div class="lecture-info" id="tour-4" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+            <div class="lecture-info" id="tour-4" data-kind="tour" hidden>
               <img src="assets/images/tours/coffee-teacup.jpg" alt="קרן זוהר שותה מכוס פורצלן כחולה-לבנה">
               <h3>סיור קפה</h3>
               <p>סיור לחובבי קפה שרוצים לצלול אל תרבות השתייה המיוחדת ביפן: מבתי קפה שקיימים מתקופת המלחמה, למודרניזציה של חללים נקיים, אומוראיס (חביתה עם קטשופ ואורז) ומאצ'ה לאטה.</p>
@@ -460,7 +460,7 @@
               </span>
               <span class="visually-hidden">, סיור לילה, למידע נוסף</span>
             </button>
-            <div class="lecture-info" id="tour-5" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+            <div class="lecture-info" id="tour-5" data-kind="tour" hidden>
               <img src="assets/images/tours/shinjuku-night.jpg" alt="דמות בתחפושת ורודה רוקדת ברחוב בשינג'וקו בלילה, מול תור של צעירים ושלטי ניאון">
               <h3>סיור לילה: טוקיו המלוכלכת</h3>
               <p>סיור ברחבי שינג'וקו, בו נבין איך נראים חיי הלילה ביפן, איך הם משתנים ולמה האזור האפור כל כך רחב.</p>
@@ -489,7 +489,7 @@
               </span>
               <span class="visually-hidden">, סיור לילה, למידע נוסף</span>
             </button>
-            <div class="lecture-info" id="tour-6" data-cta="contact.html?service=סיורים בטוקיו" hidden>
+            <div class="lecture-info" id="tour-6" data-kind="tour" hidden>
               <img src="assets/images/tours/sake-shochu.jpg" alt="שלושה בקבוקי שוצ'ו משעורה וכוס על הבר באיזקאיה">
               <h3>סיור לילה: סאקה</h3>
               <p>מושלם למי שרוצה לצלול אל תרבות השתייה היפנית. מיין אורז ועד בירה וויסקי, נדגום את תרבות השתייה ונבין את מקומו החשוב של האלכוהול בנימוסי החברה היפנית.</p>
@@ -608,7 +608,12 @@
           title.textContent = info.querySelector('h3').textContent;
           text.innerHTML = '';
           info.querySelectorAll('p, ul').forEach(el => text.appendChild(el.cloneNode(true)));
-          cta.href = info.dataset.cta || 'contact.html?service=הרצאות';
+          // Pass the exact tour or lecture name to the contact form
+          const name = title.textContent.trim();
+          const subject = info.dataset.kind === 'tour'
+            ? (name.startsWith('סיור') ? name : 'סיור ' + name)
+            : 'הרצאה: ' + name;
+          cta.href = 'contact.html?service=' + encodeURIComponent(subject);
           cta.setAttribute('aria-label', 'צרו קשר בנושא: ' + title.textContent);
           opener = btn;
           dialog.showModal();

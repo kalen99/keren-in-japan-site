@@ -162,6 +162,9 @@
       const service = params.get('service');
       if (service) {
         document.getElementById('serviceField').value = service;
+        // Put it in the email subject too, so it shows in the inbox
+        document.querySelector('#form input[name="subject"]').value =
+          'הודעה חדשה מאתר Keren in Japan: ' + service;
       }
       // Set current year
       const yearEl = document.getElementById('year');
